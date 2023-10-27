@@ -1,0 +1,308 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1235232609041105}
+  m_IsPrefabParent: 1
+--- !u!1 &1235232609041105
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4570309219031888}
+  - component: {fileID: 114539569604241101}
+  - component: {fileID: 82381469960747891}
+  - component: {fileID: 111268016589038879}
+  - component: {fileID: 114995398433800945}
+  m_Layer: 0
+  m_Name: low_ShadowPyramid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4570309219031888
+Transform:
+  m_GameObject: {fileID: 1235232609041105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4146938987553131}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114539569604241101
+MonoBehaviour:
+  m_GameObject: {fileID: 1235232609041105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229fd65d4751d70499adae013dff1332, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnEffect: {fileID: 1361419558296551, guid: 4049e5012eeb5dd43accbf9908fed800, type: 2}
+  SpawnAudio: {fileID: 0}
+  SpawnAudioDelaySecs: 0
+  Intro:
+  Idle:
+  IntroLength: 3
+  hpBar: {fileID: 0}
+--- !u!82 &82381469960747891
+AudioSource:
+  m_GameObject: {fileID: 1235232609041105}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!111 &111268016589038879
+Animation:
+  m_GameObject: {fileID: 1235232609041105}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: f60337dc9c36bef4caa0af6b5282f73b, type: 2}
+  - {fileID: 7400000, guid: 3faada361bb4b6d48b00d24dd31d3ef4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114995398433800945
+MonoBehaviour:
+  m_GameObject: {fileID: 1235232609041105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11603c51dc87fd14aa533b92cd6afc81, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  abilityFX: {fileID: 1613913391944932, guid: f6c283f675e65b448b325bf43affc8ce, type: 2}
+  abilitySound: {fileID: 0}
+--- !u!1 &1803612912180623
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4146938987553131}
+  - component: {fileID: 111400969950229356}
+  m_Layer: 0
+  m_Name: ShadowPyramid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4146938987553131
+Transform:
+  m_GameObject: {fileID: 1803612912180623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4664667427719499}
+  - {fileID: 4977876439728638}
+  m_Father: {fileID: 4570309219031888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &111400969950229356
+Animation:
+  m_GameObject: {fileID: 1803612912180623}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &1526499476850983
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4664667427719499}
+  - component: {fileID: 33450131428721524}
+  - component: {fileID: 23299333460606749}
+  m_Layer: 0
+  m_Name: ShadowPyramid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4664667427719499
+Transform:
+  m_GameObject: {fileID: 1526499476850983}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4146938987553131}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33450131428721524
+MeshFilter:
+  m_GameObject: {fileID: 1526499476850983}
+  m_Mesh: {fileID: 4300000, guid: 6a8b4530011c7e94b8956d79ea88b82b, type: 2}
+--- !u!23 &23299333460606749
+MeshRenderer:
+  m_GameObject: {fileID: 1526499476850983}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b3600bd73a43f3c408e188d08a0d2eb8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1696381348682601
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4977876439728638}
+  - component: {fileID: 33431690605113580}
+  - component: {fileID: 23902665365540145}
+  m_Layer: 0
+  m_Name: ShadowPyramid_Outline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4977876439728638
+Transform:
+  m_GameObject: {fileID: 1696381348682601}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4146938987553131}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33431690605113580
+MeshFilter:
+  m_GameObject: {fileID: 1696381348682601}
+  m_Mesh: {fileID: 4300000, guid: f6c9e754aa6fad746b8676afc5d66a51, type: 2}
+--- !u!23 &23902665365540145
+MeshRenderer:
+  m_GameObject: {fileID: 1696381348682601}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b3600bd73a43f3c408e188d08a0d2eb8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

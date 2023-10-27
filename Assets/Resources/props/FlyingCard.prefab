@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1502210865073216}
+  m_IsPrefabParent: 1
+--- !u!1 &1502210865073216
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4815851379990802}
+  - component: {fileID: 114289911379674524}
+  - component: {fileID: 114467068593390327}
+  m_Layer: 9
+  m_Name: FlyingCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4815851379990802
+Transform:
+  m_GameObject: {fileID: 1502210865073216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.25, y: -1.141409, z: -105}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children:
+  - {fileID: 4462645328324301}
+  - {fileID: 4127158523639673}
+  - {fileID: 4589898613891956}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114289911379674524
+MonoBehaviour:
+  m_GameObject: {fileID: 1502210865073216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94dc8a12b23c44f8e63b150e1b1b5e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sortByDepth: 0
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
+--- !u!114 &114467068593390327
+MonoBehaviour:
+  m_GameObject: {fileID: 1502210865073216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - time
+  indexes: 00000000
+  metadatas:
+  - 
+  ints:
+  floats:
+  - 1
+  bools:
+  strings: []
+  vector3s: []
+  colors: []
+  spaces:
+  easeTypes:
+  loopTypes:
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!1 &1446486005860230
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4462645328324301}
+  - component: {fileID: 114162998346537438}
+  - component: {fileID: 114914790663870831}
+  m_Layer: 9
+  m_Name: FlyingCard_LeftWing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4462645328324301
+Transform:
+  m_GameObject: {fileID: 1446486005860230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -93.40572, y: 139.9649, z: 0}
+  m_LocalScale: {x: 216, y: 256, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4815851379990802}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114162998346537438
+MonoBehaviour:
+  m_GameObject: {fileID: 1446486005860230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b0f237106fbf34f84f9c2fde5858a7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: -1
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: FlyingCard_Up
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!114 &114914790663870831
+MonoBehaviour:
+  m_GameObject: {fileID: 1446486005860230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d891d92c2510874ea0439c9242942cf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mFPS: 10
+  mPrefix: FlyingCard_
+  mLoop: 1
+--- !u!1 &1258360816587949
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4127158523639673}
+  - component: {fileID: 114994649485862067}
+  - component: {fileID: 114706594857287530}
+  m_Layer: 9
+  m_Name: FlyingCard_RightWing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4127158523639673
+Transform:
+  m_GameObject: {fileID: 1258360816587949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 93.98384, y: 139.9648, z: 0}
+  m_LocalScale: {x: -216, y: 256, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4815851379990802}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114994649485862067
+MonoBehaviour:
+  m_GameObject: {fileID: 1258360816587949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b0f237106fbf34f84f9c2fde5858a7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: -1
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: FlyingCard_Up
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!114 &114706594857287530
+MonoBehaviour:
+  m_GameObject: {fileID: 1258360816587949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d891d92c2510874ea0439c9242942cf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mFPS: 10
+  mPrefix: FlyingCard_
+  mLoop: 1
+--- !u!1 &1507027993519583
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4589898613891956}
+  - component: {fileID: 114846324984922286}
+  m_Layer: 9
+  m_Name: FlyingCardBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4589898613891956
+Transform:
+  m_GameObject: {fileID: 1507027993519583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 173, y: 256, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4815851379990802}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114846324984922286
+MonoBehaviour:
+  m_GameObject: {fileID: 1507027993519583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b0f237106fbf34f84f9c2fde5858a7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: FlyingCardBack
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0

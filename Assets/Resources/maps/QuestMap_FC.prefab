@@ -1,0 +1,5118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1126739473264064}
+  m_IsPrefabParent: 1
+--- !u!1 &1126739473264064
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4688743718281689}
+  - component: {fileID: 114399032125408607}
+  - component: {fileID: 82148643452430811}
+  m_Layer: 18
+  m_Name: QuestMap_FC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4688743718281689
+Transform:
+  m_GameObject: {fileID: 1126739473264064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4078374488551332}
+  - {fileID: 4729658532831770}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114399032125408607
+MonoBehaviour:
+  m_GameObject: {fileID: 1126739473264064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d3663b3f1b4e14785dc8e5551cd2d7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  dbMapJsonFileName: db_FCMap.json
+  MainCameraObj: {fileID: 1807764179892606}
+  MainCameraCollider: {fileID: 65972939430565255}
+  MainCameraPanScript: {fileID: 114605666022610979}
+  MPCameraObj: {fileID: 0}
+  RegionCameraPos:
+  - {fileID: 1519326826795619}
+  - {fileID: 1427629673881807}
+  - {fileID: 1464973541878834}
+  - {fileID: 1030251434076919}
+  - {fileID: 1633703441668786}
+  - {fileID: 1633703441668786}
+  - {fileID: 1633703441668786}
+  - {fileID: 1368377671598491}
+  - {fileID: 1759272920638687}
+  - {fileID: 1600048443362314}
+  HiddenPaths:
+  - {fileID: 1000721698142231}
+  - {fileID: 1400989108330553}
+  - {fileID: 1429592239121403}
+  - {fileID: 1321974322167019}
+  - {fileID: 1346322785773300}
+  - {fileID: 1813810225566526}
+  - {fileID: 1196854122437661}
+  - {fileID: 1314858420173807}
+  - {fileID: 1335636023626915}
+  - {fileID: 1766103248793019}
+  - {fileID: 1624270937670248}
+  - {fileID: 1384369310642205}
+  - {fileID: 1389403886274015}
+  - {fileID: 1759874899371712}
+  - {fileID: 1104630166959900}
+  - {fileID: 1895997089742254}
+  - {fileID: 1054328326362424}
+  - {fileID: 1692545889500920}
+  - {fileID: 1220626246266915}
+  MapMusic: {fileID: 0}
+  LockedRoadTexture: {fileID: 2800000, guid: fd9a692069ede634599ac5b4e7758ec7, type: 3}
+  RegionRoadTextures:
+  - {fileID: 2800000, guid: 5762bf754cbedd3408c803fbf881ddde, type: 3}
+  - {fileID: 2800000, guid: 054204d320e575d4cabb142842d0c673, type: 3}
+  - {fileID: 2800000, guid: 6b40fd1bab8a33a4dba7af9b767ec030, type: 3}
+  - {fileID: 2800000, guid: 09cafd2e2e4e78f4a93d8305bdd6be8a, type: 3}
+  - {fileID: 2800000, guid: 5762bf754cbedd3408c803fbf881ddde, type: 3}
+  - {fileID: 2800000, guid: 6b40fd1bab8a33a4dba7af9b767ec030, type: 3}
+  - {fileID: 2800000, guid: 09cafd2e2e4e78f4a93d8305bdd6be8a, type: 3}
+  - {fileID: 2800000, guid: 57bcac492e05db148a38c41158fb9acc, type: 3}
+  - {fileID: 2800000, guid: 57bcac492e05db148a38c41158fb9acc, type: 3}
+  - {fileID: 2800000, guid: 16db115c73d08274bacfcfcbe7b33628, type: 3}
+  DefaultNodePrefab: {fileID: 1207409567216024, guid: dddb08e2e5d68c340ab9a4b984540233, type: 2}
+  RegionNodePrefabs: []
+--- !u!82 &82148643452430811
+AudioSource:
+  m_GameObject: {fileID: 1126739473264064}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a3383cd3bc16ae448986a4ba31cca74d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!1 &1008248215020912
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4078374488551332}
+  m_Layer: 18
+  m_Name: MapRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4078374488551332
+Transform:
+  m_GameObject: {fileID: 1008248215020912}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.629207E-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4886581022099742}
+  - {fileID: 4117770852481149}
+  - {fileID: 4230030116603086}
+  - {fileID: 4593658246972083}
+  m_Father: {fileID: 4688743718281689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 1.866934E-05, z: 180}
+--- !u!1 &1860499982403132
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4886581022099742}
+  m_Layer: 18
+  m_Name: MapArt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4886581022099742
+Transform:
+  m_GameObject: {fileID: 1860499982403132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4968879591785209}
+  - {fileID: 4233385764439145}
+  - {fileID: 4371382207790242}
+  - {fileID: 4232017279006325}
+  - {fileID: 4329985178983653}
+  m_Father: {fileID: 4078374488551332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1343064016369021
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4968879591785209}
+  - component: {fileID: 33482611980473719}
+  - component: {fileID: 23229247948407672}
+  m_Layer: 18
+  m_Name: FcQuestMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968879591785209
+Transform:
+  m_GameObject: {fileID: 1343064016369021}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -0.5, y: 0, z: 2.2}
+  m_LocalScale: {x: 1.089374, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4886581022099742}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+--- !u!33 &33482611980473719
+MeshFilter:
+  m_GameObject: {fileID: 1343064016369021}
+  m_Mesh: {fileID: 4300000, guid: 8efd16bb8ef6d914b8cfe14abd25d5d8, type: 2}
+--- !u!23 &23229247948407672
+MeshRenderer:
+  m_GameObject: {fileID: 1343064016369021}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 0f2522db00b30c4469f982c30e374fd9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1360256633207600
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4233385764439145}
+  - component: {fileID: 33584976102738055}
+  - component: {fileID: 23181544074722859}
+  - component: {fileID: 95905217925589307}
+  m_Layer: 18
+  m_Name: FcQuestMap_Valentine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4233385764439145
+Transform:
+  m_GameObject: {fileID: 1360256633207600}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 127.472, y: 2.648012, z: 11.04135}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4886581022099742}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33584976102738055
+MeshFilter:
+  m_GameObject: {fileID: 1360256633207600}
+  m_Mesh: {fileID: 4300000, guid: 75151854487832c4c86a7e29bec409c3, type: 2}
+--- !u!23 &23181544074722859
+MeshRenderer:
+  m_GameObject: {fileID: 1360256633207600}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c3746e53c9cd9a8448f18fc45036387c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95905217925589307
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1360256633207600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e04a7988804194c4da4dfb6759f47c44, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1625457020379803
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4371382207790242}
+  - component: {fileID: 33234932585429491}
+  - component: {fileID: 23950876088120446}
+  m_Layer: 18
+  m_Name: FcQuestMap_ValentineBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4371382207790242
+Transform:
+  m_GameObject: {fileID: 1625457020379803}
+  m_LocalRotation: {x: 1.152023E-07, y: -0.7071068, z: -0.7071068, w: -1.152023E-07}
+  m_LocalPosition: {x: 144.08, y: 0, z: 1.660047}
+  m_LocalScale: {x: 99.99998, y: 100, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4886581022099742}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: -1.866933E-05, z: 180}
+--- !u!33 &33234932585429491
+MeshFilter:
+  m_GameObject: {fileID: 1625457020379803}
+  m_Mesh: {fileID: 4300000, guid: cb0514b0ad1f83c448325847976805c3, type: 2}
+--- !u!23 &23950876088120446
+MeshRenderer:
+  m_GameObject: {fileID: 1625457020379803}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 011d447d68366824cbb4ddcd03202014, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1143897511919651
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4232017279006325}
+  m_Layer: 18
+  m_Name: Roads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4232017279006325
+Transform:
+  m_GameObject: {fileID: 1143897511919651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4198254718576473}
+  - {fileID: 4055819982879384}
+  - {fileID: 4314198749415409}
+  - {fileID: 4623955538756051}
+  - {fileID: 4640760285570773}
+  - {fileID: 4938841033587721}
+  m_Father: {fileID: 4886581022099742}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1070482157040930
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4198254718576473}
+  - component: {fileID: 95015225355468162}
+  m_Layer: 18
+  m_Name: FcQuestMap_MainRoad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4198254718576473
+Transform:
+  m_GameObject: {fileID: 1070482157040930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4935351240392020}
+  - {fileID: 4952873268930585}
+  - {fileID: 4561408926861517}
+  - {fileID: 4089473053055534}
+  - {fileID: 4250263479219725}
+  - {fileID: 4733047072645513}
+  - {fileID: 4276629998751546}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95015225355468162
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1070482157040930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 7ec0acc2f9170b741ba0466659e182d5, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1727456816608564
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4935351240392020}
+  - component: {fileID: 33811909407458472}
+  - component: {fileID: 23966300571789438}
+  m_Layer: 18
+  m_Name: FCQuestMapA_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4935351240392020
+Transform:
+  m_GameObject: {fileID: 1727456816608564}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33811909407458472
+MeshFilter:
+  m_GameObject: {fileID: 1727456816608564}
+  m_Mesh: {fileID: 4300000, guid: 4bc294a257303a34f8db038a15900169, type: 2}
+--- !u!23 &23966300571789438
+MeshRenderer:
+  m_GameObject: {fileID: 1727456816608564}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 835e0f21731096145970d66f41bc737d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1589339080591213
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4952873268930585}
+  - component: {fileID: 33087765093792159}
+  - component: {fileID: 23112006132496731}
+  m_Layer: 18
+  m_Name: FCQuestMapB_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4952873268930585
+Transform:
+  m_GameObject: {fileID: 1589339080591213}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33087765093792159
+MeshFilter:
+  m_GameObject: {fileID: 1589339080591213}
+  m_Mesh: {fileID: 4300000, guid: a36a092b263678a489634ed48ff596ee, type: 2}
+--- !u!23 &23112006132496731
+MeshRenderer:
+  m_GameObject: {fileID: 1589339080591213}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 835e0f21731096145970d66f41bc737d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1820569642733427
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4561408926861517}
+  - component: {fileID: 33460852012282673}
+  - component: {fileID: 23028315867243917}
+  m_Layer: 18
+  m_Name: FCQuestMapC_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4561408926861517
+Transform:
+  m_GameObject: {fileID: 1820569642733427}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33460852012282673
+MeshFilter:
+  m_GameObject: {fileID: 1820569642733427}
+  m_Mesh: {fileID: 4300000, guid: c3da52dac4342c24289b1ec0eded7963, type: 2}
+--- !u!23 &23028315867243917
+MeshRenderer:
+  m_GameObject: {fileID: 1820569642733427}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 835e0f21731096145970d66f41bc737d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1015194756146656
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4089473053055534}
+  - component: {fileID: 33195099259260903}
+  - component: {fileID: 23620487736976111}
+  m_Layer: 18
+  m_Name: FCQuestMapD_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4089473053055534
+Transform:
+  m_GameObject: {fileID: 1015194756146656}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33195099259260903
+MeshFilter:
+  m_GameObject: {fileID: 1015194756146656}
+  m_Mesh: {fileID: 4300000, guid: 6e41b31b9a90d874093f3d39028c7a05, type: 2}
+--- !u!23 &23620487736976111
+MeshRenderer:
+  m_GameObject: {fileID: 1015194756146656}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 835e0f21731096145970d66f41bc737d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1716449842330168
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4250263479219725}
+  - component: {fileID: 33044873259306147}
+  - component: {fileID: 23560727357551772}
+  m_Layer: 18
+  m_Name: FCQuestMapE_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4250263479219725
+Transform:
+  m_GameObject: {fileID: 1716449842330168}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 79.25, y: 0.98, z: 38.94}
+  m_LocalScale: {x: 1.136569, y: 1.136569, z: 1.136569}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33044873259306147
+MeshFilter:
+  m_GameObject: {fileID: 1716449842330168}
+  m_Mesh: {fileID: 4300000, guid: a903790699f986c4b87cf3ee3483a85c, type: 2}
+--- !u!23 &23560727357551772
+MeshRenderer:
+  m_GameObject: {fileID: 1716449842330168}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 747d436f07dae1c40b0e034d4a629fc5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1367866284228861
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4733047072645513}
+  - component: {fileID: 33173978119012505}
+  - component: {fileID: 23307901206328630}
+  m_Layer: 18
+  m_Name: FCQuestMapF_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4733047072645513
+Transform:
+  m_GameObject: {fileID: 1367866284228861}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.28, y: 0.9668604, z: 38.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33173978119012505
+MeshFilter:
+  m_GameObject: {fileID: 1367866284228861}
+  m_Mesh: {fileID: 4300000, guid: d1cdd543dacafc04dac6b2b0e37ceb55, type: 2}
+--- !u!23 &23307901206328630
+MeshRenderer:
+  m_GameObject: {fileID: 1367866284228861}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ddf722ee90888745bf578bb305ab6e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1737429681734798
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4276629998751546}
+  - component: {fileID: 33825139249736058}
+  - component: {fileID: 23246456033933017}
+  m_Layer: 18
+  m_Name: FCQuestMapG_Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4276629998751546
+Transform:
+  m_GameObject: {fileID: 1737429681734798}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4198254718576473}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33825139249736058
+MeshFilter:
+  m_GameObject: {fileID: 1737429681734798}
+  m_Mesh: {fileID: 4300000, guid: 4c5909f205142ad4a8e16a70fbce64be, type: 2}
+--- !u!23 &23246456033933017
+MeshRenderer:
+  m_GameObject: {fileID: 1737429681734798}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1364826445093914
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4055819982879384}
+  - component: {fileID: 95385642647959729}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Lumpy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4055819982879384
+Transform:
+  m_GameObject: {fileID: 1364826445093914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4612128551423624}
+  - {fileID: 4957769627065459}
+  - {fileID: 4295225058579592}
+  - {fileID: 4579995048275452}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95385642647959729
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1364826445093914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5069eaf2e78eca3469b268a3401b9035, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1400989108330553
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4612128551423624}
+  - component: {fileID: 33472821103674998}
+  - component: {fileID: 23591889646832247}
+  m_Layer: 18
+  m_Name: FCQuestMapB_HiddenPath1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4612128551423624
+Transform:
+  m_GameObject: {fileID: 1400989108330553}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4055819982879384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33472821103674998
+MeshFilter:
+  m_GameObject: {fileID: 1400989108330553}
+  m_Mesh: {fileID: 4300000, guid: 1eedf08791264324cbbcc39fa6e50819, type: 2}
+--- !u!23 &23591889646832247
+MeshRenderer:
+  m_GameObject: {fileID: 1400989108330553}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 474e5d452c58c6f4c9a854d1cf9e0119, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1429592239121403
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4957769627065459}
+  - component: {fileID: 33414740607312096}
+  - component: {fileID: 23855448521653205}
+  m_Layer: 18
+  m_Name: FCQuestMapB_HiddenPath2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4957769627065459
+Transform:
+  m_GameObject: {fileID: 1429592239121403}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4055819982879384}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33414740607312096
+MeshFilter:
+  m_GameObject: {fileID: 1429592239121403}
+  m_Mesh: {fileID: 4300000, guid: 85d9eaa1a0b6c03499ed154cf29d0a66, type: 2}
+--- !u!23 &23855448521653205
+MeshRenderer:
+  m_GameObject: {fileID: 1429592239121403}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 474e5d452c58c6f4c9a854d1cf9e0119, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1321974322167019
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4295225058579592}
+  - component: {fileID: 33496600949568790}
+  - component: {fileID: 23294698364811158}
+  m_Layer: 18
+  m_Name: FCQuestMapB_HiddenPath3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4295225058579592
+Transform:
+  m_GameObject: {fileID: 1321974322167019}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4055819982879384}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33496600949568790
+MeshFilter:
+  m_GameObject: {fileID: 1321974322167019}
+  m_Mesh: {fileID: 4300000, guid: 4b8e4e3297799534aa35708c036df993, type: 2}
+--- !u!23 &23294698364811158
+MeshRenderer:
+  m_GameObject: {fileID: 1321974322167019}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 474e5d452c58c6f4c9a854d1cf9e0119, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1346322785773300
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4579995048275452}
+  - component: {fileID: 33749917398024679}
+  - component: {fileID: 23196973410433377}
+  m_Layer: 18
+  m_Name: FCQuestMapB_HiddenPath4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4579995048275452
+Transform:
+  m_GameObject: {fileID: 1346322785773300}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4055819982879384}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33749917398024679
+MeshFilter:
+  m_GameObject: {fileID: 1346322785773300}
+  m_Mesh: {fileID: 4300000, guid: 1d2f85ba04d56fb418380aa50b493a99, type: 2}
+--- !u!23 &23196973410433377
+MeshRenderer:
+  m_GameObject: {fileID: 1346322785773300}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 474e5d452c58c6f4c9a854d1cf9e0119, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1937125749689196
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4314198749415409}
+  - component: {fileID: 95850026264343139}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Witch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4314198749415409
+Transform:
+  m_GameObject: {fileID: 1937125749689196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4225733931282088}
+  - {fileID: 4327610564069138}
+  - {fileID: 4736705726502828}
+  - {fileID: 4740975883338853}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95850026264343139
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1937125749689196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5d51b221bffede241a00f504ed843827, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1813810225566526
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4225733931282088}
+  - component: {fileID: 33281167538628779}
+  - component: {fileID: 23366836739806729}
+  m_Layer: 18
+  m_Name: FCQuestMapC_HiddenPath2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4225733931282088
+Transform:
+  m_GameObject: {fileID: 1813810225566526}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4314198749415409}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33281167538628779
+MeshFilter:
+  m_GameObject: {fileID: 1813810225566526}
+  m_Mesh: {fileID: 4300000, guid: 951782156e163ab41ba1647eaeefb643, type: 2}
+--- !u!23 &23366836739806729
+MeshRenderer:
+  m_GameObject: {fileID: 1813810225566526}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ddf722ee90888745bf578bb305ab6e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1196854122437661
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4327610564069138}
+  - component: {fileID: 33926995159518135}
+  - component: {fileID: 23946454446604520}
+  m_Layer: 18
+  m_Name: FCQuestMapC_HiddenPath3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4327610564069138
+Transform:
+  m_GameObject: {fileID: 1196854122437661}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4314198749415409}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33926995159518135
+MeshFilter:
+  m_GameObject: {fileID: 1196854122437661}
+  m_Mesh: {fileID: 4300000, guid: 5de80e58584d6e348aaf95a9e847a041, type: 2}
+--- !u!23 &23946454446604520
+MeshRenderer:
+  m_GameObject: {fileID: 1196854122437661}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ddf722ee90888745bf578bb305ab6e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1314858420173807
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4736705726502828}
+  - component: {fileID: 33544280718993230}
+  - component: {fileID: 23118492111955338}
+  m_Layer: 18
+  m_Name: FCQuestMapC_HiddenPath5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4736705726502828
+Transform:
+  m_GameObject: {fileID: 1314858420173807}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4314198749415409}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33544280718993230
+MeshFilter:
+  m_GameObject: {fileID: 1314858420173807}
+  m_Mesh: {fileID: 4300000, guid: 39d686bb76641a8439fc1c5a4e9e3382, type: 2}
+--- !u!23 &23118492111955338
+MeshRenderer:
+  m_GameObject: {fileID: 1314858420173807}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ddf722ee90888745bf578bb305ab6e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1335636023626915
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4740975883338853}
+  - component: {fileID: 33347241634117105}
+  - component: {fileID: 23382640135391175}
+  m_Layer: 18
+  m_Name: FCQuestMapC_HiddenPath6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4740975883338853
+Transform:
+  m_GameObject: {fileID: 1335636023626915}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4314198749415409}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33347241634117105
+MeshFilter:
+  m_GameObject: {fileID: 1335636023626915}
+  m_Mesh: {fileID: 4300000, guid: 1e71b33d59271634fadb1577b9a156ba, type: 2}
+--- !u!23 &23382640135391175
+MeshRenderer:
+  m_GameObject: {fileID: 1335636023626915}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ddf722ee90888745bf578bb305ab6e4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1518877715338537
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4623955538756051}
+  - component: {fileID: 95761181592809209}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Ice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4623955538756051
+Transform:
+  m_GameObject: {fileID: 1518877715338537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4311988527519677}
+  - {fileID: 4787550805203404}
+  - {fileID: 4740521352907309}
+  - {fileID: 4425006259849206}
+  - {fileID: 4935826247072521}
+  - {fileID: 4774019574670542}
+  - {fileID: 4466010120276355}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95761181592809209
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1518877715338537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6c8acd62c3ae54348bb177eef9604c2c, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1766103248793019
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4311988527519677}
+  - component: {fileID: 33928383213456864}
+  - component: {fileID: 23548758200323082}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4311988527519677
+Transform:
+  m_GameObject: {fileID: 1766103248793019}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33928383213456864
+MeshFilter:
+  m_GameObject: {fileID: 1766103248793019}
+  m_Mesh: {fileID: 4300000, guid: 127b7719bd68bbf4398e6203e2411d8f, type: 2}
+--- !u!23 &23548758200323082
+MeshRenderer:
+  m_GameObject: {fileID: 1766103248793019}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1624270937670248
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4787550805203404}
+  - component: {fileID: 33852352812188976}
+  - component: {fileID: 23858193404417206}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4787550805203404
+Transform:
+  m_GameObject: {fileID: 1624270937670248}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33852352812188976
+MeshFilter:
+  m_GameObject: {fileID: 1624270937670248}
+  m_Mesh: {fileID: 4300000, guid: e64e6eca70547a34d97bdb26f3efda46, type: 2}
+--- !u!23 &23858193404417206
+MeshRenderer:
+  m_GameObject: {fileID: 1624270937670248}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1384369310642205
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4740521352907309}
+  - component: {fileID: 33566697021304137}
+  - component: {fileID: 23745072433267581}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4740521352907309
+Transform:
+  m_GameObject: {fileID: 1384369310642205}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33566697021304137
+MeshFilter:
+  m_GameObject: {fileID: 1384369310642205}
+  m_Mesh: {fileID: 4300000, guid: 3b77052b5423b5c4bb8573d83ad6114d, type: 2}
+--- !u!23 &23745072433267581
+MeshRenderer:
+  m_GameObject: {fileID: 1384369310642205}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1389403886274015
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4425006259849206}
+  - component: {fileID: 33750112585784106}
+  - component: {fileID: 23200920822468421}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4425006259849206
+Transform:
+  m_GameObject: {fileID: 1389403886274015}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33750112585784106
+MeshFilter:
+  m_GameObject: {fileID: 1389403886274015}
+  m_Mesh: {fileID: 4300000, guid: e8b4febc7b9455242abbdeb6cd8567b1, type: 2}
+--- !u!23 &23200920822468421
+MeshRenderer:
+  m_GameObject: {fileID: 1389403886274015}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1759874899371712
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4935826247072521}
+  - component: {fileID: 33990645995538403}
+  - component: {fileID: 23153470349028060}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4935826247072521
+Transform:
+  m_GameObject: {fileID: 1759874899371712}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33990645995538403
+MeshFilter:
+  m_GameObject: {fileID: 1759874899371712}
+  m_Mesh: {fileID: 4300000, guid: 23135686333f43344928a1809837bf41, type: 2}
+--- !u!23 &23153470349028060
+MeshRenderer:
+  m_GameObject: {fileID: 1759874899371712}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1104630166959900
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4774019574670542}
+  - component: {fileID: 33072938938680132}
+  - component: {fileID: 23535731469179658}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4774019574670542
+Transform:
+  m_GameObject: {fileID: 1104630166959900}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33072938938680132
+MeshFilter:
+  m_GameObject: {fileID: 1104630166959900}
+  m_Mesh: {fileID: 4300000, guid: 971252a6bd223c14bbf8b3f63a5472be, type: 2}
+--- !u!23 &23535731469179658
+MeshRenderer:
+  m_GameObject: {fileID: 1104630166959900}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1895997089742254
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4466010120276355}
+  - component: {fileID: 33606166963497434}
+  - component: {fileID: 23945263705515673}
+  - component: {fileID: 64522101888345666}
+  m_Layer: 18
+  m_Name: FCQuestMapD_HiddenPath7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4466010120276355
+Transform:
+  m_GameObject: {fileID: 1895997089742254}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4623955538756051}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33606166963497434
+MeshFilter:
+  m_GameObject: {fileID: 1895997089742254}
+  m_Mesh: {fileID: 4300000, guid: 4c5909f205142ad4a8e16a70fbce64be, type: 2}
+--- !u!23 &23945263705515673
+MeshRenderer:
+  m_GameObject: {fileID: 1895997089742254}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7341ddbbb9474f828c7a42144916e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &64522101888345666
+MeshCollider:
+  m_GameObject: {fileID: 1895997089742254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 4c5909f205142ad4a8e16a70fbce64be, type: 2}
+--- !u!1 &1941067706704639
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4640760285570773}
+  - component: {fileID: 95839788576925905}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Wildberry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4640760285570773
+Transform:
+  m_GameObject: {fileID: 1941067706704639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4971933124288055}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95839788576925905
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1941067706704639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2860de070bec38343b9576286ebb6b37, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1000721698142231
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4971933124288055}
+  - component: {fileID: 33720926293154453}
+  - component: {fileID: 23213986622566807}
+  m_Layer: 18
+  m_Name: FCQuestMapA_HiddenPath1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4971933124288055
+Transform:
+  m_GameObject: {fileID: 1000721698142231}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 73.27933, y: 0.9668604, z: 38.52128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4640760285570773}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33720926293154453
+MeshFilter:
+  m_GameObject: {fileID: 1000721698142231}
+  m_Mesh: {fileID: 4300000, guid: 8fc1defdfd969e64fa10a183a242aa32, type: 2}
+--- !u!23 &23213986622566807
+MeshRenderer:
+  m_GameObject: {fileID: 1000721698142231}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 747d436f07dae1c40b0e034d4a629fc5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1012519439648071
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4938841033587721}
+  m_Layer: 18
+  m_Name: ValentinesMap_Roads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4938841033587721
+Transform:
+  m_GameObject: {fileID: 1012519439648071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4247500146817681}
+  - {fileID: 4689007263859159}
+  - {fileID: 4017390302135919}
+  m_Father: {fileID: 4232017279006325}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220626246266915
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4247500146817681}
+  - component: {fileID: 33210659567503510}
+  - component: {fileID: 23699810893673036}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Valentine_Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4247500146817681
+Transform:
+  m_GameObject: {fileID: 1220626246266915}
+  m_LocalRotation: {x: 0.7071066, y: 0, z: 0, w: -0.7071069}
+  m_LocalPosition: {x: 90.2, y: 2, z: 34.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4938841033587721}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -89.99997, y: 0, z: 0}
+--- !u!33 &33210659567503510
+MeshFilter:
+  m_GameObject: {fileID: 1220626246266915}
+  m_Mesh: {fileID: 4300000, guid: 1e6fb29bc8810c447a97032fa0432712, type: 2}
+--- !u!23 &23699810893673036
+MeshRenderer:
+  m_GameObject: {fileID: 1220626246266915}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 34733bf53961dbc499df0fd40ba20d44, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1054328326362424
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4689007263859159}
+  - component: {fileID: 33440419777015344}
+  - component: {fileID: 23248765415196282}
+  m_Layer: 18
+  m_Name: FcQuestMap_MainRoad_Valentine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4689007263859159
+Transform:
+  m_GameObject: {fileID: 1054328326362424}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 125.5102, y: 2.813909, z: 10.65503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4938841033587721}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33440419777015344
+MeshFilter:
+  m_GameObject: {fileID: 1054328326362424}
+  m_Mesh: {fileID: 4300000, guid: e522637b1bc905549a5a359c9f9a38c2, type: 2}
+--- !u!23 &23248765415196282
+MeshRenderer:
+  m_GameObject: {fileID: 1054328326362424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 34733bf53961dbc499df0fd40ba20d44, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1692545889500920
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4017390302135919}
+  - component: {fileID: 33643647049323846}
+  - component: {fileID: 23972700234575588}
+  m_Layer: 18
+  m_Name: FcQuestMap_HiddenRoad_Valentine_End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4017390302135919
+Transform:
+  m_GameObject: {fileID: 1692545889500920}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 111.7571, y: 2.833297, z: 14.37897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4938841033587721}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33643647049323846
+MeshFilter:
+  m_GameObject: {fileID: 1692545889500920}
+  m_Mesh: {fileID: 4300000, guid: 6af5be63d1c12114b901c989b9556343, type: 2}
+--- !u!23 &23972700234575588
+MeshRenderer:
+  m_GameObject: {fileID: 1692545889500920}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c99b2d878096c5142b60b232a69c3969, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1817069048922803
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4329985178983653}
+  m_Layer: 18
+  m_Name: Environment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4329985178983653
+Transform:
+  m_GameObject: {fileID: 1817069048922803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4510799712392254}
+  - {fileID: 4469326721245863}
+  - {fileID: 4298017419124311}
+  - {fileID: 4695055875586476}
+  - {fileID: 4315131435526753}
+  - {fileID: 4155620884269638}
+  m_Father: {fileID: 4886581022099742}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1675523358027393
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4510799712392254}
+  - component: {fileID: 33135717170861858}
+  - component: {fileID: 23299949873861041}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4510799712392254
+Transform:
+  m_GameObject: {fileID: 1675523358027393}
+  m_LocalRotation: {x: -0.7010574, y: -0.09229597, z: -0.09229597, w: 0.7010574}
+  m_LocalPosition: {x: 63.8, y: 1, z: 22.54}
+  m_LocalScale: {x: 0.5231068, y: 0.4395196, z: 0.4395197}
+  m_Children: []
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 15, z: 0}
+--- !u!33 &33135717170861858
+MeshFilter:
+  m_GameObject: {fileID: 1675523358027393}
+  m_Mesh: {fileID: 4300000, guid: dad549219e814f3479a8554aa2f6809b, type: 2}
+--- !u!23 &23299949873861041
+MeshRenderer:
+  m_GameObject: {fileID: 1675523358027393}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ff99956ded3350245a36aefda93ae96a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1172506071714237
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4469326721245863}
+  - component: {fileID: 95538742448235962}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4469326721245863
+Transform:
+  m_GameObject: {fileID: 1172506071714237}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 80.98454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4973232162214035}
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &95538742448235962
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1172506071714237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a63ba603167fa874fb12b631cd45fe8d, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1869103810860797
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4973232162214035}
+  - component: {fileID: 33341436026137922}
+  - component: {fileID: 23716962349997532}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4973232162214035
+Transform:
+  m_GameObject: {fileID: 1869103810860797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.46923, y: 113.8213, z: 0.2808438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4469326721245863}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33341436026137922
+MeshFilter:
+  m_GameObject: {fileID: 1869103810860797}
+  m_Mesh: {fileID: 4300000, guid: 9c52f010668ebe548b58d7a150563164, type: 2}
+--- !u!23 &23716962349997532
+MeshRenderer:
+  m_GameObject: {fileID: 1869103810860797}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b312399f45c52b4499ffe4a73bb05072, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1523336472091127
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4298017419124311}
+  - component: {fileID: 95682535814703338}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4298017419124311
+Transform:
+  m_GameObject: {fileID: 1523336472091127}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 80.98454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4197701090595679}
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &95682535814703338
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1523336472091127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5ad7fb889b4409242b73b000cfc2cdcd, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1397980860114542
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4197701090595679}
+  - component: {fileID: 33154842270171566}
+  - component: {fileID: 23765581450110238}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4197701090595679
+Transform:
+  m_GameObject: {fileID: 1397980860114542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.25297, y: 48.88206, z: 0.2808438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4298017419124311}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33154842270171566
+MeshFilter:
+  m_GameObject: {fileID: 1397980860114542}
+  m_Mesh: {fileID: 4300000, guid: 1d4293f5a706918478d4b822e21ca457, type: 2}
+--- !u!23 &23765581450110238
+MeshRenderer:
+  m_GameObject: {fileID: 1397980860114542}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 626afaf963d4f9a449664a11160f3065, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1086116012127158
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4695055875586476}
+  - component: {fileID: 95655415169846665}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4695055875586476
+Transform:
+  m_GameObject: {fileID: 1086116012127158}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 80.98454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4964247372399474}
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &95655415169846665
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1086116012127158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: bba705ec364da4440a3ae21f5526e3fe, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1388536012505012
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4964247372399474}
+  - component: {fileID: 33770847249872513}
+  - component: {fileID: 23312680681772109}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4964247372399474
+Transform:
+  m_GameObject: {fileID: 1388536012505012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -49.4117, y: 63.02619, z: 0.2808438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4695055875586476}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33770847249872513
+MeshFilter:
+  m_GameObject: {fileID: 1388536012505012}
+  m_Mesh: {fileID: 4300000, guid: 34e29df47c266b64fb4d472e9453e02b, type: 2}
+--- !u!23 &23312680681772109
+MeshRenderer:
+  m_GameObject: {fileID: 1388536012505012}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: cf6c1de2b8310b640b1f71bf10d201c9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1723240367023427
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4315131435526753}
+  - component: {fileID: 33278510644901182}
+  - component: {fileID: 23100070198945403}
+  m_Layer: 18
+  m_Name: FcQuestMap_Atlas05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4315131435526753
+Transform:
+  m_GameObject: {fileID: 1723240367023427}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 133.1825, y: 2.764348, z: 21.22362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33278510644901182
+MeshFilter:
+  m_GameObject: {fileID: 1723240367023427}
+  m_Mesh: {fileID: 4300000, guid: 4824a34f961df9942ae8cb7a95710d74, type: 2}
+--- !u!23 &23100070198945403
+MeshRenderer:
+  m_GameObject: {fileID: 1723240367023427}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5309baf2fb07ac846b7c161c9bca1f3e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1713135405061340
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4155620884269638}
+  - component: {fileID: 33908066297316220}
+  - component: {fileID: 23408696970485028}
+  m_Layer: 18
+  m_Name: FcQuestMap_ValentineBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4155620884269638
+Transform:
+  m_GameObject: {fileID: 1713135405061340}
+  m_LocalRotation: {x: 1.152023E-07, y: -0.7071068, z: -0.7071068, w: -1.152023E-07}
+  m_LocalPosition: {x: 144, y: 0, z: 1.600047}
+  m_LocalScale: {x: 99.99998, y: 100, z: 100}
+  m_Children: []
+  m_Father: {fileID: 4329985178983653}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 90, y: -1.866933E-05, z: 180}
+--- !u!33 &33908066297316220
+MeshFilter:
+  m_GameObject: {fileID: 1713135405061340}
+  m_Mesh: {fileID: 0}
+--- !u!23 &23408696970485028
+MeshRenderer:
+  m_GameObject: {fileID: 1713135405061340}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1847331737762047
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4117770852481149}
+  m_Layer: 18
+  m_Name: QuestNodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4117770852481149
+Transform:
+  m_GameObject: {fileID: 1847331737762047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4812997782605749}
+  - {fileID: 4531724805215526}
+  - {fileID: 4724474434851864}
+  - {fileID: 4274325082254770}
+  - {fileID: 4437659141000384}
+  - {fileID: 4004236864725845}
+  - {fileID: 4568479648177093}
+  - {fileID: 4352835006847404}
+  - {fileID: 4015387127330687}
+  - {fileID: 4369643052525211}
+  m_Father: {fileID: 4078374488551332}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1966777460789124
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4812997782605749}
+  m_Layer: 18
+  m_Name: FCQuestMapA_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4812997782605749
+Transform:
+  m_GameObject: {fileID: 1966777460789124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4822713782803661}
+  - {fileID: 4788714211632798}
+  - {fileID: 4320559860146543}
+  - {fileID: 4706938838593258}
+  - {fileID: 4314595860915536}
+  - {fileID: 4623326410414438}
+  - {fileID: 4923105099030651}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1445464431848584
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4822713782803661}
+  m_Layer: 18
+  m_Name: Q5001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4822713782803661
+Transform:
+  m_GameObject: {fileID: 1445464431848584}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 71.57, y: 0, z: 39.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1114503987613599
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4788714211632798}
+  m_Layer: 18
+  m_Name: Q5002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4788714211632798
+Transform:
+  m_GameObject: {fileID: 1114503987613599}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 73.53, y: 0, z: 29.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1369756161916680
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4320559860146543}
+  m_Layer: 18
+  m_Name: Q5003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4320559860146543
+Transform:
+  m_GameObject: {fileID: 1369756161916680}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 34.27, y: 0, z: 36.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1915607123651450
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4706938838593258}
+  m_Layer: 18
+  m_Name: Q5004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4706938838593258
+Transform:
+  m_GameObject: {fileID: 1915607123651450}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 51.3, y: 0, z: 17.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1079268039182919
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4314595860915536}
+  m_Layer: 18
+  m_Name: Q5005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4314595860915536
+Transform:
+  m_GameObject: {fileID: 1079268039182919}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 25, y: 0, z: 13.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1554662852661916
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4623326410414438}
+  m_Layer: 18
+  m_Name: Q5006
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4623326410414438
+Transform:
+  m_GameObject: {fileID: 1554662852661916}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 24.7, y: 0, z: 25.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1387875403215248
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4923105099030651}
+  m_Layer: 18
+  m_Name: Q5007
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4923105099030651
+Transform:
+  m_GameObject: {fileID: 1387875403215248}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 9.2, y: 0, z: 9.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812997782605749}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1987526359950652
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4531724805215526}
+  m_Layer: 18
+  m_Name: FCQuestMapB_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4531724805215526
+Transform:
+  m_GameObject: {fileID: 1987526359950652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4714873295370953}
+  - {fileID: 4012158678970255}
+  - {fileID: 4276496704302621}
+  - {fileID: 4908962441291008}
+  - {fileID: 4529465793750841}
+  - {fileID: 4030016356971015}
+  - {fileID: 4356120353421202}
+  - {fileID: 4926268919155291}
+  - {fileID: 4230839480782007}
+  - {fileID: 4523030014307525}
+  - {fileID: 4412273165385140}
+  - {fileID: 4899627213249755}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856625810246948
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4714873295370953}
+  m_Layer: 18
+  m_Name: Q5008
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4714873295370953
+Transform:
+  m_GameObject: {fileID: 1856625810246948}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 9.89, y: 0, z: -10.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1253848652130752
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4012158678970255}
+  m_Layer: 18
+  m_Name: Q5009
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4012158678970255
+Transform:
+  m_GameObject: {fileID: 1253848652130752}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 25.5, y: 0, z: 3.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1037217916705499
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4276496704302621}
+  m_Layer: 18
+  m_Name: Q5010
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4276496704302621
+Transform:
+  m_GameObject: {fileID: 1037217916705499}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 8.3, y: 0, z: -17.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1354021772327324
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4908962441291008}
+  m_Layer: 18
+  m_Name: Q5011
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4908962441291008
+Transform:
+  m_GameObject: {fileID: 1354021772327324}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 55.2, y: 0, z: -17.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1752229545824587
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4529465793750841}
+  m_Layer: 18
+  m_Name: Q5012
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4529465793750841
+Transform:
+  m_GameObject: {fileID: 1752229545824587}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 73.13, y: 0, z: -22.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1084129673052495
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4030016356971015}
+  m_Layer: 18
+  m_Name: Q5013
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4030016356971015
+Transform:
+  m_GameObject: {fileID: 1084129673052495}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 72.82, y: 0, z: -37.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1842669796143300
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4356120353421202}
+  m_Layer: 18
+  m_Name: Q5014
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4356120353421202
+Transform:
+  m_GameObject: {fileID: 1842669796143300}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 48, y: 0, z: 1.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1126032105603279
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4926268919155291}
+  m_Layer: 18
+  m_Name: Q5015
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4926268919155291
+Transform:
+  m_GameObject: {fileID: 1126032105603279}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 21.67, y: 0, z: -24.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1757022777369961
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4230839480782007}
+  m_Layer: 18
+  m_Name: Q5016
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4230839480782007
+Transform:
+  m_GameObject: {fileID: 1757022777369961}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 34, y: 0, z: -27.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1009334367216567
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4523030014307525}
+  m_Layer: 18
+  m_Name: Q5017
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4523030014307525
+Transform:
+  m_GameObject: {fileID: 1009334367216567}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 33.68, y: 0, z: -37.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1208375534141027
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4412273165385140}
+  m_Layer: 18
+  m_Name: Q5018
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4412273165385140
+Transform:
+  m_GameObject: {fileID: 1208375534141027}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 52.28, y: 0, z: -39.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1439905174022258
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4899627213249755}
+  m_Layer: 18
+  m_Name: Q5019
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4899627213249755
+Transform:
+  m_GameObject: {fileID: 1439905174022258}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 10.82, y: 0, z: -40.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4531724805215526}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1903065907075628
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4724474434851864}
+  m_Layer: 18
+  m_Name: FCQuestMapC_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4724474434851864
+Transform:
+  m_GameObject: {fileID: 1903065907075628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4606284370804102}
+  - {fileID: 4979730443998334}
+  - {fileID: 4478507238504220}
+  - {fileID: 4092849424608671}
+  - {fileID: 4934452190048767}
+  - {fileID: 4877404575069468}
+  - {fileID: 4083088549271568}
+  - {fileID: 4981168844655057}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1568685567968005
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4606284370804102}
+  m_Layer: 18
+  m_Name: Q5020
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4606284370804102
+Transform:
+  m_GameObject: {fileID: 1568685567968005}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -15.2, y: 0, z: -31.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1473036663278202
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4979730443998334}
+  m_Layer: 18
+  m_Name: Q5021
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4979730443998334
+Transform:
+  m_GameObject: {fileID: 1473036663278202}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -34.3, y: 0, z: -20.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1332866943136870
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4478507238504220}
+  m_Layer: 18
+  m_Name: Q5022
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4478507238504220
+Transform:
+  m_GameObject: {fileID: 1332866943136870}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -50.92, y: 0, z: -11.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1469316286962591
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4092849424608671}
+  m_Layer: 18
+  m_Name: Q5023
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4092849424608671
+Transform:
+  m_GameObject: {fileID: 1469316286962591}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -62.34, y: 0, z: -21.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1625116387968028
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4934452190048767}
+  m_Layer: 18
+  m_Name: Q5024
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4934452190048767
+Transform:
+  m_GameObject: {fileID: 1625116387968028}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -76.82, y: 0, z: -19.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1486058132001937
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4877404575069468}
+  m_Layer: 18
+  m_Name: Q5025
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4877404575069468
+Transform:
+  m_GameObject: {fileID: 1486058132001937}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -38.3, y: 0, z: -40.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1290643371576995
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4083088549271568}
+  m_Layer: 18
+  m_Name: Q5026
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4083088549271568
+Transform:
+  m_GameObject: {fileID: 1290643371576995}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -59.2, y: 0, z: -39.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1391812735952662
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4981168844655057}
+  m_Layer: 18
+  m_Name: Q5027
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4981168844655057
+Transform:
+  m_GameObject: {fileID: 1391812735952662}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -76.8, y: 0, z: -38.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4724474434851864}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1918952068419526
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4274325082254770}
+  m_Layer: 18
+  m_Name: FCQuestMapD_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4274325082254770
+Transform:
+  m_GameObject: {fileID: 1918952068419526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4425430781509128}
+  - {fileID: 4771214325903369}
+  - {fileID: 4576107472577337}
+  - {fileID: 4378645624854149}
+  - {fileID: 4660992453863755}
+  - {fileID: 4521136266754931}
+  - {fileID: 4133769542023292}
+  - {fileID: 4674127609588497}
+  - {fileID: 4253224897139332}
+  - {fileID: 4663861442604051}
+  - {fileID: 4122871274242350}
+  - {fileID: 4822896550320213}
+  - {fileID: 4866514744231875}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692345028651179
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4425430781509128}
+  m_Layer: 18
+  m_Name: Q5028
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425430781509128
+Transform:
+  m_GameObject: {fileID: 1692345028651179}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -77.1, y: 0, z: -4.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1154378849463128
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4771214325903369}
+  m_Layer: 18
+  m_Name: Q5029
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4771214325903369
+Transform:
+  m_GameObject: {fileID: 1154378849463128}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -75.3, y: 0, z: 12.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1205700716686261
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4576107472577337}
+  m_Layer: 18
+  m_Name: Q5030
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4576107472577337
+Transform:
+  m_GameObject: {fileID: 1205700716686261}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -60.1, y: 0, z: -1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1525236666913701
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4378645624854149}
+  m_Layer: 18
+  m_Name: Q5031
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4378645624854149
+Transform:
+  m_GameObject: {fileID: 1525236666913701}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -60.6, y: 0, z: 10.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1883345827157307
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4660992453863755}
+  m_Layer: 18
+  m_Name: Q5032
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4660992453863755
+Transform:
+  m_GameObject: {fileID: 1883345827157307}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -46.1, y: 0, z: 10.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1262231073427116
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4521136266754931}
+  m_Layer: 18
+  m_Name: Q5033
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4521136266754931
+Transform:
+  m_GameObject: {fileID: 1262231073427116}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -26, y: 0, z: 10.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1635549846597644
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4133769542023292}
+  m_Layer: 18
+  m_Name: Q5034
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4133769542023292
+Transform:
+  m_GameObject: {fileID: 1635549846597644}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -43.1, y: 0, z: 23.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1260663909066767
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4674127609588497}
+  m_Layer: 18
+  m_Name: Q5035
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4674127609588497
+Transform:
+  m_GameObject: {fileID: 1260663909066767}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -64.4, y: 0, z: 24.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1593246537900141
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4253224897139332}
+  m_Layer: 18
+  m_Name: Q5036
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4253224897139332
+Transform:
+  m_GameObject: {fileID: 1593246537900141}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -36.4, y: 0, z: -0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1286077583866816
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4663861442604051}
+  m_Layer: 18
+  m_Name: Q5037
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4663861442604051
+Transform:
+  m_GameObject: {fileID: 1286077583866816}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -12.5, y: 0, z: 10.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1542330941198956
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4122871274242350}
+  m_Layer: 18
+  m_Name: Q5038
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4122871274242350
+Transform:
+  m_GameObject: {fileID: 1542330941198956}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -19.9, y: 0, z: 25.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1214405454058365
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4822896550320213}
+  m_Layer: 18
+  m_Name: Q5039
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4822896550320213
+Transform:
+  m_GameObject: {fileID: 1214405454058365}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -38.1, y: 0, z: 34.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1599935915037152
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4866514744231875}
+  m_Layer: 18
+  m_Name: Q5040
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4866514744231875
+Transform:
+  m_GameObject: {fileID: 1599935915037152}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -54.5, y: 0, z: 39.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4274325082254770}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1463375380715826
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4437659141000384}
+  m_Layer: 18
+  m_Name: FCQuestMapE_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4437659141000384
+Transform:
+  m_GameObject: {fileID: 1463375380715826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4494330145511858}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1255698784951008
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4494330145511858}
+  m_Layer: 18
+  m_Name: Q5041
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4494330145511858
+Transform:
+  m_GameObject: {fileID: 1255698784951008}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 43.01, y: 0, z: 42.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4437659141000384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1434435515267868
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4004236864725845}
+  m_Layer: 18
+  m_Name: FCQuestMapF_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4004236864725845
+Transform:
+  m_GameObject: {fileID: 1434435515267868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4488775358424845}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1437680097401594
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4488775358424845}
+  m_Layer: 18
+  m_Name: Q5042
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4488775358424845
+Transform:
+  m_GameObject: {fileID: 1437680097401594}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -39.47, y: 0, z: -6.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4004236864725845}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1605430472911851
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4568479648177093}
+  m_Layer: 18
+  m_Name: FCQuestMapG_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4568479648177093
+Transform:
+  m_GameObject: {fileID: 1605430472911851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4966178385823506}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1052896965692054
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4966178385823506}
+  m_Layer: 18
+  m_Name: Q5043
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4966178385823506
+Transform:
+  m_GameObject: {fileID: 1052896965692054}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: -60.46, y: 0, z: 32.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4568479648177093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1496879931321685
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4352835006847404}
+  m_Layer: 18
+  m_Name: FCQuestMapH_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4352835006847404
+Transform:
+  m_GameObject: {fileID: 1496879931321685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4011346272892443}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1322829053144648
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4011346272892443}
+  m_Layer: 18
+  m_Name: Q5044
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4011346272892443
+Transform:
+  m_GameObject: {fileID: 1322829053144648}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 124, y: 0, z: 38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4352835006847404}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1398123652041837
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4015387127330687}
+  m_Layer: 18
+  m_Name: FCQuestMapI_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4015387127330687
+Transform:
+  m_GameObject: {fileID: 1398123652041837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4687257085358964}
+  - {fileID: 4700720418224359}
+  - {fileID: 4738895851718532}
+  - {fileID: 4042667481177284}
+  - {fileID: 4501646772642435}
+  - {fileID: 4512989369996610}
+  - {fileID: 4270069417408021}
+  - {fileID: 4529344029482226}
+  - {fileID: 4039928614280860}
+  - {fileID: 4924306153101335}
+  - {fileID: 4824734760330864}
+  - {fileID: 4746914686786883}
+  - {fileID: 4983048082375462}
+  - {fileID: 4943133358585988}
+  - {fileID: 4740774029232080}
+  - {fileID: 4041542619633764}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1234819466730166
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4687257085358964}
+  m_Layer: 18
+  m_Name: Q5045
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4687257085358964
+Transform:
+  m_GameObject: {fileID: 1234819466730166}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 138.5, y: 0, z: 31.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1864706561461920
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4700720418224359}
+  m_Layer: 18
+  m_Name: Q5046
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4700720418224359
+Transform:
+  m_GameObject: {fileID: 1864706561461920}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 110.9, y: 0, z: 29.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1782577943520593
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4738895851718532}
+  m_Layer: 18
+  m_Name: Q5047
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4738895851718532
+Transform:
+  m_GameObject: {fileID: 1782577943520593}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 150.3, y: 0, z: 21.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1317615712447133
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4042667481177284}
+  m_Layer: 18
+  m_Name: Q5048
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4042667481177284
+Transform:
+  m_GameObject: {fileID: 1317615712447133}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 101.8, y: 0, z: 18.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1786863435140092
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4501646772642435}
+  m_Layer: 18
+  m_Name: Q5049
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4501646772642435
+Transform:
+  m_GameObject: {fileID: 1786863435140092}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 156.8, y: 0, z: 10.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1606697801605914
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4512989369996610}
+  m_Layer: 18
+  m_Name: Q5050
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4512989369996610
+Transform:
+  m_GameObject: {fileID: 1606697801605914}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 97, y: 0, z: 6.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1587791632616366
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4270069417408021}
+  m_Layer: 18
+  m_Name: Q5051
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4270069417408021
+Transform:
+  m_GameObject: {fileID: 1587791632616366}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 157, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1343722360286604
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4529344029482226}
+  m_Layer: 18
+  m_Name: Q5052
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4529344029482226
+Transform:
+  m_GameObject: {fileID: 1343722360286604}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 98.3, y: 0, z: -6.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1191875042856691
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4039928614280860}
+  m_Layer: 18
+  m_Name: Q5053
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4039928614280860
+Transform:
+  m_GameObject: {fileID: 1191875042856691}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 147, y: 0, z: -11.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1329423453943668
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4924306153101335}
+  m_Layer: 18
+  m_Name: Q5054
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4924306153101335
+Transform:
+  m_GameObject: {fileID: 1329423453943668}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 108.1, y: 0, z: -13.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1912666239148506
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4824734760330864}
+  m_Layer: 18
+  m_Name: Q5055
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4824734760330864
+Transform:
+  m_GameObject: {fileID: 1912666239148506}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 136.3, y: 0, z: -9.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1847690249376502
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4746914686786883}
+  m_Layer: 18
+  m_Name: Q5056
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4746914686786883
+Transform:
+  m_GameObject: {fileID: 1847690249376502}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 120.6, y: 0, z: -10.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1248992307377414
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4983048082375462}
+  m_Layer: 18
+  m_Name: Q5057
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4983048082375462
+Transform:
+  m_GameObject: {fileID: 1248992307377414}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 127.9, y: 0, z: -3.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1869767997055850
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4943133358585988}
+  m_Layer: 18
+  m_Name: Q5058
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4943133358585988
+Transform:
+  m_GameObject: {fileID: 1869767997055850}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 127.2, y: 0, z: 4.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1636155637022009
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4740774029232080}
+  m_Layer: 18
+  m_Name: Q5059
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4740774029232080
+Transform:
+  m_GameObject: {fileID: 1636155637022009}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 140.5, y: 0, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1822666453214754
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4041542619633764}
+  m_Layer: 18
+  m_Name: Q5060
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4041542619633764
+Transform:
+  m_GameObject: {fileID: 1822666453214754}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 110.9, y: 0, z: 5.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4015387127330687}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1031148564227838
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4369643052525211}
+  m_Layer: 18
+  m_Name: FCQuestMapJ_Nodes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4369643052525211
+Transform:
+  m_GameObject: {fileID: 1031148564227838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4629298783808203}
+  m_Father: {fileID: 4117770852481149}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1429279863109655
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4629298783808203}
+  m_Layer: 18
+  m_Name: Q5061
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4629298783808203
+Transform:
+  m_GameObject: {fileID: 1429279863109655}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+  m_LocalPosition: {x: 108.5, y: 0, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4369643052525211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1722728735611778
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4230030116603086}
+  m_Layer: 18
+  m_Name: RegionCameraPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4230030116603086
+Transform:
+  m_GameObject: {fileID: 1722728735611778}
+  m_LocalRotation: {x: -3.090863E-08, y: -0.7071068, z: -0.7071068, w: -3.090862E-08}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4417589157572184}
+  - {fileID: 4298608222236708}
+  - {fileID: 4896246058118905}
+  - {fileID: 4453102797428475}
+  m_Father: {fileID: 4078374488551332}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 2.878709E-13, z: -180}
+--- !u!1 &1459516692886198
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4417589157572184}
+  m_Layer: 18
+  m_Name: Pos_CameraDestinationPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4417589157572184
+Transform:
+  m_GameObject: {fileID: 1459516692886198}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 20, y: 50, z: -25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4230030116603086}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1811131706938105
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4298608222236708}
+  m_Layer: 18
+  m_Name: Pos_Region2_LumpySpaceCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4298608222236708
+Transform:
+  m_GameObject: {fileID: 1811131706938105}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -37.8, y: -16.6, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4230030116603086}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1348630254963948
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4896246058118905}
+  m_Layer: 18
+  m_Name: Pos_Region3_WitchGardenCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4896246058118905
+Transform:
+  m_GameObject: {fileID: 1348630254963948}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 47.1, y: -17.3, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4230030116603086}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1652563934903224
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4453102797428475}
+  m_Layer: 18
+  m_Name: Pos_Region4_IceKingdomCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4453102797428475
+Transform:
+  m_GameObject: {fileID: 1652563934903224}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 43.8, y: 25.9, z: 50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4230030116603086}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!1 &1045991702812309
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4593658246972083}
+  m_Layer: 18
+  m_Name: RegionsPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4593658246972083
+Transform:
+  m_GameObject: {fileID: 1045991702812309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4957670448996818}
+  - {fileID: 4294243389324544}
+  - {fileID: 4685412013320458}
+  - {fileID: 4353530816936526}
+  - {fileID: 4264155550826643}
+  - {fileID: 4949861998588286}
+  - {fileID: 4295762722746516}
+  - {fileID: 4874032881805943}
+  - {fileID: 4094875170392327}
+  - {fileID: 4530882200126069}
+  m_Father: {fileID: 4078374488551332}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1519326826795619
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4957670448996818}
+  m_Layer: 18
+  m_Name: Pos_CameraStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4957670448996818
+Transform:
+  m_GameObject: {fileID: 1519326826795619}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 46.1, y: 50, z: 24.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1427629673881807
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4294243389324544}
+  m_Layer: 18
+  m_Name: Pos_Region2_LumpySpace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4294243389324544
+Transform:
+  m_GameObject: {fileID: 1427629673881807}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 38.3, y: 50, z: -16.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1464973541878834
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4685412013320458}
+  m_Layer: 18
+  m_Name: Pos_Region3_WitchGarden
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4685412013320458
+Transform:
+  m_GameObject: {fileID: 1464973541878834}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: -47.7, y: 50, z: -17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1030251434076919
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4353530816936526}
+  m_Layer: 18
+  m_Name: Pos_Region4_IceKingdom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4353530816936526
+Transform:
+  m_GameObject: {fileID: 1030251434076919}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: -43.7, y: 50, z: 26.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1633703441668786
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4264155550826643}
+  m_Layer: 18
+  m_Name: Pos_Region5_MarshallLee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4264155550826643
+Transform:
+  m_GameObject: {fileID: 1633703441668786}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 37, y: 50, z: 40.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1546867551014078
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4949861998588286}
+  m_Layer: 18
+  m_Name: Pos_Region6_LSP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4949861998588286
+Transform:
+  m_GameObject: {fileID: 1546867551014078}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: -69.2, y: 50, z: -7.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1048526410349605
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4295762722746516}
+  m_Layer: 18
+  m_Name: Pos_Region7_IceQueen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4295762722746516
+Transform:
+  m_GameObject: {fileID: 1048526410349605}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: -61.6, y: 50, z: 31.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1368377671598491
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4874032881805943}
+  m_Layer: 18
+  m_Name: Pos_Region8_Valentines_Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4874032881805943
+Transform:
+  m_GameObject: {fileID: 1368377671598491}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 123.4, y: 50, z: 37.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1759272920638687
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4094875170392327}
+  m_Layer: 18
+  m_Name: Pos_Region9_Valentines_Main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4094875170392327
+Transform:
+  m_GameObject: {fileID: 1759272920638687}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 126.5, y: 50, z: 10.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1600048443362314
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4530882200126069}
+  m_Layer: 18
+  m_Name: Pos_Region10_Valentines_End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4530882200126069
+Transform:
+  m_GameObject: {fileID: 1600048443362314}
+  m_LocalRotation: {x: -1.152023E-07, y: -0.7071068, z: 0.7071067, w: -1.152023E-07}
+  m_LocalPosition: {x: 108.7, y: 50, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4593658246972083}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -90.00001, y: -1.866934E-05, z: -180}
+--- !u!1 &1013048138624699
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4729658532831770}
+  m_Layer: 18
+  m_Name: Cameras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4729658532831770
+Transform:
+  m_GameObject: {fileID: 1013048138624699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4460566592600100}
+  - {fileID: 4969360697803985}
+  m_Father: {fileID: 4688743718281689}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807764179892606
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4460566592600100}
+  - component: {fileID: 20860480276963639}
+  - component: {fileID: 92005614484642986}
+  - component: {fileID: 124332691463675999}
+  - component: {fileID: 114492069837277100}
+  - component: {fileID: 114484808212659386}
+  - component: {fileID: 114909333202527793}
+  - component: {fileID: 114540370113386402}
+  - component: {fileID: 114605666022610979}
+  - component: {fileID: 114099805002940195}
+  - component: {fileID: 114892846818513472}
+  - component: {fileID: 114843230186253204}
+  - component: {fileID: 114866873549633726}
+  - component: {fileID: 114986903927757394}
+  m_Layer: 18
+  m_Name: FCQuestMap Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4460566592600100
+Transform:
+  m_GameObject: {fileID: 1807764179892606}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -23.16274, y: 57.54674, z: -32.97317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4729658532831770}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!20 &20860480276963639
+Camera:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.01960784}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 100
+  field of view: 60
+  orthographic: 1
+  orthographic size: 22
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 262144
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!92 &92005614484642986
+GUILayer:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+--- !u!124 &124332691463675999
+FlareLayer:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+--- !u!114 &114492069837277100
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0762a0d0c189ff64e941f63b0d61d5c0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  debug: 0
+  useMouse: 1
+  useTouch: 1
+  allowMultiTouch: 1
+  useKeyboard: 1
+  useController: 1
+  stickyPress: 1
+  eventReceiverMask:
+    serializedVersion: 2
+    m_Bits: 262144
+  clipRaycasts: 1
+  tooltipDelay: 1
+  stickyTooltip: 1
+  mouseDragThreshold: 4
+  mouseClickThreshold: 10
+  touchDragThreshold: 40
+  touchClickThreshold: 40
+  rangeDistance: -1
+  scrollAxisName: Mouse ScrollWheel
+  verticalAxisName: Vertical
+  horizontalAxisName: Horizontal
+  submitKey0: 13
+  submitKey1: 330
+  cancelKey0: 27
+  cancelKey1: 331
+--- !u!114 &114484808212659386
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e073342b52ac871499d107f6b4a0119f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  requiredFingerCount: 1
+  MaxSimultaneousGestures: 1
+  ResetMode: 0
+  Raycaster: {fileID: 0}
+  ClusterManager: {fileID: 0}
+  Delegate: {fileID: 0}
+  UseSendMessage: 1
+  EventMessageName: OnPinch
+  EventMessageTarget: {fileID: 0}
+  SendMessageToSelection: 0
+  IsExclusive: 0
+  MinDOT: -0.7
+  MinDistance: 5
+  DeltaScale: 1
+  layers:
+    serializedVersion: 2
+    m_Bits: 786944
+--- !u!114 &114909333202527793
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfae585e6fd798646bedc4649fcbb034, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  zoomMethod: 1
+  zoomSpeed: 0.1
+  minZoomAmount: -16
+  maxZoomAmount: 4
+--- !u!114 &114540370113386402
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c195ac2fe412d43a3d8e0b494951ef, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  requiredFingerCount: 1
+  MaxSimultaneousGestures: 1
+  ResetMode: 0
+  Raycaster: {fileID: 0}
+  ClusterManager: {fileID: 0}
+  Delegate: {fileID: 0}
+  UseSendMessage: 1
+  EventMessageName: OnDrag
+  EventMessageTarget: {fileID: 0}
+  SendMessageToSelection: 0
+  IsExclusive: 1
+  MoveTolerance: 0
+  ApplySameDirectionConstraint: 0
+  layers:
+    serializedVersion: 2
+    m_Bits: 786944
+--- !u!114 &114605666022610979
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a5d2b01165ba44088eaaf24153f947, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sensitivity: 0.1
+  smoothSpeed: 50
+  moveArea: {fileID: 65972939430565255}
+  idealPos: {x: 0, y: 50, z: 0}
+  swipeMagnitude: 5
+  swipeSensitivity: 0.03
+  scrollDamping: 0.87
+--- !u!114 &114099805002940195
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd850aba25a773742b7f8b147dada478, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114892846818513472
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd4f6ad2408a954e95615a494277c72, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  requiredFingerCount: 1
+  MaxSimultaneousGestures: 1
+  ResetMode: 0
+  Raycaster: {fileID: 0}
+  ClusterManager: {fileID: 0}
+  Delegate: {fileID: 0}
+  UseSendMessage: 1
+  EventMessageName: OnTap
+  EventMessageTarget: {fileID: 0}
+  SendMessageToSelection: 0
+  IsExclusive: 0
+  RequiredTaps: 1
+  MoveTolerance: 20
+  MaxDuration: 0
+  MaxDelayBetweenTaps: 0.5
+--- !u!114 &114843230186253204
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0d7bf1512db7548aa76e2ffd515804, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ShowLockedErrorButtonTween: {fileID: 0}
+--- !u!114 &114866873549633726
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName: ToRegion
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - position
+  - time
+  indexes: 0000000000000000
+  metadatas:
+  - t
+  - 
+  ints:
+  floats:
+  - 1
+  bools:
+  strings: []
+  vector3s: []
+  colors: []
+  spaces:
+  easeTypes:
+  loopTypes:
+  gameObjects: []
+  transforms:
+  - {fileID: 4957670448996818}
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!114 &114986903927757394
+MonoBehaviour:
+  m_GameObject: {fileID: 1807764179892606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName: Walk
+  playAutomatically: 0
+  delay: 0
+  type: 17
+  showIconInInspector: 1
+  keys:
+  - position
+  - time
+  - easetype
+  indexes: 000000000000000000000000
+  metadatas:
+  - t
+  - 
+  - 
+  ints:
+  floats:
+  - 2
+  bools:
+  strings: []
+  vector3s: []
+  colors: []
+  spaces:
+  easeTypes: 02000000
+  loopTypes:
+  gameObjects: []
+  transforms:
+  - {fileID: 4957670448996818}
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!1 &1882051936277135
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4969360697803985}
+  - component: {fileID: 65972939430565255}
+  - component: {fileID: 114826497999715663}
+  m_Layer: 18
+  m_Name: FCQuestMap Main CameraCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4969360697803985
+Transform:
+  m_GameObject: {fileID: 1882051936277135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -50, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4729658532831770}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65972939430565255
+BoxCollider:
+  m_GameObject: {fileID: 1882051936277135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 54.26715, y: 102.2943, z: 54.91907}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114826497999715663
+MonoBehaviour:
+  m_GameObject: {fileID: 1882051936277135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cf416e19b0a8c49a57b48d6bc6d7a9, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mainCamera: {fileID: 20860480276963639}
+  longColW: 170
+  zoomColW: 240
+  longColH: 37
+  zoomColH: 75
+  longFOV: 38
+  zoomFOV: 18

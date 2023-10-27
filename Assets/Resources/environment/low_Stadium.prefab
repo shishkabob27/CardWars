@@ -1,0 +1,429 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1219900578104101}
+  m_IsPrefabParent: 1
+--- !u!1 &1219900578104101
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4490892295955248}
+  - component: {fileID: 114631791222420075}
+  m_Layer: 0
+  m_Name: low_Stadium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4490892295955248
+Transform:
+  m_GameObject: {fileID: 1219900578104101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4294878444370087}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114631791222420075
+MonoBehaviour:
+  m_GameObject: {fileID: 1219900578104101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1259724310179156
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4294878444370087}
+  - component: {fileID: 95651382902208991}
+  m_Layer: 0
+  m_Name: Stadium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4294878444370087
+Transform:
+  m_GameObject: {fileID: 1259724310179156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4109557370789374}
+  - {fileID: 4787893255657250}
+  - {fileID: 4434627921778832}
+  - {fileID: 4033026552794843}
+  - {fileID: 4273533672779751}
+  m_Father: {fileID: 4490892295955248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95651382902208991
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1259724310179156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5d1fe309e764b7e40bad4ffcedc70bb4, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1802560565869633
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4109557370789374}
+  - component: {fileID: 33786036534018584}
+  - component: {fileID: 23680339434698390}
+  m_Layer: 0
+  m_Name: Stadium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4109557370789374
+Transform:
+  m_GameObject: {fileID: 1802560565869633}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4294878444370087}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33786036534018584
+MeshFilter:
+  m_GameObject: {fileID: 1802560565869633}
+  m_Mesh: {fileID: 4300000, guid: c968072ae3a4a9c41aa80c342e18d269, type: 2}
+--- !u!23 &23680339434698390
+MeshRenderer:
+  m_GameObject: {fileID: 1802560565869633}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b396a706dc84f9f43afa2ac534e2a731, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1472135237149568
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4787893255657250}
+  - component: {fileID: 33606077521646400}
+  - component: {fileID: 23298381247015786}
+  - component: {fileID: 114930076412513672}
+  m_Layer: 0
+  m_Name: Stadium_Clouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4787893255657250
+Transform:
+  m_GameObject: {fileID: 1472135237149568}
+  m_LocalRotation: {x: -0.3753185, y: 0.5992796, z: 0.5992796, w: 0.3753185}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.060179, y: 1.060179, z: 1.060179}
+  m_Children: []
+  m_Father: {fileID: 4294878444370087}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90.00001, y: -64.11641, z: 180}
+--- !u!33 &33606077521646400
+MeshFilter:
+  m_GameObject: {fileID: 1472135237149568}
+  m_Mesh: {fileID: 4300000, guid: 03b4aae787a54ce4a9462bad58eac9cf, type: 2}
+--- !u!23 &23298381247015786
+MeshRenderer:
+  m_GameObject: {fileID: 1472135237149568}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b396a706dc84f9f43afa2ac534e2a731, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114930076412513672
+MonoBehaviour:
+  m_GameObject: {fileID: 1472135237149568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - amount
+  - time
+  - looptype
+  - easetype
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  ints:
+  floats:
+  - 400
+  bools:
+  strings: []
+  vector3s:
+  - {x: 0, y: 0, z: -1}
+  colors: []
+  spaces:
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!1 &1759799816327752
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4434627921778832}
+  - component: {fileID: 33055185808524747}
+  - component: {fileID: 23202159716308742}
+  m_Layer: 0
+  m_Name: Stadium_Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4434627921778832
+Transform:
+  m_GameObject: {fileID: 1759799816327752}
+  m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4294878444370087}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+--- !u!33 &33055185808524747
+MeshFilter:
+  m_GameObject: {fileID: 1759799816327752}
+  m_Mesh: {fileID: 4300000, guid: d35641a322c0a5b4299a79b9aaaeb154, type: 2}
+--- !u!23 &23202159716308742
+MeshRenderer:
+  m_GameObject: {fileID: 1759799816327752}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 95d1b3585401e6d4a8dd2ac32460036a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1896496663271889
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4033026552794843}
+  - component: {fileID: 33499914073397104}
+  - component: {fileID: 23279714512954936}
+  m_Layer: 0
+  m_Name: Stadium_Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4033026552794843
+Transform:
+  m_GameObject: {fileID: 1896496663271889}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4294878444370087}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33499914073397104
+MeshFilter:
+  m_GameObject: {fileID: 1896496663271889}
+  m_Mesh: {fileID: 4300000, guid: e882d6dcb01ed6b45b7e3ae389d8166d, type: 2}
+--- !u!23 &23279714512954936
+MeshRenderer:
+  m_GameObject: {fileID: 1896496663271889}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7b8702396c88a5547acac54e26c8b77a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1156076801662360
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4273533672779751}
+  - component: {fileID: 33123404550626703}
+  - component: {fileID: 23853173712791296}
+  m_Layer: 0
+  m_Name: Stadium_Sky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4273533672779751
+Transform:
+  m_GameObject: {fileID: 1156076801662360}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4294878444370087}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33123404550626703
+MeshFilter:
+  m_GameObject: {fileID: 1156076801662360}
+  m_Mesh: {fileID: 4300000, guid: a38419c08016cf14a903f57e6ffbc4a7, type: 2}
+--- !u!23 &23853173712791296
+MeshRenderer:
+  m_GameObject: {fileID: 1156076801662360}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: b396a706dc84f9f43afa2ac534e2a731, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

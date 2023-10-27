@@ -1,0 +1,787 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1582373750993246}
+  m_IsPrefabParent: 1
+--- !u!1 &1582373750993246
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4223541227597061}
+  - component: {fileID: 114597052858318986}
+  m_Layer: 0
+  m_Name: low_DonutLand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4223541227597061
+Transform:
+  m_GameObject: {fileID: 1582373750993246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4783960434339427}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114597052858318986
+MonoBehaviour:
+  m_GameObject: {fileID: 1582373750993246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1095322207048890
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4783960434339427}
+  - component: {fileID: 95334859515280955}
+  m_Layer: 0
+  m_Name: DonutLand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4783960434339427
+Transform:
+  m_GameObject: {fileID: 1095322207048890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4984592700304742}
+  - {fileID: 4480809990701494}
+  - {fileID: 4416780155166511}
+  - {fileID: 4447930631031946}
+  - {fileID: 4643825045512526}
+  - {fileID: 4470577231638955}
+  - {fileID: 4607153015721898}
+  - {fileID: 4225817392607681}
+  - {fileID: 4973376368979545}
+  - {fileID: 4682542261422445}
+  m_Father: {fileID: 4223541227597061}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95334859515280955
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1095322207048890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a5fc40cd349e6174a9caaa325d80ab12, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1314088448192308
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4984592700304742}
+  - component: {fileID: 33503708555096843}
+  - component: {fileID: 23530826909831081}
+  m_Layer: 0
+  m_Name: 'DonutLand_Ground '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4984592700304742
+Transform:
+  m_GameObject: {fileID: 1314088448192308}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9325771, y: -8.626368, z: -2.067252}
+  m_LocalScale: {x: 0.7990093, y: 0.7990093, z: 0.7990093}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33503708555096843
+MeshFilter:
+  m_GameObject: {fileID: 1314088448192308}
+  m_Mesh: {fileID: 4300000, guid: 86e486f9bd4ce3140a4bfd7a81173d23, type: 2}
+--- !u!23 &23530826909831081
+MeshRenderer:
+  m_GameObject: {fileID: 1314088448192308}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 844254c0d76eb304bbc447ff6bedcfe9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1719234369857813
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4480809990701494}
+  - component: {fileID: 33499898969238723}
+  - component: {fileID: 23497466999976818}
+  m_Layer: 0
+  m_Name: DonutLand_Ground _Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4480809990701494
+Transform:
+  m_GameObject: {fileID: 1719234369857813}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9325771, y: -8.626368, z: -2.067252}
+  m_LocalScale: {x: 0.7990093, y: 0.7990093, z: 0.7990093}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33499898969238723
+MeshFilter:
+  m_GameObject: {fileID: 1719234369857813}
+  m_Mesh: {fileID: 4300000, guid: e099bee8944fd9e4894fd47f7d2513e9, type: 2}
+--- !u!23 &23497466999976818
+MeshRenderer:
+  m_GameObject: {fileID: 1719234369857813}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: fde867f1634ddb04687910b7e0e4df78, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1748322863959695
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4416780155166511}
+  - component: {fileID: 33981606879647371}
+  - component: {fileID: 23888280974365724}
+  m_Layer: 0
+  m_Name: DonutLand_Ground_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4416780155166511
+Transform:
+  m_GameObject: {fileID: 1748322863959695}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33981606879647371
+MeshFilter:
+  m_GameObject: {fileID: 1748322863959695}
+  m_Mesh: {fileID: 4300000, guid: 5032a71c5be3d394d9b4d6f5c9b230fc, type: 2}
+--- !u!23 &23888280974365724
+MeshRenderer:
+  m_GameObject: {fileID: 1748322863959695}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ed69cc2d852f50142b216a6a0f57f934, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1262035196524822
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4447930631031946}
+  m_Layer: 0
+  m_Name: DonutLand_Jungle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4447930631031946
+Transform:
+  m_GameObject: {fileID: 1262035196524822}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9325771, y: -8.626368, z: -2.067252}
+  m_LocalScale: {x: 0.7990093, y: 0.7990093, z: 0.7990093}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1954009756066601
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4643825045512526}
+  - component: {fileID: 33201443819230158}
+  - component: {fileID: 23797984477112666}
+  m_Layer: 0
+  m_Name: DonutLand_Jungle 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4643825045512526
+Transform:
+  m_GameObject: {fileID: 1954009756066601}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9325771, y: -8.626368, z: -2.067252}
+  m_LocalScale: {x: 0.7990093, y: 0.7990093, z: 0.7990093}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33201443819230158
+MeshFilter:
+  m_GameObject: {fileID: 1954009756066601}
+  m_Mesh: {fileID: 4300000, guid: 2bc83f383d2e85c4bb40071e111bc4af, type: 2}
+--- !u!23 &23797984477112666
+MeshRenderer:
+  m_GameObject: {fileID: 1954009756066601}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 96295bf313183e446a0af6957ae894de, type: 2}
+  - {fileID: 2100000, guid: 96295bf313183e446a0af6957ae894de, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1589333346868098
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4470577231638955}
+  - component: {fileID: 33054221204607657}
+  - component: {fileID: 23215789773798804}
+  m_Layer: 0
+  m_Name: DonutLand_Jungle_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4470577231638955
+Transform:
+  m_GameObject: {fileID: 1589333346868098}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.9325771, y: -8.626368, z: -2.067252}
+  m_LocalScale: {x: 0.7990093, y: 0.7990093, z: 0.7990093}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33054221204607657
+MeshFilter:
+  m_GameObject: {fileID: 1589333346868098}
+  m_Mesh: {fileID: 4300000, guid: f1a51fc538055754f8c13e901ba91adb, type: 2}
+--- !u!23 &23215789773798804
+MeshRenderer:
+  m_GameObject: {fileID: 1589333346868098}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f94ba8f1a1dc87f4da371a9391855593, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1699285640313854
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4607153015721898}
+  m_Layer: 0
+  m_Name: Particle View 001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4607153015721898
+Transform:
+  m_GameObject: {fileID: 1699285640313854}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1423053229433870
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4225817392607681}
+  - component: {fileID: 33236139682589110}
+  - component: {fileID: 23222704181928294}
+  - component: {fileID: 95965364264869817}
+  - component: {fileID: 114429142612518503}
+  m_Layer: 0
+  m_Name: DonutLand_Cloud01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4225817392607681
+Transform:
+  m_GameObject: {fileID: 1423053229433870}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33236139682589110
+MeshFilter:
+  m_GameObject: {fileID: 1423053229433870}
+  m_Mesh: {fileID: 4300000, guid: de2b5c10fd3ea584cbd7b11a21d2682d, type: 2}
+--- !u!23 &23222704181928294
+MeshRenderer:
+  m_GameObject: {fileID: 1423053229433870}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ed69cc2d852f50142b216a6a0f57f934, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95965364264869817
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1423053229433870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a154daa7dd12f754d9dcbf8e64b6099e, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114429142612518503
+MonoBehaviour:
+  m_GameObject: {fileID: 1423053229433870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - amount
+  - easetype
+  - looptype
+  - time
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  ints:
+  floats:
+  - 1000
+  bools:
+  strings: []
+  vector3s:
+  - {x: 0, y: 0, z: -1}
+  colors: []
+  spaces:
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!1 &1803767555022566
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4973376368979545}
+  - component: {fileID: 33343676765815980}
+  - component: {fileID: 23139517612930178}
+  - component: {fileID: 95362367396106805}
+  - component: {fileID: 114896228248015089}
+  m_Layer: 0
+  m_Name: DonutLand_Cloud02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4973376368979545
+Transform:
+  m_GameObject: {fileID: 1803767555022566}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33343676765815980
+MeshFilter:
+  m_GameObject: {fileID: 1803767555022566}
+  m_Mesh: {fileID: 4300000, guid: 6509e218ecd737f498502c874cd979ec, type: 2}
+--- !u!23 &23139517612930178
+MeshRenderer:
+  m_GameObject: {fileID: 1803767555022566}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ed69cc2d852f50142b216a6a0f57f934, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95362367396106805
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1803767555022566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2347c27ec6c1faf42afb7a1db3e5d29e, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114896228248015089
+MonoBehaviour:
+  m_GameObject: {fileID: 1803767555022566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - amount
+  - easetype
+  - looptype
+  - time
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  ints:
+  floats:
+  - 400
+  bools:
+  strings: []
+  vector3s:
+  - {x: 0, y: 0, z: -1}
+  colors: []
+  spaces:
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []
+--- !u!1 &1430193919968113
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4682542261422445}
+  - component: {fileID: 33351284273327537}
+  - component: {fileID: 23985918932015740}
+  - component: {fileID: 95990270926964610}
+  - component: {fileID: 114597082170800798}
+  m_Layer: 0
+  m_Name: DonutLand_Sky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4682542261422445
+Transform:
+  m_GameObject: {fileID: 1430193919968113}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4783960434339427}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33351284273327537
+MeshFilter:
+  m_GameObject: {fileID: 1430193919968113}
+  m_Mesh: {fileID: 4300000, guid: 156eb24d00784384185a8cc60323b774, type: 2}
+--- !u!23 &23985918932015740
+MeshRenderer:
+  m_GameObject: {fileID: 1430193919968113}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ed69cc2d852f50142b216a6a0f57f934, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95990270926964610
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1430193919968113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 696762395bcba2046a4a99b82902084c, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114597082170800798
+MonoBehaviour:
+  m_GameObject: {fileID: 1430193919968113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - amount
+  - easetype
+  - looptype
+  - time
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  ints:
+  floats:
+  - 1200
+  bools:
+  strings: []
+  vector3s:
+  - {x: 0, y: 0, z: -1}
+  colors: []
+  spaces:
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []

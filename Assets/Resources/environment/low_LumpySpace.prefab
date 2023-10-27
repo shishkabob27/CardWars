@@ -1,0 +1,407 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1841426369524343}
+  m_IsPrefabParent: 1
+--- !u!1 &1841426369524343
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4751261413886194}
+  - component: {fileID: 114582747354436306}
+  m_Layer: 0
+  m_Name: low_LumpySpace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4751261413886194
+Transform:
+  m_GameObject: {fileID: 1841426369524343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4797738842010792}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114582747354436306
+MonoBehaviour:
+  m_GameObject: {fileID: 1841426369524343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1521574054691796
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4797738842010792}
+  - component: {fileID: 95087370968150305}
+  m_Layer: 0
+  m_Name: Lumpyspace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4797738842010792
+Transform:
+  m_GameObject: {fileID: 1521574054691796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4724657403904969}
+  - {fileID: 4561590258561277}
+  - {fileID: 4815423589263708}
+  - {fileID: 4726214336206001}
+  - {fileID: 4719921687680912}
+  m_Father: {fileID: 4751261413886194}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95087370968150305
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1521574054691796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1a0e7b6d679e5e14993206bac250220c, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1155424284275643
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4724657403904969}
+  - component: {fileID: 33803510590415956}
+  - component: {fileID: 23252314293335680}
+  m_Layer: 0
+  m_Name: LumpySpace_Atlas_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4724657403904969
+Transform:
+  m_GameObject: {fileID: 1155424284275643}
+  m_LocalRotation: {x: 0.4213868, y: 0.5678319, z: 0.5678319, w: -0.4213868}
+  m_LocalPosition: {x: 0, y: -27.90832, z: 0}
+  m_LocalScale: {x: 3.343842, y: 3.343842, z: 3.343842}
+  m_Children: []
+  m_Father: {fileID: 4797738842010792}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 89.99999, y: 73.15806, z: 180}
+--- !u!33 &33803510590415956
+MeshFilter:
+  m_GameObject: {fileID: 1155424284275643}
+  m_Mesh: {fileID: 4300000, guid: cdba7b40cef3cc846a14d890fef732c1, type: 2}
+--- !u!23 &23252314293335680
+MeshRenderer:
+  m_GameObject: {fileID: 1155424284275643}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 46206cf862fd03c4e85a1b2aaa6c0255, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1864264647985371
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4561590258561277}
+  - component: {fileID: 33566015763674712}
+  - component: {fileID: 23427863963703292}
+  m_Layer: 0
+  m_Name: LumpySpace_Atlas_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4561590258561277
+Transform:
+  m_GameObject: {fileID: 1864264647985371}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -27.90832, z: 0}
+  m_LocalScale: {x: 1.299925, y: 1.299925, z: 1.299925}
+  m_Children: []
+  m_Father: {fileID: 4797738842010792}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33566015763674712
+MeshFilter:
+  m_GameObject: {fileID: 1864264647985371}
+  m_Mesh: {fileID: 4300000, guid: 62680442ae8ffe74d984618b2da92f57, type: 2}
+--- !u!23 &23427863963703292
+MeshRenderer:
+  m_GameObject: {fileID: 1864264647985371}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 394d7dfb08c92384f9a36eff423a934c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1746031143865971
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4815423589263708}
+  - component: {fileID: 33035396466420070}
+  - component: {fileID: 23132680497474284}
+  m_Layer: 0
+  m_Name: LumpySpace_Atlas_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4815423589263708
+Transform:
+  m_GameObject: {fileID: 1746031143865971}
+  m_LocalRotation: {x: 0.002825992, y: 0.7071012, z: 0.7071012, w: -0.002825992}
+  m_LocalPosition: {x: 0, y: -27.90832, z: 0}
+  m_LocalScale: {x: 38.0839, y: 38.0839, z: 38.0839}
+  m_Children: []
+  m_Father: {fileID: 4797738842010792}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 0.4579729, z: 180}
+--- !u!33 &33035396466420070
+MeshFilter:
+  m_GameObject: {fileID: 1746031143865971}
+  m_Mesh: {fileID: 4300000, guid: 746343a174240e445acaa0d42aa7fcda, type: 2}
+--- !u!23 &23132680497474284
+MeshRenderer:
+  m_GameObject: {fileID: 1746031143865971}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 050e4ea0249404445af27df003ed37b7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1328516711428957
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4726214336206001}
+  m_Layer: 0
+  m_Name: Particle View 001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4726214336206001
+Transform:
+  m_GameObject: {fileID: 1328516711428957}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4797738842010792}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1802882291575270
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4719921687680912}
+  - component: {fileID: 33494153621041365}
+  - component: {fileID: 23967028675175362}
+  - component: {fileID: 95176163519556993}
+  - component: {fileID: 114695909708233475}
+  m_Layer: 0
+  m_Name: Lumpyspace_Sky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4719921687680912
+Transform:
+  m_GameObject: {fileID: 1802882291575270}
+  m_LocalRotation: {x: -0.6963676, y: -0.1227692, z: -0.1227692, w: 0.6963676}
+  m_LocalPosition: {x: 0, y: -36, z: 0}
+  m_LocalScale: {x: 1.299925, y: 1.299925, z: 1.299925}
+  m_Children: []
+  m_Father: {fileID: 4797738842010792}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 19.99694, z: 0}
+--- !u!33 &33494153621041365
+MeshFilter:
+  m_GameObject: {fileID: 1802882291575270}
+  m_Mesh: {fileID: 4300000, guid: 4825cfe7913fdca4298536982631c22a, type: 2}
+--- !u!23 &23967028675175362
+MeshRenderer:
+  m_GameObject: {fileID: 1802882291575270}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a7467777b19b67346a857a7baeedc672, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!95 &95176163519556993
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1802882291575270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8d161d7165c6daf4cb409e5a07769192, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114695909708233475
+MonoBehaviour:
+  m_GameObject: {fileID: 1802882291575270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a30a3cb39b14e498c1d2b059ead877, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  tweenName:
+  playAutomatically: 1
+  delay: 0
+  type: 23
+  showIconInInspector: 1
+  keys:
+  - amount
+  - easetype
+  - looptype
+  - time
+  indexes: 00000000000000000000000000000000
+  metadatas:
+  - 
+  - 
+  - 
+  - 
+  ints:
+  floats:
+  - 700
+  bools:
+  strings: []
+  vector3s:
+  - {x: 0, y: 0, z: -1}
+  colors: []
+  spaces:
+  easeTypes: 15000000
+  loopTypes: 01000000
+  gameObjects: []
+  transforms: []
+  audioClips: []
+  audioSources: []
+  vector3Arrays: []
+  transformArrays: []
+  paths: []

@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1026460335361583}
+  m_IsPrefabParent: 1
+--- !u!1 &1026460335361583
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4144079596740299}
+  - component: {fileID: 114068143793007527}
+  - component: {fileID: 114396497365015469}
+  m_Layer: 23
+  m_Name: low_FPS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4144079596740299
+Transform:
+  m_GameObject: {fileID: 1026460335361583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1424.732, y: -96.64108, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children:
+  - {fileID: 4452122274052804}
+  - {fileID: 4383890215439216}
+  - {fileID: 4018820877064804}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114068143793007527
+MonoBehaviour:
+  m_GameObject: {fileID: 1026460335361583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94dc8a12b23c44f8e63b150e1b1b5e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sortByDepth: 1
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 100
+    e01: 0
+    e02: 0
+    e03: 773.3333
+    e10: 0
+    e11: 100
+    e12: 0
+    e13: 1.1306
+    e20: 0
+    e21: 0
+    e22: 100
+    e23: 9999.995
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
+--- !u!114 &114396497365015469
+MonoBehaviour:
+  m_GameObject: {fileID: 1026460335361583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6265bc0aa15afb48a78808dd6cd3628, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  uiCamera: {fileID: 0}
+  widgetContainer: {fileID: 0}
+  panelContainer: {fileID: 0}
+  side: 1
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0}
+  pixelOffset: {x: 0, y: 0}
+  screenOffset: {x: 0, y: 0}
+  depthOffset: 0
+  useDepthOffset: 0
+  parentObject: {fileID: 0}
+  useParentObjectPosition: 0
+  useCameraRectIfNotUsingParentObjectPosition: 1
+  anchorEnabled: 1
+  syncWidth: 0
+  syncWidthOffset: 0
+  syncWidthScale: 1
+  syncHeight: 0
+  syncHeightOffset: 0
+  syncHeightScale: 1
+  syncClippingWidth: 0
+  syncClippingWidthOffset: 0
+  syncClippingWidthScale: 1
+  syncClippingHeight: 0
+  syncClippingHeightOffset: 0
+  syncClippingHeightScale: 1
+  syncColliderWidth: 0
+  syncColliderWidthOffset: 0
+  syncColliderWidthScale: 1
+  syncColliderHeight: 0
+  syncColliderHeightOffset: 0
+  syncColliderHeightScale: 1
+--- !u!1 &1263239964649342
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4452122274052804}
+  - component: {fileID: 114765479832886910}
+  - component: {fileID: 114964945932926637}
+  m_Layer: 23
+  m_Name: FrameRate_FPSCounter
+  m_TagString: SilverStar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4452122274052804
+Transform:
+  m_GameObject: {fileID: 1263239964649342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.987061, y: 269, z: 4.768418E-05}
+  m_LocalScale: {x: 96, y: 96, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4144079596740299}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114765479832886910
+MonoBehaviour:
+  m_GameObject: {fileID: 1263239964649342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164c07ecebec732459e1ac62f90495d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 3
+  mDepth: 0
+  mFont: {fileID: 114653441173398934, guid: 2b81d47f6d679fc4e9bb51d21dc169f7, type: 2}
+  mText: 30
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mMaxFontSize: 128
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!114 &114964945932926637
+MonoBehaviour:
+  m_GameObject: {fileID: 1263239964649342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87870d13fd375d14a80631b582eb0ac8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  frequency: 0.2
+  bar: {fileID: 114695478924219437}
+--- !u!1 &1865810373777002
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4383890215439216}
+  - component: {fileID: 114359105594259586}
+  m_Layer: 23
+  m_Name: FrameRate_BarBG
+  m_TagString: SilverStar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383890215439216
+Transform:
+  m_GameObject: {fileID: 1865810373777002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.7334, y: 45.18, z: 4.768418E-05}
+  m_LocalScale: {x: 23, y: 334.0749, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4144079596740299}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114359105594259586
+MonoBehaviour:
+  m_GameObject: {fileID: 1865810373777002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65915904566ec6e489529db768cf1c91, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 0.09558821, g: 0.09558821, b: 0.09558821, a: 1}
+  mPivot: 4
+  mDepth: -1
+  mAtlas: {fileID: 114531819187677093, guid: 34ea6b242ae685a488927d76beb26e72, type: 2}
+  mSpriteName: CW_Grey
+  mFillCenter: 1
+  mType: 3
+  mFillDirection: 1
+  mFillAmount: 1
+  mInvert: 0
+--- !u!1 &1909066921845566
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4018820877064804}
+  - component: {fileID: 114695478924219437}
+  m_Layer: 23
+  m_Name: FrameRate_Bar
+  m_TagString: SilverStar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4018820877064804
+Transform:
+  m_GameObject: {fileID: 1909066921845566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.73364, y: 45.18, z: 4.768418E-05}
+  m_LocalScale: {x: 23, y: 334.0749, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4144079596740299}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114695478924219437
+MonoBehaviour:
+  m_GameObject: {fileID: 1909066921845566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65915904566ec6e489529db768cf1c91, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 0.1586208, g: 1, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114531819187677093, guid: 34ea6b242ae685a488927d76beb26e72, type: 2}
+  mSpriteName: CW_Grey
+  mFillCenter: 1
+  mType: 3
+  mFillDirection: 1
+  mFillAmount: 1
+  mInvert: 0

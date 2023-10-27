@@ -1,0 +1,54 @@
+using UnityEngine;
+
+public class CWBattleSequenceController : MonoBehaviour
+{
+	public Camera mainGameCam;
+	public Transform mainGameCamTarget;
+	public Camera battleCamP1;
+	public Transform battleCamP1Target;
+	public Camera battleCamP2;
+	public Transform battleCamP2Target;
+	public GameObject battleCamP1ResetPos;
+	public GameObject battleCamP2ResetPos;
+	public UILabel tapToAttack;
+	public UISprite barSprite;
+	public UISprite baseSprite;
+	public UISprite baseSpriteOutline;
+	public UISprite baseSpriteDupFX;
+	public UISprite undefendedSprite;
+	public UISprite critAreaSprite;
+	public UISprite hitAreaSprite;
+	public UISprite hitAreaFXSprite;
+	public GameObject hitAreaEdgeStart;
+	public GameObject hitAreaEdgeEnd;
+	public GameObject critAreaEdgeEnd;
+	public bool animateFlag;
+	public float totalTime;
+	public float damageModifierCrit;
+	public float critAreaStart;
+	public float critAreaEnd;
+	public float hitAreaStart;
+	public float hitAreaEnd;
+	public GameObject critTweenTarget;
+	public GameObject hitTweenTarget;
+	public GameObject missTweenTarget;
+	public GameObject awayTweenTarget;
+	public GameObject ringStartTweenTarget;
+	public GameObject[] critDamageTweenTargets;
+	public GameObject[] hitDamageTweenTargets;
+	public GameObject[] missDamageTweenTargets;
+	public GameObject missNoCreatureDamageTweenTarget;
+	public int lane;
+	public bool camAlignFlag;
+	public bool undefendedFlag;
+	public bool noAttackFlag;
+	public string result;
+	public bool forceMiss;
+	public bool forceCrit;
+	public bool timeOutFlag;
+	public GameObject tweenTargetPr;
+	public float currentAngle;
+	public bool ignoreTimeScale;
+	public int round;
+	public int roundLimit;
+}

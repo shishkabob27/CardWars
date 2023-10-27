@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1743448707872090}
+  m_IsPrefabParent: 1
+--- !u!1 &1743448707872090
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4456873453123823}
+  - component: {fileID: 65911980616006805}
+  - component: {fileID: 114171171804493837}
+  - component: {fileID: 114973693000980103}
+  - component: {fileID: 114552860102804990}
+  - component: {fileID: 114322597345502918}
+  m_Layer: 19
+  m_Name: Debug_FinishMapButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4456873453123823
+Transform:
+  m_GameObject: {fileID: 1743448707872090}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.3486, y: 47.42252, z: 4.730848}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children:
+  - {fileID: 4388942470121438}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
+--- !u!65 &65911980616006805
+BoxCollider:
+  m_GameObject: {fileID: 1743448707872090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150, y: 150, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114171171804493837
+MonoBehaviour:
+  m_GameObject: {fileID: 1743448707872090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babb40b2cf3697f4997840bdc8e6ec15, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sprite: {fileID: 0}
+  mesh: {fileID: 0}
+  doNotScale: 0
+--- !u!114 &114973693000980103
+MonoBehaviour:
+  m_GameObject: {fileID: 1743448707872090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af82f971daaf6014c8dda82fb4c2efaa, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  audioClip: {fileID: 0}
+  trigger: 0
+  volume: 1
+  pitch: 1
+--- !u!114 &114552860102804990
+MonoBehaviour:
+  m_GameObject: {fileID: 1743448707872090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794c6ff7e4af0f14c8dc66a77523fc81, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  starCount: 0
+--- !u!114 &114322597345502918
+MonoBehaviour:
+  m_GameObject: {fileID: 1743448707872090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94dc8a12b23c44f8e63b150e1b1b5e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sortByDepth: 0
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 100
+    e01: 0
+    e02: 0
+    e03: -634.86
+    e10: 0
+    e11: -3.576279E-05
+    e12: 100
+    e13: -473.0831
+    e20: 0
+    e21: -100
+    e22: -3.576279E-05
+    e23: 4742.253
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
+--- !u!1 &1416401656872001
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4388942470121438}
+  - component: {fileID: 114332132065161200}
+  m_Layer: 19
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388942470121438
+Transform:
+  m_GameObject: {fileID: 1416401656872001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 150, y: 150, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4456873453123823}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114332132065161200
+MonoBehaviour:
+  m_GameObject: {fileID: 1416401656872001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b0f237106fbf34f84f9c2fde5858a7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 7
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: UI_FastForward
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0

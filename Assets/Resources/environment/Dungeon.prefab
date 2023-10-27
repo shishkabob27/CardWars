@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1690480213240643}
+  m_IsPrefabParent: 1
+--- !u!1 &1690480213240643
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4026230339081326}
+  - component: {fileID: 114174908981680119}
+  m_Layer: 0
+  m_Name: Dungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4026230339081326
+Transform:
+  m_GameObject: {fileID: 1690480213240643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4968997931701600}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114174908981680119
+MonoBehaviour:
+  m_GameObject: {fileID: 1690480213240643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1936367530003706
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4968997931701600}
+  - component: {fileID: 111898425636108921}
+  m_Layer: 0
+  m_Name: Dungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968997931701600
+Transform:
+  m_GameObject: {fileID: 1936367530003706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4926290922260300}
+  - {fileID: 4886715307708414}
+  - {fileID: 4525050261200762}
+  - {fileID: 4587551964157048}
+  m_Father: {fileID: 4026230339081326}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &111898425636108921
+Animation:
+  m_GameObject: {fileID: 1936367530003706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &1594177075840286
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4926290922260300}
+  - component: {fileID: 33913846550513420}
+  - component: {fileID: 23201913339888659}
+  m_Layer: 0
+  m_Name: Dungeon_Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4926290922260300
+Transform:
+  m_GameObject: {fileID: 1594177075840286}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968997931701600}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33913846550513420
+MeshFilter:
+  m_GameObject: {fileID: 1594177075840286}
+  m_Mesh: {fileID: 4300000, guid: 25f0416848cf53547ab75fa6409934a9, type: 2}
+--- !u!23 &23201913339888659
+MeshRenderer:
+  m_GameObject: {fileID: 1594177075840286}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8e26b50d27dfbf94e8dae1d34c8e4f23, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1981776046023596
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4886715307708414}
+  - component: {fileID: 33454465904575049}
+  - component: {fileID: 23709073077126208}
+  m_Layer: 0
+  m_Name: Dungeon_Foreground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4886715307708414
+Transform:
+  m_GameObject: {fileID: 1981776046023596}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968997931701600}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33454465904575049
+MeshFilter:
+  m_GameObject: {fileID: 1981776046023596}
+  m_Mesh: {fileID: 4300000, guid: 1f6206a17fd4dd24098f74c2d5e931a2, type: 2}
+--- !u!23 &23709073077126208
+MeshRenderer:
+  m_GameObject: {fileID: 1981776046023596}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: fa7b3247dd39cba4e936906f6a096c7e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1044578652892268
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4525050261200762}
+  - component: {fileID: 33225046749548167}
+  - component: {fileID: 23627718746559971}
+  - component: {fileID: 114519017154330638}
+  m_Layer: 0
+  m_Name: Dungeon_Water_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4525050261200762
+Transform:
+  m_GameObject: {fileID: 1044578652892268}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968997931701600}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33225046749548167
+MeshFilter:
+  m_GameObject: {fileID: 1044578652892268}
+  m_Mesh: {fileID: 4300000, guid: f574efcc32cbbc84a948b5fa5d939505, type: 2}
+--- !u!23 &23627718746559971
+MeshRenderer:
+  m_GameObject: {fileID: 1044578652892268}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7a05d881dbbd26a4c82245191cf4abe3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114519017154330638
+MonoBehaviour:
+  m_GameObject: {fileID: 1044578652892268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3d34b5eea85264b965c3626b90a8c7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  materialIndex: 0
+  uvAnimationRate: {x: 0, y: 1}
+  textureName: _MainTex
+--- !u!1 &1422281433527802
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4587551964157048}
+  - component: {fileID: 33951022026786266}
+  - component: {fileID: 23065928037145065}
+  - component: {fileID: 114983490374877949}
+  m_Layer: 0
+  m_Name: Dungeon_Water_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4587551964157048
+Transform:
+  m_GameObject: {fileID: 1422281433527802}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968997931701600}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33951022026786266
+MeshFilter:
+  m_GameObject: {fileID: 1422281433527802}
+  m_Mesh: {fileID: 4300000, guid: d9e0e285800a6594db0553d76d8438e6, type: 2}
+--- !u!23 &23065928037145065
+MeshRenderer:
+  m_GameObject: {fileID: 1422281433527802}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a5a1d06596dd8db46973d28e2b127b83, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114983490374877949
+MonoBehaviour:
+  m_GameObject: {fileID: 1422281433527802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3d34b5eea85264b965c3626b90a8c7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  materialIndex: 0
+  uvAnimationRate: {x: 0, y: 1}
+  textureName: _MainTex

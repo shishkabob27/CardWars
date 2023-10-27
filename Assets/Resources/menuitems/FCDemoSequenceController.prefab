@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1524597426378763}
+  m_IsPrefabParent: 1
+--- !u!1 &1524597426378763
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4489615278633866}
+  - component: {fileID: 114438654681573142}
+  - component: {fileID: 114585665322096603}
+  - component: {fileID: 114712062882632766}
+  m_Layer: 0
+  m_Name: FCDemoSequenceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4489615278633866
+Transform:
+  m_GameObject: {fileID: 1524597426378763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114438654681573142
+MonoBehaviour:
+  m_GameObject: {fileID: 1524597426378763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffffe46ae92e07045836b16680f9bd17, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  nisRoot: {fileID: 0}
+  playerPrefab: {fileID: 114369154286411013, guid: 3392924ef47ccb34ea0b964aa649d63c, type: 2}
+  overrideLayer: 1
+  busyTweenShow: {fileID: 0}
+  busyTweenHide: {fileID: 0}
+  busyTweenWaitSeconds: 0.3
+  cleanupPlayerOnFinish: 0
+  endFadeSecsOverride: -1
+--- !u!114 &114585665322096603
+MonoBehaviour:
+  m_GameObject: {fileID: 1524597426378763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f404f700bd14a0246b39250d2f47ad08, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &114712062882632766
+MonoBehaviour:
+  m_GameObject: {fileID: 1524597426378763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1618ddc1d2c22438b186ac3e3c2a57, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Phase1BossHealthMinimum: 1
+  Phase2BossHealthThreshold: 0.5
+  Phase2PlayerHealthThreshold: 0.5
+  Phase2BossHealthMinimum: 1

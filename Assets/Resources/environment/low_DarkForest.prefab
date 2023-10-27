@@ -1,0 +1,326 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1697701551933277}
+  m_IsPrefabParent: 1
+--- !u!1 &1697701551933277
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4626674066028416}
+  - component: {fileID: 114589234051099728}
+  m_Layer: 0
+  m_Name: low_DarkForest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4626674066028416
+Transform:
+  m_GameObject: {fileID: 1697701551933277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4118205254431040}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114589234051099728
+MonoBehaviour:
+  m_GameObject: {fileID: 1697701551933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1992393704173159
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4118205254431040}
+  - component: {fileID: 95991562558724008}
+  m_Layer: 0
+  m_Name: DarkForest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4118205254431040
+Transform:
+  m_GameObject: {fileID: 1992393704173159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4501772980224039}
+  - {fileID: 4734444612972324}
+  - {fileID: 4457626653301560}
+  - {fileID: 4756007856906379}
+  m_Father: {fileID: 4626674066028416}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95991562558724008
+Animator:
+  serializedVersion: 3
+  m_GameObject: {fileID: 1992393704173159}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9b5b92ba54ab02b4ca9f1ca9373302da, type: 2}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1386640910153074
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4501772980224039}
+  - component: {fileID: 33079596498509246}
+  - component: {fileID: 23543827787844078}
+  m_Layer: 0
+  m_Name: DarkForest_BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4501772980224039
+Transform:
+  m_GameObject: {fileID: 1386640910153074}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4118205254431040}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33079596498509246
+MeshFilter:
+  m_GameObject: {fileID: 1386640910153074}
+  m_Mesh: {fileID: 4300000, guid: f1c546ef7aae8fa4daacc10a3cf48b0e, type: 2}
+--- !u!23 &23543827787844078
+MeshRenderer:
+  m_GameObject: {fileID: 1386640910153074}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ecc6da830fece542999682f396a0e33, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1412049214899823
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4734444612972324}
+  - component: {fileID: 33025121263365049}
+  - component: {fileID: 23259896110280412}
+  m_Layer: 0
+  m_Name: DarkForest_Clouds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4734444612972324
+Transform:
+  m_GameObject: {fileID: 1412049214899823}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4118205254431040}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33025121263365049
+MeshFilter:
+  m_GameObject: {fileID: 1412049214899823}
+  m_Mesh: {fileID: 4300000, guid: 91f5478b1944ec4409d33ee691661b79, type: 2}
+--- !u!23 &23259896110280412
+MeshRenderer:
+  m_GameObject: {fileID: 1412049214899823}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4ecc6da830fece542999682f396a0e33, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1283968932586701
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4457626653301560}
+  - component: {fileID: 33374833057829160}
+  - component: {fileID: 23771228844874979}
+  m_Layer: 0
+  m_Name: DarkForest_ForegroundTrees
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4457626653301560
+Transform:
+  m_GameObject: {fileID: 1283968932586701}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4118205254431040}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33374833057829160
+MeshFilter:
+  m_GameObject: {fileID: 1283968932586701}
+  m_Mesh: {fileID: 4300000, guid: f4936ad020733c843a7890f293f7e69d, type: 2}
+--- !u!23 &23771228844874979
+MeshRenderer:
+  m_GameObject: {fileID: 1283968932586701}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 1a0f1cbb60fdcd5428aea2ceef279476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1973806802147420
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4756007856906379}
+  - component: {fileID: 33031308348855349}
+  - component: {fileID: 23301413880493754}
+  m_Layer: 0
+  m_Name: DarkForest_Stars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4756007856906379
+Transform:
+  m_GameObject: {fileID: 1973806802147420}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4118205254431040}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33031308348855349
+MeshFilter:
+  m_GameObject: {fileID: 1973806802147420}
+  m_Mesh: {fileID: 4300000, guid: fa07041097354dc4caaaac0dd9f66d32, type: 2}
+--- !u!23 &23301413880493754
+MeshRenderer:
+  m_GameObject: {fileID: 1973806802147420}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: a2c7e0ac1dae9cf41a0f97d69909a5f0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

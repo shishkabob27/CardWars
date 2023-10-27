@@ -1,0 +1,395 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1863516354478191}
+  m_IsPrefabParent: 1
+--- !u!1 &1863516354478191
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4935328522651896}
+  - component: {fileID: 114358221650024581}
+  m_Layer: 0
+  m_Name: Cave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4935328522651896
+Transform:
+  m_GameObject: {fileID: 1863516354478191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4361573756672679}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114358221650024581
+MonoBehaviour:
+  m_GameObject: {fileID: 1863516354478191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d74b57a632d1a46a543ca68977c8cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  perfEvent: 1
+  disableCamera: 0
+  disableObject: 1
+  disableRenderers: 0
+  disableUIPanels: 0
+--- !u!1 &1245814496585293
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4361573756672679}
+  - component: {fileID: 111515731202740462}
+  m_Layer: 0
+  m_Name: Cave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4361573756672679
+Transform:
+  m_GameObject: {fileID: 1245814496585293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4355223568237638}
+  - {fileID: 4054233285394915}
+  - {fileID: 4762307656314861}
+  - {fileID: 4311336863975507}
+  - {fileID: 4364328297627056}
+  m_Father: {fileID: 4935328522651896}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &111515731202740462
+Animation:
+  m_GameObject: {fileID: 1245814496585293}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &1006655874724968
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4355223568237638}
+  - component: {fileID: 33570696923008450}
+  - component: {fileID: 23909534014179600}
+  m_Layer: 0
+  m_Name: Cave_Cave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4355223568237638
+Transform:
+  m_GameObject: {fileID: 1006655874724968}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4361573756672679}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33570696923008450
+MeshFilter:
+  m_GameObject: {fileID: 1006655874724968}
+  m_Mesh: {fileID: 4300000, guid: f5fc66c66f4ac1d479429b3dda4f8dbe, type: 2}
+--- !u!23 &23909534014179600
+MeshRenderer:
+  m_GameObject: {fileID: 1006655874724968}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ae88345af4486914085de7a88753cba8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1571915895450982
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4054233285394915}
+  - component: {fileID: 33055911494284923}
+  - component: {fileID: 23455402801540135}
+  m_Layer: 0
+  m_Name: Cave_Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4054233285394915
+Transform:
+  m_GameObject: {fileID: 1571915895450982}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4361573756672679}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33055911494284923
+MeshFilter:
+  m_GameObject: {fileID: 1571915895450982}
+  m_Mesh: {fileID: 4300000, guid: cf2cdea52c3cf7445b73e1132ad551ed, type: 2}
+--- !u!23 &23455402801540135
+MeshRenderer:
+  m_GameObject: {fileID: 1571915895450982}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 0db61c5c77762314f93b1f30f92ad8a5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1468569897731233
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4762307656314861}
+  - component: {fileID: 33001569127339061}
+  - component: {fileID: 23112370846377682}
+  m_Layer: 0
+  m_Name: Cave_House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4762307656314861
+Transform:
+  m_GameObject: {fileID: 1468569897731233}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4361573756672679}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33001569127339061
+MeshFilter:
+  m_GameObject: {fileID: 1468569897731233}
+  m_Mesh: {fileID: 4300000, guid: c13b535fa7bc5a348a987531af4a45c8, type: 2}
+--- !u!23 &23112370846377682
+MeshRenderer:
+  m_GameObject: {fileID: 1468569897731233}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e74d4dfc0d618d340a76562aec13270a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1623905658581473
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4311336863975507}
+  - component: {fileID: 33658667792798991}
+  - component: {fileID: 23059614193307179}
+  m_Layer: 0
+  m_Name: Cave_Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4311336863975507
+Transform:
+  m_GameObject: {fileID: 1623905658581473}
+  m_LocalRotation: {x: -0.7071068, y: 2.702117E-15, z: -6.181724E-08, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4361573756672679}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 5.008956E-06, z: 5.008957E-06}
+--- !u!33 &33658667792798991
+MeshFilter:
+  m_GameObject: {fileID: 1623905658581473}
+  m_Mesh: {fileID: 4300000, guid: 18b91894a8ba5e24d98ff5d0a5d91951, type: 2}
+--- !u!23 &23059614193307179
+MeshRenderer:
+  m_GameObject: {fileID: 1623905658581473}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6766c14090161064f96c0de2f1526cbe, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1507883149361559
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4364328297627056}
+  - component: {fileID: 33649532645689451}
+  - component: {fileID: 23786509067430206}
+  - component: {fileID: 114069837734292123}
+  m_Layer: 0
+  m_Name: Cave_Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4364328297627056
+Transform:
+  m_GameObject: {fileID: 1507883149361559}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4361573756672679}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &33649532645689451
+MeshFilter:
+  m_GameObject: {fileID: 1507883149361559}
+  m_Mesh: {fileID: 4300000, guid: bd159d676e16dc74ea75bcda003fc1ad, type: 2}
+--- !u!23 &23786509067430206
+MeshRenderer:
+  m_GameObject: {fileID: 1507883149361559}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: eec4bb524005ac44780d87dbd964474d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114069837734292123
+MonoBehaviour:
+  m_GameObject: {fileID: 1507883149361559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3d34b5eea85264b965c3626b90a8c7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  materialIndex: 0
+  uvAnimationRate: {x: 0.1, y: 0}
+  textureName: _MainTex

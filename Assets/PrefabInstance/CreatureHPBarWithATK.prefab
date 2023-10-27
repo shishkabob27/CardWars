@@ -1,0 +1,991 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1407239992941197}
+  m_IsPrefabParent: 1
+--- !u!1 &1407239992941197
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4951962084072615}
+  - component: {fileID: 114465118197966468}
+  - component: {fileID: 114265798985452713}
+  m_Layer: 0
+  m_Name: CreatureHPBarWithATK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4951962084072615
+Transform:
+  m_GameObject: {fileID: 1407239992941197}
+  m_LocalRotation: {x: -5.960464E-08, y: 0.7071068, z: 0.7071068, w: 5.960464E-08}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_Children:
+  - {fileID: 4791185470889712}
+  - {fileID: 4656817000740558}
+  - {fileID: 4968239154440504}
+  - {fileID: 4497951902020749}
+  - {fileID: 4082992137627297}
+  - {fileID: 4017778781986126}
+  - {fileID: 4339959501862159}
+  - {fileID: 4546876986889341}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: -9.659346E-06, z: 180}
+--- !u!114 &114465118197966468
+MonoBehaviour:
+  m_GameObject: {fileID: 1407239992941197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e996ea728e8c0a4b8ce356fde929baf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  player: 0
+  lane: 0
+  hpBarSprite: {fileID: 114649535162852757}
+  hpBar: {fileID: 4968239154440504}
+  target: {fileID: 0}
+--- !u!114 &114265798985452713
+MonoBehaviour:
+  m_GameObject: {fileID: 1407239992941197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94dc8a12b23c44f8e63b150e1b1b5e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  sortByDepth: 1
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 9.452026E-06
+    e01: 0
+    e02: 50.00002
+    e03: -850.0002
+    e10: 50.00002
+    e11: -5.960464E-06
+    e12: -9.452026E-06
+    e13: 305.0002
+    e20: -5.960465E-06
+    e21: 50.00001
+    e22: 2.131628E-12
+    e23: 110
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
+--- !u!1 &1556881240652181
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4791185470889712}
+  - component: {fileID: 114364407175179705}
+  - component: {fileID: 114159564254885651}
+  m_Layer: 0
+  m_Name: ATKLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4791185470889712
+Transform:
+  m_GameObject: {fileID: 1556881240652181}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.235804E-06}
+  m_LocalPosition: {x: 119, y: -20, z: -2.648032}
+  m_LocalScale: {x: 76, y: 76, z: 1.375}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 0.0001416127, z: 180}
+--- !u!114 &114364407175179705
+MonoBehaviour:
+  m_GameObject: {fileID: 1556881240652181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164c07ecebec732459e1ac62f90495d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 9
+  mFont: {fileID: 114653441173398934, guid: 2b81d47f6d679fc4e9bb51d21dc169f7, type: 2}
+  mText: 00
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 2, y: 2}
+  mShrinkToFit: 0
+  mMaxFontSize: 128
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!114 &114159564254885651
+MonoBehaviour:
+  m_GameObject: {fileID: 1556881240652181}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ef33e63dbfc24a8366b4e3f72fae0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 0
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1937182079231252
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4656817000740558}
+  - component: {fileID: 114610847397196985}
+  m_Layer: 0
+  m_Name: ATKSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4656817000740558
+Transform:
+  m_GameObject: {fileID: 1937182079231252}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.371139E-08}
+  m_LocalPosition: {x: 157.6001, y: 18, z: -8.148089}
+  m_LocalScale: {x: 150, y: 135, z: 1.375}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 180, y: 5.008956E-06, z: 180}
+--- !u!114 &114610847397196985
+MonoBehaviour:
+  m_GameObject: {fileID: 1937182079231252}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65915904566ec6e489529db768cf1c91, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: ATK_Icon
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!1 &1066002787675806
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4968239154440504}
+  - component: {fileID: 114888593112130345}
+  m_Layer: 0
+  m_Name: CreatureHPBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968239154440504
+Transform:
+  m_GameObject: {fileID: 1066002787675806}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.629207E-07}
+  m_LocalPosition: {x: -28.29755, y: 8.439445, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4689820202487398}
+  - {fileID: 4137260148067821}
+  - {fileID: 4186713048580897}
+  - {fileID: 4497206741731662}
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -180, y: -1.866934E-05, z: 180}
+--- !u!114 &114888593112130345
+MonoBehaviour:
+  m_GameObject: {fileID: 1066002787675806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a2c9a6d19404441aa77c985c54c294, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  creatureHP: {fileID: 114342486100708859}
+  creatureDEF: {fileID: 114807303169000956}
+  creatureATK: {fileID: 114364407175179705}
+  creatureHPBar: {fileID: 114649535162852757}
+  creatureHPBarDamage: {fileID: 114389076177611849}
+  ArrowATK: {fileID: 114850814434502674}
+  ArrowDEF: {fileID: 114607747139775505}
+  depletionFX: {fileID: 1273359415717906, guid: 599d2eefbf58fe84491c8e6811520300, type: 2}
+  refillFX: {fileID: 1728680292471920, guid: 9875091c47c412e40b2d56cb954a0bc6, type: 2}
+  atkUpColor: {r: 1, g: 0.2862745, b: 0.5254902, a: 1}
+  atkDownColor: {r: 0.4862745, g: 0.4862745, b: 0.4862745, a: 1}
+  defUpColor: {r: 0, g: 1, b: 1, a: 1}
+  defDownColor: {r: 0.4862745, g: 0.4862745, b: 0.4862745, a: 1}
+  maxHP: 0
+  currentHP: 0
+  prevHP: 0
+--- !u!1 &1106916062437156
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4689820202487398}
+  - component: {fileID: 114266093205612232}
+  m_Layer: 0
+  m_Name: CreatureHPBarBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4689820202487398
+Transform:
+  m_GameObject: {fileID: 1106916062437156}
+  m_LocalRotation: {x: 0, y: -8.940697E-08, z: 0, w: 1}
+  m_LocalPosition: {x: 3.242493E-05, y: -26.36678, z: -2.137115E-06}
+  m_LocalScale: {x: 200.0001, y: 11.04336, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968239154440504}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 1.024528E-05, z: 0}
+--- !u!114 &114266093205612232
+MonoBehaviour:
+  m_GameObject: {fileID: 1106916062437156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56fe860eaa0b5f429ea93c0b4eedf85, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 0, g: 0, b: 0, a: 0.3764706}
+  mPivot: 4
+  mDepth: -1
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: CW_Grey
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 0
+  mFillAmount: 1
+  mInvert: 0
+--- !u!1 &1311371742407643
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4137260148067821}
+  - component: {fileID: 114649535162852757}
+  - component: {fileID: 114985315614002289}
+  m_Layer: 0
+  m_Name: CreatureHPBarFront
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4137260148067821
+Transform:
+  m_GameObject: {fileID: 1311371742407643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.242493E-05, y: -26.36678, z: -2.137115E-06}
+  m_LocalScale: {x: 207.5, y: 14.77049, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968239154440504}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114649535162852757
+MonoBehaviour:
+  m_GameObject: {fileID: 1311371742407643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56fe860eaa0b5f429ea93c0b4eedf85, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 0.8196079, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 1
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: CW_Grey
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 0
+  mFillAmount: 1
+  mInvert: 0
+--- !u!114 &114985315614002289
+MonoBehaviour:
+  m_GameObject: {fileID: 1311371742407643}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ef33e63dbfc24a8366b4e3f72fae0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 0
+  style: 2
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 0.5
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {r: 1, g: 0.479716, b: 0.007352948, a: 1}
+  to: {r: 0.2941176, g: 0, b: 0, a: 1}
+--- !u!1 &1695334602016897
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4186713048580897}
+  - component: {fileID: 114389076177611849}
+  m_Layer: 0
+  m_Name: CreatureHPBarDamage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4186713048580897
+Transform:
+  m_GameObject: {fileID: 1695334602016897}
+  m_LocalRotation: {x: 0, y: -8.940697E-08, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -26.36678, z: 0}
+  m_LocalScale: {x: 207.5001, y: 14.77049, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968239154440504}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 1.024528E-05, z: 0}
+--- !u!114 &114389076177611849
+MonoBehaviour:
+  m_GameObject: {fileID: 1695334602016897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56fe860eaa0b5f429ea93c0b4eedf85, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 0, b: 0, a: 1}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: CW_Grey
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 0
+  mFillAmount: 1
+  mInvert: 0
+--- !u!1 &1571254331904333
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4497206741731662}
+  - component: {fileID: 114743359901667511}
+  m_Layer: 0
+  m_Name: CreatureHPBarFrame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4497206741731662
+Transform:
+  m_GameObject: {fileID: 1571254331904333}
+  m_LocalRotation: {x: 0, y: 8.940697E-08, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -26, z: 0}
+  m_LocalScale: {x: 210.3749, y: 22, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4968239154440504}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -1.024528E-05, z: 0}
+--- !u!114 &114743359901667511
+MonoBehaviour:
+  m_GameObject: {fileID: 1571254331904333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b0f237106fbf34f84f9c2fde5858a7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 2
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: HealthBar_Creature
+  mFillCenter: 0
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!1 &1771319820537766
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4497951902020749}
+  - component: {fileID: 114807303169000956}
+  - component: {fileID: 114246674933880761}
+  m_Layer: 0
+  m_Name: CreatureDEFValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4497951902020749
+Transform:
+  m_GameObject: {fileID: 1771319820537766}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -2E-06}
+  m_LocalPosition: {x: -42.89545, y: 8.865413, z: 10}
+  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 180, y: 0.0002291831, z: 180}
+--- !u!114 &114807303169000956
+MonoBehaviour:
+  m_GameObject: {fileID: 1771319820537766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164c07ecebec732459e1ac62f90495d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 3
+  mDepth: 4
+  mFont: {fileID: 114653441173398934, guid: 2b81d47f6d679fc4e9bb51d21dc169f7, type: 2}
+  mText: 99
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 2, y: 2}
+  mShrinkToFit: 0
+  mMaxFontSize: 128
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!114 &114246674933880761
+MonoBehaviour:
+  m_GameObject: {fileID: 1771319820537766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ef33e63dbfc24a8366b4e3f72fae0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 0
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1276041116331912
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4082992137627297}
+  - component: {fileID: 114342486100708859}
+  m_Layer: 0
+  m_Name: CreatureHPValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4082992137627297
+Transform:
+  m_GameObject: {fileID: 1276041116331912}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.831851E-06}
+  m_LocalPosition: {x: -28.00003, y: 8.559971, z: 10}
+  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 180, y: 0.0002099146, z: 180}
+--- !u!114 &114342486100708859
+MonoBehaviour:
+  m_GameObject: {fileID: 1276041116331912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164c07ecebec732459e1ac62f90495d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 5
+  mDepth: 4
+  mFont: {fileID: 114653441173398934, guid: 2b81d47f6d679fc4e9bb51d21dc169f7, type: 2}
+  mText: 99
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 2, y: 2}
+  mShrinkToFit: 0
+  mMaxFontSize: 128
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!1 &1197515389542752
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4017778781986126}
+  - component: {fileID: 114683871414961765}
+  m_Layer: 0
+  m_Name: Slash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4017778781986126
+Transform:
+  m_GameObject: {fileID: 1197515389542752}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -2E-06}
+  m_LocalPosition: {x: -37.27271, y: 8.865412, z: 10}
+  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 180, y: 0.0002291831, z: 180}
+--- !u!114 &114683871414961765
+MonoBehaviour:
+  m_GameObject: {fileID: 1197515389542752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164c07ecebec732459e1ac62f90495d0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mDepth: 2
+  mFont: {fileID: 114653441173398934, guid: 2b81d47f6d679fc4e9bb51d21dc169f7, type: 2}
+  mText: /
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 2, y: 2}
+  mShrinkToFit: 0
+  mMaxFontSize: 128
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!1 &1427736835677602
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4339959501862159}
+  - component: {fileID: 114850814434502674}
+  - component: {fileID: 114653133027281739}
+  - component: {fileID: 114074041750714595}
+  - component: {fileID: 114346867803607978}
+  m_Layer: 0
+  m_Name: ArrowATK
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4339959501862159
+Transform:
+  m_GameObject: {fileID: 1427736835677602}
+  m_LocalRotation: {x: 1, y: -1.629207E-07, z: -1.629207E-07, w: 2.654315E-14}
+  m_LocalPosition: {x: 180.0002, y: 0, z: -5.198202E-06}
+  m_LocalScale: {x: 46, y: 80, z: 0.632388}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 180, y: -1.866934E-05, z: 1.866934E-05}
+--- !u!114 &114850814434502674
+MonoBehaviour:
+  m_GameObject: {fileID: 1427736835677602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65915904566ec6e489529db768cf1c91, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 0}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: HealthBar_UpDown_Arrow
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!114 &114653133027281739
+MonoBehaviour:
+  m_GameObject: {fileID: 1427736835677602}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ef33e63dbfc24a8366b4e3f72fae0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 0
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114074041750714595
+MonoBehaviour:
+  m_GameObject: {fileID: 1427736835677602}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e180cbdb95748ce498bc02ac8d90d884, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 3
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {x: 180, y: -40, z: 0}
+  to: {x: 180, y: 0, z: 0}
+--- !u!114 &114346867803607978
+MonoBehaviour:
+  m_GameObject: {fileID: 1427736835677602}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e180cbdb95748ce498bc02ac8d90d884, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 3
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 1
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {x: 180, y: 0, z: 0}
+  to: {x: 180, y: -40, z: 0}
+--- !u!1 &1033033803341415
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4546876986889341}
+  - component: {fileID: 114607747139775505}
+  - component: {fileID: 114723015829616783}
+  - component: {fileID: 114054163211491216}
+  - component: {fileID: 114339566123792403}
+  m_Layer: 0
+  m_Name: ArrowDEF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4546876986889341
+Transform:
+  m_GameObject: {fileID: 1033033803341415}
+  m_LocalRotation: {x: 6.931524E-14, y: 1, z: 1.331581E-07, w: -5.205486E-07}
+  m_LocalPosition: {x: -110, y: 10, z: 0}
+  m_LocalScale: {x: 23, y: 40, z: 0.5005779}
+  m_Children: []
+  m_Father: {fileID: 4951962084072615}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 180, y: 5.965047E-05, z: -180}
+--- !u!114 &114607747139775505
+MonoBehaviour:
+  m_GameObject: {fileID: 1033033803341415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65915904566ec6e489529db768cf1c91, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  mColor: {r: 1, g: 1, b: 1, a: 0}
+  mPivot: 4
+  mDepth: 0
+  mAtlas: {fileID: 114182652808670402, guid: 1c4a0467e9f0a724f9318d38d4c75cb6, type: 2}
+  mSpriteName: HealthBar_UpDown_Arrow
+  mFillCenter: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+--- !u!114 &114723015829616783
+MonoBehaviour:
+  m_GameObject: {fileID: 1033033803341415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ef33e63dbfc24a8366b4e3f72fae0, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 0
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114054163211491216
+MonoBehaviour:
+  m_GameObject: {fileID: 1033033803341415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e180cbdb95748ce498bc02ac8d90d884, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 3
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 0
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {x: -110, y: 10, z: 0}
+  to: {x: -110, y: 30, z: 0}
+--- !u!114 &114339566123792403
+MonoBehaviour:
+  m_GameObject: {fileID: 1033033803341415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e180cbdb95748ce498bc02ac8d90d884, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  label:
+  method: 3
+  style: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ignoreTimeScale: 1
+  delay: 0
+  duration: 1
+  steeperCurves: 0
+  tweenGroup: 1
+  DisableInputWhileTweening: 0
+  eventReceiver: {fileID: 0}
+  callWhenFinished:
+  from: {x: -110, y: 30, z: 0}
+  to: {x: -110, y: 10, z: 0}

@@ -1,0 +1,414 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1416464816270161}
+  m_IsPrefabParent: 1
+--- !u!1 &1416464816270161
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4060521052351359}
+  - component: {fileID: 114840813531242322}
+  - component: {fileID: 82520604950322571}
+  - component: {fileID: 111155467823470992}
+  - component: {fileID: 114390419968658710}
+  m_Layer: 0
+  m_Name: SpiritTower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4060521052351359
+Transform:
+  m_GameObject: {fileID: 1416464816270161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4798754193223938}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114840813531242322
+MonoBehaviour:
+  m_GameObject: {fileID: 1416464816270161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229fd65d4751d70499adae013dff1332, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnEffect: {fileID: 1637327450515740, guid: 5928ec68b7640d24a90241e6b8c4ad02, type: 2}
+  SpawnAudio: {fileID: 0}
+  SpawnAudioDelaySecs: 0
+  Intro:
+  Idle:
+  IntroLength: 3
+  hpBar: {fileID: 0}
+--- !u!82 &82520604950322571
+AudioSource:
+  m_GameObject: {fileID: 1416464816270161}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!111 &111155467823470992
+Animation:
+  m_GameObject: {fileID: 1416464816270161}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: f60337dc9c36bef4caa0af6b5282f73b, type: 2}
+  - {fileID: 7400000, guid: 3faada361bb4b6d48b00d24dd31d3ef4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &114390419968658710
+MonoBehaviour:
+  m_GameObject: {fileID: 1416464816270161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11603c51dc87fd14aa533b92cd6afc81, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  abilityFX: {fileID: 1699091974304513, guid: 4f019bb079da096468db195286334b3a, type: 2}
+  abilitySound: {fileID: 0}
+--- !u!1 &1139400961837632
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4798754193223938}
+  - component: {fileID: 111585125235968748}
+  m_Layer: 0
+  m_Name: SpiritTower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4798754193223938
+Transform:
+  m_GameObject: {fileID: 1139400961837632}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4739417916949658}
+  - {fileID: 4271212518497795}
+  - {fileID: 4759335771183797}
+  m_Father: {fileID: 4060521052351359}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!111 &111585125235968748
+Animation:
+  m_GameObject: {fileID: 1139400961837632}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 90dca01f5f1600c4d88a81784ebddf62, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 1
+--- !u!1 &1073846058408431
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4739417916949658}
+  - component: {fileID: 33139849906689728}
+  - component: {fileID: 23551816497882859}
+  m_Layer: 0
+  m_Name: SpiritTower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4739417916949658
+Transform:
+  m_GameObject: {fileID: 1073846058408431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.008706208, y: -0.02567023, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4798754193223938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &33139849906689728
+MeshFilter:
+  m_GameObject: {fileID: 1073846058408431}
+  m_Mesh: {fileID: 4300000, guid: b3752587142b92d49ab5d7530c66f7a4, type: 2}
+--- !u!23 &23551816497882859
+MeshRenderer:
+  m_GameObject: {fileID: 1073846058408431}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: fb7ba641c7b96c04f90fc0848ffa40d8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &1883826358835958
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4271212518497795}
+  - component: {fileID: 33473183717192951}
+  - component: {fileID: 23087992808793671}
+  - component: {fileID: 114876965035880633}
+  m_Layer: 0
+  m_Name: SpiritTower_Blast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4271212518497795
+Transform:
+  m_GameObject: {fileID: 1883826358835958}
+  m_LocalRotation: {x: 0.5, y: 0.5000001, z: 0.5000001, w: 0.5}
+  m_LocalPosition: {x: -1.994263E-07, y: -0.03120005, z: 4.01922}
+  m_LocalScale: {x: 1.258545, y: 1.258545, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4798754193223938}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90.00001, y: -1.707547E-06, z: -90.00002}
+--- !u!33 &33473183717192951
+MeshFilter:
+  m_GameObject: {fileID: 1883826358835958}
+  m_Mesh: {fileID: 4300000, guid: 731606d430e99594aa858b4c74429c43, type: 2}
+--- !u!23 &23087992808793671
+MeshRenderer:
+  m_GameObject: {fileID: 1883826358835958}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6fd4a4a4371cce74e90ebd942bc3565e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &114876965035880633
+MonoBehaviour:
+  m_GameObject: {fileID: 1883826358835958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3d34b5eea85264b965c3626b90a8c7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  materialIndex: 0
+  uvAnimationRate: {x: -0.5, y: 0}
+  textureName: _MainTex
+--- !u!1 &1188024467796851
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4759335771183797}
+  - component: {fileID: 114916319615882194}
+  m_Layer: 0
+  m_Name: SpiritTower_Halo_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4759335771183797
+Transform:
+  m_GameObject: {fileID: 1188024467796851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.004440342, y: -0.02576962, z: 3.956339}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4149345774969471}
+  m_Father: {fileID: 4798754193223938}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114916319615882194
+MonoBehaviour:
+  m_GameObject: {fileID: 1188024467796851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf94f7136b27f8449a8dbdd14886268, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  player: 0
+--- !u!1 &1381261028403244
+GameObject:
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4149345774969471}
+  - component: {fileID: 33378225741325192}
+  - component: {fileID: 23615027547785182}
+  m_Layer: 0
+  m_Name: SpiritTower_Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4149345774969471
+Transform:
+  m_GameObject: {fileID: 1381261028403244}
+  m_LocalRotation: {x: -5.684342E-14, y: 2.384186E-07, z: 2.384186E-07, w: 1}
+  m_LocalPosition: {x: 0, y: 7.450581E-08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4759335771183797}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -2.732076E-05, z: -2.732076E-05}
+--- !u!33 &33378225741325192
+MeshFilter:
+  m_GameObject: {fileID: 1381261028403244}
+  m_Mesh: {fileID: 4300000, guid: edfe4ebd0abb1f8479699353fb00aa5d, type: 2}
+--- !u!23 &23615027547785182
+MeshRenderer:
+  m_GameObject: {fileID: 1381261028403244}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 1bcd7263ce1a69c41933ea84fa46b48c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
