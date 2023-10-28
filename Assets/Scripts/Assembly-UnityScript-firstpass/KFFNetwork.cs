@@ -1,5 +1,6 @@
 // Assembly-UnityScript-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 // KFFNetwork
+using MiniJSON;
 using System;
 using System.Collections;
 using System.Collections.Generic;
