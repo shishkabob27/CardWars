@@ -42,7 +42,7 @@ public class ByteReader
 		int num2 = mOffset;
 		if (num2 < num)
 		{
-			int num3;
+			int num3 = 0;
 			do
 			{
 				if (num2 < num)

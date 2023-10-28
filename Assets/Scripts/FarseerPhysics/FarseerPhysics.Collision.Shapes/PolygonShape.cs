@@ -7,5 +7,9 @@ namespace FarseerPhysics.Collision.Shapes
 		public Vertices Normals;
 
 		public Vertices Vertices;
-	}
+
+        public PolygonShape(float density) : base(density)
+        {
+        }
+    }
 }

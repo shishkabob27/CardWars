@@ -14,5 +14,9 @@ namespace FarseerPhysics.Collision.Shapes
 		private bool _hasPrevVertex;
 
 		private bool _hasNextVertex;
-	}
+
+        public ChainShape(float density) : base(density)
+        {
+        }
+    }
 }

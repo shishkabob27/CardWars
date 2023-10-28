@@ -73,7 +73,8 @@ public class AmazonPurchaseListener : IPurchaseListener
 		{
 			IAmazonIapV2 iapService = AmazonIapV2Impl.Instance;
 			receivedProductDataCallback = a_Callback;
-			GetProductDataResponseDelegate productDataCallback = delegate(GetProductDataResponse response)
+			GetProductDataResponseDelegate productDataCallback = null;
+            productDataCallback = delegate(GetProductDataResponse response)
 			{
 				iapService.RemoveGetProductDataResponseListener(productDataCallback);
 				if (response.Status != "SUCCESSFUL")

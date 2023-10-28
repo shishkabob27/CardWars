@@ -62,7 +62,7 @@ public class SLOTUIAnchor : UIAnchor
 
 	protected override void Start()
 	{
-		mIsWindows = Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsWebPlayer || Application.platform == RuntimePlatform.WindowsEditor;
+		mIsWindows = Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor;
 		uiPanel = base.gameObject.GetComponent(typeof(UIPanel)) as UIPanel;
 		draggablePanel = base.gameObject.GetComponent(typeof(UIDraggablePanel)) as UIDraggablePanel;
 		base.Start();

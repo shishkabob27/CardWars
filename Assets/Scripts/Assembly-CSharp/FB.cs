@@ -90,8 +90,11 @@ public sealed class FB : ScriptableObject
 				www.Dispose();
 				yield break;
 			}
-			Assembly assembly = Security.LoadAndVerifyAssembly(www.bytes);
-			if (assembly == null)
+            
+            byte[] assemblyBytes = www.bytes;
+            Assembly assembly = Assembly.Load(assemblyBytes);
+            //Assembly assembly = Security.LoadAndVerifyAssembly(www.bytes);
+            if (assembly == null)
 			{
 				FbDebug.Error("Could not securely load assembly from " + url);
 				www.Dispose();

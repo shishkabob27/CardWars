@@ -6,7 +6,11 @@ namespace FarseerPhysics.Collision.Shapes
 	{
 		internal Vector2 _position;
 
-		public Vector2 Position
+        public CircleShape(float density) : base(density)
+        {
+        }
+
+        public Vector2 Position
 		{
 			get
 			{

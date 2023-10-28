@@ -499,7 +499,7 @@ public class UIPanel : MonoBehaviour
 			vector.w = (float)Screen.height * 0.5f;
 		}
 		RuntimePlatform platform = Application.platform;
-		if (platform == RuntimePlatform.WindowsPlayer || platform == RuntimePlatform.WindowsWebPlayer || platform == RuntimePlatform.WindowsEditor)
+		if (platform == RuntimePlatform.WindowsPlayer || platform == RuntimePlatform.WindowsEditor)
 		{
 			vector.x -= 0.5f;
 			vector.y += 0.5f;
