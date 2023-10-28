@@ -8,7 +8,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using JsonFx.Json;
-using Steamworks;
 using UnityEngine;
 
 public class PlayerInfoScript : MonoBehaviour
@@ -1513,34 +1512,17 @@ public class PlayerInfoScript : MonoBehaviour
 		LoginAttempted = true;
 		LoadTimeStamp();
 		string text = null;
-		if (SteamManager.IsUsingSteam())
+		PlayerName = LoadPlayerName();
+		text = PlayerPrefs.GetString("SocialLogin", null);
+		if (string.IsNullOrEmpty(PlayerName) && string.IsNullOrEmpty(text))
 		{
-			if (SteamManager.Initialized)
-			{
-				CSteamID steamID = SteamUser.GetSteamID();
-				byte[] array = new byte[16];
-				Array.Copy(BitConverter.GetBytes((ulong)steamID), array, 8);
-				PlayerName = new Guid(array).ToString();
-			}
-			else
-			{
-				PlayerName = string.Empty;
-			}
+			PlayerName = Guid.NewGuid().ToString();
+			SavePlayerName(PlayerName);
 		}
-		else
+		else if (string.IsNullOrEmpty(PlayerName))
 		{
-			PlayerName = LoadPlayerName();
-			text = PlayerPrefs.GetString("SocialLogin", null);
-			if (string.IsNullOrEmpty(PlayerName) && string.IsNullOrEmpty(text))
-			{
-				PlayerName = Guid.NewGuid().ToString();
-				SavePlayerName(PlayerName);
-			}
-			else if (string.IsNullOrEmpty(PlayerName))
-			{
-				PlayerName = text;
-				SavePlayerName(PlayerName);
-			}
+			PlayerName = text;
+			SavePlayerName(PlayerName);
 		}
 		SessionManager instance = SessionManager.GetInstance();
 		instance.OnReadyCallback = null;
