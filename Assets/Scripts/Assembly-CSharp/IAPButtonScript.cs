@@ -31,7 +31,7 @@ public class IAPButtonScript : MonoBehaviour
 	{
 		AllowPurchase = allowPurchase;
 		AbstractPurchaseID = PurchaseAndroidID;
-		GameObject gameObject = base.gameObject.transform.parent.FindChild("Gem_Amount").gameObject;
+		GameObject gameObject = base.gameObject.transform.parent.Find("Gem_Amount").gameObject;
 		if ((bool)gameObject)
 		{
 			UILabel component = gameObject.GetComponent<UILabel>();
@@ -48,7 +48,7 @@ public class IAPButtonScript : MonoBehaviour
 				}
 			}
 		}
-		gameObject = base.gameObject.transform.FindChild("Gem_Cost").gameObject;
+		gameObject = base.gameObject.transform.Find("Gem_Cost").gameObject;
 		if ((bool)gameObject)
 		{
 			UILabel component2 = gameObject.GetComponent<UILabel>();

@@ -180,8 +180,8 @@ public class CWCharacterAnimController : MonoBehaviour
 				anim.PlayQueued(animFromJson2);
 			}
 		}
-		Transform transform = playerCharacters[player].transform.FindChild("M_MOUTH");
-		Transform transform2 = playerCharacters[player].transform.FindChild("M_EYES");
+		Transform transform = playerCharacters[player].transform.Find("M_MOUTH");
+		Transform transform2 = playerCharacters[player].transform.Find("M_EYES");
 		if (player == PlayerType.User)
 		{
 			P1FaceAnim = animFromJson;

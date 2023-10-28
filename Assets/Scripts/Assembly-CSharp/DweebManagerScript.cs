@@ -72,7 +72,7 @@ public class DweebManagerScript : MonoBehaviour
 			if (PlayerHand != null)
 			{
 				DweebCup.transform.parent = PlayerHand;
-				Transform transform = PlayerHand.FindChild("HoldCards(Clone)");
+				Transform transform = PlayerHand.Find("HoldCards(Clone)");
 				if (transform != null)
 				{
 					transform.gameObject.SetActive(false);

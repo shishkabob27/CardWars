@@ -294,9 +294,9 @@ public class NcParticleSystem : NcEffectBehaviour
 				{
 					flag2 = true;
 				}
-				if (flag2 && 0f < m_BufColliderOriParts[i].lifetime)
+				if (flag2 && 0f < m_BufColliderOriParts[i].remainingLifetime)
 				{
-					m_BufColliderOriParts[i].lifetime = 0f;
+					m_BufColliderOriParts[i].remainingLifetime = 0f;
 					flag = true;
 					CreateAttachPrefab(position, m_BufColliderConParts[i].size * m_fPrefabScale);
 				}

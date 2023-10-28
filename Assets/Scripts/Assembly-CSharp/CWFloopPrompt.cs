@@ -30,7 +30,7 @@ public class CWFloopPrompt : MonoBehaviour
 	{
 		if (PauseMenu.pauseMenuShown || CurrentQuestInfo.activeInHierarchy)
 		{
-			GameObject gameObject = base.gameObject.transform.FindChild("No").gameObject;
+			GameObject gameObject = base.gameObject.transform.Find("No").gameObject;
 			if ((bool)gameObject)
 			{
 				gameObject.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);

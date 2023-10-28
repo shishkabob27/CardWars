@@ -61,8 +61,8 @@ public class DebugAnimButtonDisplay : MonoBehaviour
 			obj.SetActive(true);
 		}
 		int num = ((debug != CharAnimDebug.Me) ? 1 : 0);
-		Transform transform = obj.transform.FindChild("DebugCam_0");
-		Transform transform2 = obj.transform.FindChild("DebugCam_1");
+		Transform transform = obj.transform.Find("DebugCam_0");
+		Transform transform2 = obj.transform.Find("DebugCam_1");
 		CWPlayCharacterAnimation[] componentsInChildren = obj.GetComponentsInChildren<CWPlayCharacterAnimation>(true);
 		CWPlayCharacterAnimation[] array = componentsInChildren;
 		foreach (CWPlayCharacterAnimation cWPlayCharacterAnimation in array)
@@ -71,7 +71,7 @@ public class DebugAnimButtonDisplay : MonoBehaviour
 		}
 		transform.GetComponent<Camera>().enabled = debug == CharAnimDebug.Me;
 		transform2.GetComponent<Camera>().enabled = debug == CharAnimDebug.Them;
-		Transform transform3 = obj.transform.FindChild("Panel");
+		Transform transform3 = obj.transform.Find("Panel");
 		transform3.transform.localPosition = new Vector3(-2100f * (float)num, 100f, 0f);
 	}
 }

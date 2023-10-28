@@ -125,26 +125,26 @@ public class TournamentDate : AsyncData<TournamentData>
 					{
 					case TournamentManager.RewardType.Card:
 					{
-						GameObject gameObject2 = RewardSlots[num].transform.FindChild("Icon_Gem").gameObject;
+						GameObject gameObject2 = RewardSlots[num].transform.Find("Icon_Gem").gameObject;
 						gameObject2.SetActive(false);
-						GameObject gameObject3 = RewardSlots[num].transform.FindChild("Icon_Coin").gameObject;
+						GameObject gameObject3 = RewardSlots[num].transform.Find("Icon_Coin").gameObject;
 						gameObject3.SetActive(false);
 						PlayerDeckManager deckManager = instance.DeckManager;
 						CardForm card = CardDataManager.Instance.GetCard(item.CardName);
 						GameObject gameObject;
 						if (card.Quality == Quality.Obsidian)
 						{
-							gameObject = RewardSlots[num].transform.FindChild("Icon_BlackCard").gameObject;
+							gameObject = RewardSlots[num].transform.Find("Icon_BlackCard").gameObject;
 							RewardDesc[num].text = KFFLocalization.Get("!!BLACKCARD");
 						}
 						else if (card.Quality == Quality.Gold)
 						{
-							gameObject = RewardSlots[num].transform.FindChild("Icon_GoldCard").gameObject;
+							gameObject = RewardSlots[num].transform.Find("Icon_GoldCard").gameObject;
 							RewardDesc[num].text = KFFLocalization.Get("!!GOLDCARD");
 						}
 						else
 						{
-							gameObject = RewardSlots[num].transform.FindChild("Icon_GoldCard").gameObject;
+							gameObject = RewardSlots[num].transform.Find("Icon_GoldCard").gameObject;
 							RewardDesc[num].text = KFFLocalization.Get("!!CARD");
 						}
 						gameObject.SetActive(true);
@@ -152,22 +152,22 @@ public class TournamentDate : AsyncData<TournamentData>
 					}
 					case TournamentManager.RewardType.Gem:
 					{
-						GameObject gameObject = RewardSlots[num].transform.FindChild("DeckCard").gameObject;
+						GameObject gameObject = RewardSlots[num].transform.Find("DeckCard").gameObject;
 						gameObject.SetActive(false);
-						GameObject gameObject3 = RewardSlots[num].transform.FindChild("Icon_Coin").gameObject;
+						GameObject gameObject3 = RewardSlots[num].transform.Find("Icon_Coin").gameObject;
 						gameObject3.SetActive(false);
-						GameObject gameObject2 = RewardSlots[num].transform.FindChild("Icon_Gem").gameObject;
+						GameObject gameObject2 = RewardSlots[num].transform.Find("Icon_Gem").gameObject;
 						gameObject2.SetActive(true);
 						RewardDesc[num].text = KFFLocalization.Get("!!GEMS");
 						break;
 					}
 					case TournamentManager.RewardType.Coin:
 					{
-						GameObject gameObject = RewardSlots[num].transform.FindChild("DeckCard").gameObject;
+						GameObject gameObject = RewardSlots[num].transform.Find("DeckCard").gameObject;
 						gameObject.SetActive(false);
-						GameObject gameObject2 = RewardSlots[num].transform.FindChild("Icon_Gem").gameObject;
+						GameObject gameObject2 = RewardSlots[num].transform.Find("Icon_Gem").gameObject;
 						gameObject2.SetActive(false);
-						GameObject gameObject3 = RewardSlots[num].transform.FindChild("Icon_Coin").gameObject;
+						GameObject gameObject3 = RewardSlots[num].transform.Find("Icon_Coin").gameObject;
 						gameObject3.SetActive(true);
 						RewardDesc[num].text = KFFLocalization.Get("!!COINS");
 						break;

@@ -415,13 +415,13 @@ public class CWTutorialsPopup : MonoBehaviour
 						}
 					}
 					transform.localPosition = new Vector3(transform.localPosition.x, info.SpritePos.y - transform.localScale.y, transform.localPosition.z);
-					Transform transform3 = gameObject.transform.FindChild("Background/Frame");
+					Transform transform3 = gameObject.transform.Find("Background/Frame");
 					num3 = componentInChildren2.relativeSize.y * transform.localScale.y + 100f;
 					transform3.localScale = new Vector3(transform3.localScale.x, num3, 1f);
 				}
 			}
 		}
-		transform = gameObject.transform.FindChild("Background");
+		transform = gameObject.transform.Find("Background");
 		Transform transform4 = transform;
 		if (string.IsNullOrEmpty(info.Text))
 		{
@@ -718,7 +718,7 @@ public class CWTutorialsPopup : MonoBehaviour
 	{
 		if (obj != null)
 		{
-			return obj.transform.FindChild("Sprite_Group");
+			return obj.transform.Find("Sprite_Group");
 		}
 		return null;
 	}
@@ -727,7 +727,7 @@ public class CWTutorialsPopup : MonoBehaviour
 	{
 		if (obj != null)
 		{
-			return obj.transform.FindChild("Sprite_Popup");
+			return obj.transform.Find("Sprite_Popup");
 		}
 		return null;
 	}

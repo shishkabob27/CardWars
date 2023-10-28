@@ -106,7 +106,7 @@ public class CWResultChestTrigger : MonoBehaviour
 		}
 		yield return new WaitForSeconds(cardTime);
 		GameObject cardObj = GetSpawnObject(quat: Quaternion.Euler(new Vector3(0f, -90f, 0f)), prefab: endChestCtrlr.resultCard, parentTr: chestParentTr);
-		Transform cardInChest = base.transform.FindChild("Chest_Card");
+		Transform cardInChest = base.transform.Find("Chest_Card");
 		if (cardInChest != null)
 		{
 			cardInChest.gameObject.SetActive(false);

@@ -326,13 +326,13 @@ public class FXMakerLayout : NgLayout
 		GUI.Window(GUIUtility.GetControlID(FocusType.Passive), rect, delegate(int id)
 		{
 			GUI.depth = 0;
-			int controlID = GUIUtility.GetControlID(FocusType.Native);
+			int controlID = GUIUtility.GetControlID(FocusType.Passive);
 			if (GUIUtility.hotControl < controlID)
 			{
 				setHotControl(0);
 			}
 			func(id);
-			int controlID2 = GUIUtility.GetControlID(FocusType.Native);
+			int controlID2 = GUIUtility.GetControlID(FocusType.Passive);
 			if (GUIUtility.hotControl < controlID || (GUIUtility.hotControl > controlID2 && controlID2 != -1))
 			{
 				setHotControl(-1);

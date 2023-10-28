@@ -63,7 +63,7 @@ public class CWBattleEndQuestCondition : MonoBehaviour
 		{
 			tweenEvent2.Play();
 		}
-		Transform targetTr = base.transform.FindChild("FX_Target");
+		Transform targetTr = base.transform.Find("FX_Target");
 		SpawnFX(targetTr);
 	}
 

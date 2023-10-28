@@ -117,12 +117,12 @@ public class ConnectivityController : MonoBehaviour
 		Transform transform;
 		if (gameObject != null)
 		{
-			transform = gameObject.transform.FindChild("Background");
+			transform = gameObject.transform.Find("Background");
 			if (transform != null)
 			{
 				if (enableInputForTutorialCallback != null)
 				{
-					Transform transform2 = transform.FindChild("ScrollBar");
+					Transform transform2 = transform.Find("ScrollBar");
 					if (transform2 != null)
 					{
 						Component[] componentsInChildren = transform2.GetComponentsInChildren(typeof(Collider));
@@ -140,7 +140,7 @@ public class ConnectivityController : MonoBehaviour
 						}
 					}
 				}
-				transform = transform.FindChild("Button");
+				transform = transform.Find("Button");
 				if (transform != null)
 				{
 					if (enableInputForTutorialCallback != null)
@@ -159,8 +159,8 @@ public class ConnectivityController : MonoBehaviour
 					}
 					transform.gameObject.AddComponent<RestartSceneScript>();
 				}
-				transform = gameObject.transform.FindChild("Background");
-				transform = transform.transform.FindChild("Title_Label");
+				transform = gameObject.transform.Find("Background");
+				transform = transform.transform.Find("Title_Label");
 				if (transform != null)
 				{
 					UILabel componentInChildren2 = transform.GetComponentInChildren<UILabel>();

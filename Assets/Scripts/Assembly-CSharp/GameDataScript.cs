@@ -164,7 +164,7 @@ public class GameDataScript : MonoBehaviour
 
 	private void SetShadowOffset(GameObject chairObj)
 	{
-		Transform transform = chairObj.transform.FindChild("Chair_Shadow");
+		Transform transform = chairObj.transform.Find("Chair_Shadow");
 		if (transform != null)
 		{
 			transform.position = new Vector3(transform.position.x, -40f, 0f);
