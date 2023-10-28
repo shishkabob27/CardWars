@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/Panel")]
 public class UIPanel : MonoBehaviour
 {

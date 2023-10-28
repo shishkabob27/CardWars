@@ -850,8 +850,8 @@ public class TFUtils
 
 	public static void PlayMovie(string movie, bool canSkip = true)
 	{
-		Handheld.PlayFullScreenMovie(movie, Color.black, (!canSkip) ? FullScreenMovieControlMode.Hidden : FullScreenMovieControlMode.CancelOnInput);
-	}
+		//Handheld.PlayFullScreenMovie(movie, Color.black, (!canSkip) ? FullScreenMovieControlMode.Hidden : FullScreenMovieControlMode.CancelOnInput);
+    }
 
 	public static byte[] Zip(string str)
 	{

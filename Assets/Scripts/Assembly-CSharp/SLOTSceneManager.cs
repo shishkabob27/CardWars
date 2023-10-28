@@ -37,9 +37,9 @@ public class SLOTSceneManager : SLOTGameSingleton<SLOTSceneManager>
 		if (name != null && name.Length > 0)
 		{
 			CheckAsyncOperationDone(true);
-			//Application.LoadLevel(GetLevelName(name));
-			
-		}
+            //Application.LoadLevel(GetLevelName(name));
+            SceneManager.LoadScene(GetLevelName(name));
+        }
 	}
 
 	public void LoadLevelAdditive(string name)
