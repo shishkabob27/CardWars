@@ -56,7 +56,7 @@ public class SQServer
 	{
 		get
 		{
-			return "http://floop-iap-lb.kffgames.com";
+			return "http://retroretreat.net";
 		}
 	}
 

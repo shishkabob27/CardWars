@@ -692,8 +692,9 @@ public abstract class MapControllerBase : MonoBehaviour
 	{
 		if (QuestMapRoot == null)
 		{
-			GameObject original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(QuestMapPrefabPath) as GameObject;
-			GameObject gameObject = UnityEngine.Object.Instantiate(original);
+            //GameObject original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(QuestMapPrefabPath) as GameObject;
+            GameObject original = Instantiate(Resources.Load(QuestMapPrefabPath, typeof(GameObject))) as GameObject;
+			GameObject gameObject = original;
 			if (gameObject != null)
 			{
 				gameObject.transform.SetParent(base.gameObject.transform.transform, false);

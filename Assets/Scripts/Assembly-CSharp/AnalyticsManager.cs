@@ -864,7 +864,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
 			dictionary["v_maj"] = "1.0";
 			dictionary["d"] = SystemInfo.deviceModel;
-			KontagentBinding.sendDeviceInformation(dictionary);
+			//KontagentBinding.sendDeviceInformation(dictionary);
 		}
 	}
 
@@ -872,7 +872,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 	{
 		if (!TurnOff)
 		{
-			KontagentBinding.startSession(KontagentApiKey, KontagentTestMode);
+			//KontagentBinding.startSession(KontagentApiKey, KontagentTestMode);
 		}
 	}
 
@@ -880,7 +880,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 	{
 		if (!TurnOff)
 		{
-			KontagentBinding.stopSession();
+			//KontagentBinding.stopSession();
 		}
 	}
 
@@ -948,7 +948,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 			stringBuilder.Append("}");
 			dictionary["data"] = stringBuilder.ToString();
 		}
-		KontagentBinding.customEvent(eventName, dictionary);
+		//KontagentBinding.customEvent(eventName, dictionary);
 	}
 
 	private void LogIAP(string[] Categories, string iapName, int buyPrice, int dataLevel)
@@ -959,11 +959,11 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
 			AddCommon(dictionary, Categories, iapName, dataLevel);
 			dictionary["v"] = buyPrice.ToString();
-			KontagentBinding.revenueTracking(buyPrice, dictionary);
+			//KontagentBinding.revenueTracking(buyPrice, dictionary);
 			Dictionary<string, object> dictionary2 = new Dictionary<string, object>();
 			dictionary2.Add("item", iapName);
 			dictionary2.Add("price", (float)buyPrice / 100f);
-			KFFKochavaAnalytics.LogEvent("Purchase", dictionary2);
+			//KFFKochavaAnalytics.LogEvent("Purchase", dictionary2);
 		}
 	}
 }

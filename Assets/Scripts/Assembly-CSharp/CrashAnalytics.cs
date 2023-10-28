@@ -27,6 +27,7 @@ public class CrashAnalytics
 
 	private static AndroidJavaClass GetJniInstance()
 	{
+		return null;
 		if (!inited)
 		{
 			inited = true;

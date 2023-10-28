@@ -65,10 +65,12 @@ public class CWLoadLevelForBattle : MonoBehaviour
 	private bool TryLoadEnvironmentPrefab(string prefab)
 	{
 		string path = "Environment/" + prefab;
-		Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(path);
-		if (@object != null)
+        //Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(path);
+        GameObject original = Resources.Load(path, typeof(GameObject)) as GameObject;
+
+        if (original != null)
 		{
-			levelObj = SLOTGame.InstantiateFX(@object) as GameObject;
+			levelObj = Instantiate(original);
 			levelObj.transform.parent = EnvironmentParentTr;
 			return true;
 		}

@@ -85,6 +85,7 @@ public class SLOTResourceManager : SLOTGameSingleton<SLOTResourceManager>
 		{
 			return Resources.Load(path);
 		}
+		UnityEngine.Debug.LogError("Failed to load resource: " +  path);
 		return null;
 	}
 

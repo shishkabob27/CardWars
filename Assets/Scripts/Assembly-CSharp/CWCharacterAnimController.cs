@@ -88,11 +88,12 @@ public class CWCharacterAnimController : MonoBehaviour
 
 	private GameObject SpawnCardObjects(string prefabName, GameObject parentBone)
 	{
-		UnityEngine.Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + prefabName);
-		GameObject gameObject = null;
-		if ((bool)@object)
+		//UnityEngine.Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + prefabName);
+        GameObject original = Resources.Load("Props/" + prefabName, typeof(GameObject)) as GameObject;
+        GameObject gameObject = null;
+		if (original != null)
 		{
-			gameObject = SLOTGame.InstantiateFX(@object, parentBone.transform.position, Quaternion.identity) as GameObject;
+			gameObject = Instantiate(original, parentBone.transform.position, Quaternion.identity) as GameObject;
 			gameObject.transform.parent = parentBone.transform;
 			gameObject.transform.localRotation = ((!(prefabName == "HoldCards")) ? Quaternion.identity : Quaternion.Euler(new Vector3(270f, 0f, 0f)));
 		}

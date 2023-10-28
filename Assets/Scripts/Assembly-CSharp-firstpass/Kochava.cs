@@ -1461,6 +1461,7 @@ public class Kochava : MonoBehaviour
 
 	public void OnApplicationPause(bool didPause)
 	{
+		return;
 		if (sessionTracking == KochSessionTracking.full && appData != null)
 		{
 			_S._fireEvent("session", new Dictionary<string, object> { 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class CWFloopActionManager : MonoBehaviour
@@ -671,18 +672,21 @@ public class CWFloopActionManager : MonoBehaviour
 	public GameObject GetSpawnedFX(string resourceName, GameObject target)
 	{
 		GameObject gameObject = null;
-		Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + resourceName);
-		if (@object == null)
+        //Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + resourceName);
+		GameObject original = Resources.Load("Props/" + resourceName, typeof(GameObject)) as GameObject;
+        if (original == null)
 		{
-			@object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + resourceName);
-		}
-		if (@object == null)
+            //original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + resourceName);
+            original = Resources.Load("Particles/" + resourceName, typeof(GameObject)) as GameObject;
+        }
+		if (original == null)
 		{
-			@object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("FloopActions/" + resourceName);
-		}
-		if (@object != null)
+            //original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("FloopActions/" + resourceName);
+            original = Resources.Load("FloopActions/" + resourceName, typeof(GameObject)) as GameObject;
+        }
+		if (original != null)
 		{
-			gameObject = Object.Instantiate(@object, target.transform.position, target.transform.rotation) as GameObject;
+			gameObject = Instantiate(original, target.transform.position, target.transform.rotation) as GameObject;
 			if (gameObject != null)
 			{
 				SLOTGameSingleton<SLOTAudioManager>.GetInstance().UpdateAudioVolumes(gameObject);

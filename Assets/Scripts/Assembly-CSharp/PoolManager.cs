@@ -220,6 +220,7 @@ public class PoolManager : MonoBehaviour
 
 	public static void PopulateStore(GameObject prefab, string poolName, int count)
 	{
+		UnityEngine.Debug.Log(prefab.name);
 		Transform parent = Instance.transform;
 		Stack<GameObject> value = null;
 		Dictionary<string, Stack<GameObject>> dictionary = Instance.objectStore;
@@ -229,7 +230,7 @@ public class PoolManager : MonoBehaviour
 		}
 		for (int i = 0; i < count; i++)
 		{
-			GameObject gameObject = Object.Instantiate(prefab);
+			GameObject gameObject = Instantiate(prefab) as GameObject;
 			NGUITools.SetActive(gameObject, false);
 			gameObject.name = poolName;
 			gameObject.transform.parent = parent;

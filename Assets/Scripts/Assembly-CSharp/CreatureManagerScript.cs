@@ -236,13 +236,15 @@ public class CreatureManagerScript : MonoBehaviour
 		}
 		foreach (KeyValuePair<string, int> creaturePrefab in creaturePrefabList)
 		{
-			GameObject prefab = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Summons/" + creaturePrefab.Key) as GameObject;
-			PoolManager.PopulateStore(prefab, creaturePrefab.Key, creaturePrefab.Value);
+            //GameObject prefab = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Summons/" + creaturePrefab.Key) as GameObject;
+            GameObject original = Resources.Load("Summons/" + creaturePrefab.Key, typeof(GameObject)) as GameObject;
+            PoolManager.PopulateStore(original, creaturePrefab.Key, creaturePrefab.Value);
 		}
 		foreach (KeyValuePair<string, int> buildingPprefab in BuildingPprefabList)
 		{
-			GameObject prefab2 = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Building/" + buildingPprefab.Key) as GameObject;
-			PoolManager.PopulateStore(prefab2, buildingPprefab.Key, buildingPprefab.Value);
+            //GameObject prefab2 = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Building/" + buildingPprefab.Key) as GameObject;
+            GameObject prefab2 = Resources.Load("Building/" + buildingPprefab.Key, typeof(GameObject)) as GameObject;
+            PoolManager.PopulateStore(prefab2, buildingPprefab.Key, buildingPprefab.Value);
 		}
 	}
 

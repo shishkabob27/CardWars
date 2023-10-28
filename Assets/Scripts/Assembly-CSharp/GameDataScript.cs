@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameDataScript : MonoBehaviour
@@ -197,10 +198,12 @@ public class GameDataScript : MonoBehaviour
 	{
 		GameObject gameObject = null;
 		Vector3 position = new Vector3(tr.position.x + offsetX, tr.position.y + offsetY, 0f);
-		Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(prefabName);
-		if (@object != null)
+        //Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(prefabName);
+        GameObject original = Resources.Load(prefabName, typeof(GameObject)) as GameObject;
+
+        if (original != null)
 		{
-			gameObject = SLOTGame.InstantiateFX(@object, position, tr.rotation) as GameObject;
+			gameObject = Instantiate(original, position, tr.rotation) as GameObject;
 			gameObject.transform.parent = tr;
 		}
 		return gameObject;

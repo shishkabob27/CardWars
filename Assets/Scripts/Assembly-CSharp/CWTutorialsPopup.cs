@@ -269,8 +269,9 @@ public class CWTutorialsPopup : MonoBehaviour
 
 	private GameObject CreatePopup(TutorialInfo info)
 	{
-		UnityEngine.Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("MenuItems/Tutorial_Popup");
-		GameObject gameObject = SLOTGame.InstantiateFX(original) as GameObject;
+        //UnityEngine.Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("MenuItems/Tutorial_Popup");
+        GameObject original = Instantiate(Resources.Load("menuitems/Tutorial_Popup", typeof(GameObject))) as GameObject;
+		GameObject gameObject = original;
 		gameObject.name = gameObject.name + "_" + info.TutorialID;
 		gameObject.SendMessage("Reset");
 		gameObject.transform.localPosition = info.Pos;
@@ -469,11 +470,16 @@ public class CWTutorialsPopup : MonoBehaviour
 
 	private GameObject CreatePointer(TutorialInfo.PointerInfo pinfo)
 	{
-		UnityEngine.Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("MenuItems/Tutorial_Arrow");
+		//UnityEngine.Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("menuitems/Tutorial_Arrow");
+		GameObject original = Instantiate(Resources.Load("menuitems/Tutorial_Arrow", typeof(GameObject))) as GameObject; 
+		UnityEngine.Debug.Log(original.name);
 		GameObject gameObject = null;
 		if (!pinfo.Hide || pinfo.ScaleTarget)
 		{
-			gameObject = SLOTGame.InstantiateFX(original) as GameObject;
+			gameObject = original as GameObject;
+            UnityEngine.Debug.Log(pinfo.PointerTarget);
+            UnityEngine.Debug.Log(gameObject.name);
+			
 			gameObject.name += pinfo.PointerTarget;
 			Transform transform = FindSpriteGroup(gameObject);
 			if (!pinfo.Hide)

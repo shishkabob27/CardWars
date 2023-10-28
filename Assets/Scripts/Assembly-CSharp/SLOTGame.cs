@@ -544,7 +544,7 @@ public class SLOTGame : BusyIconController
 
 	public static UnityEngine.Object InstantiateFX(UnityEngine.Object original)
 	{
-		UnityEngine.Object @object = UnityEngine.Object.Instantiate(original);
+		UnityEngine.Object @object = Instantiate(original);
 		if (@object != null)
 		{
 			OnInstantiate(@object);
