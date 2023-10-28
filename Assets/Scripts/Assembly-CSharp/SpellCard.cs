@@ -1,5 +1,3 @@
-// Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// SpellCard
 public class SpellCard : CardForm
 {
 	public override int BaseATK

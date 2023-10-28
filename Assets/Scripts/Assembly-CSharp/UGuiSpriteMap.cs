@@ -1,5 +1,6 @@
-using UnityEngine;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class UGuiSpriteMap : ScriptableObject
 {
@@ -8,5 +9,17 @@ public class UGuiSpriteMap : ScriptableObject
 	{
 	}
 
-	public StringSpriteTable spriteMap;
+	public StringSpriteTable spriteMap = new StringSpriteTable();
+
+	public Sprite GetSprite(string spriteName)
+	{
+		try
+		{
+			return spriteMap.Dic[spriteName];
+		}
+		catch (KeyNotFoundException)
+		{
+		}
+		return null;
+	}
 }

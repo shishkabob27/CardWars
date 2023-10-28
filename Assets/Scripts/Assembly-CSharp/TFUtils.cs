@@ -1,14 +1,11 @@
-// Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// TFUtils
 #define ASSERTS_ON
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Security.Cryptography;
 using System.Text;
-//using Ionic.Zlib;
+using Ionic.Zlib;
 using UnityEngine;
 
 public class TFUtils

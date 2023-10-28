@@ -1,30 +1,28 @@
-// Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// BusyIconController
 using UnityEngine;
 
 public class BusyIconController : MonoBehaviour
 {
-    public GameObject busyIcon;
+	public GameObject busyIcon;
 
-    public Camera busyIconCamera;
+	public Camera busyIconCamera;
 
-    private bool busy;
+	private bool busy;
 
-    protected virtual void Start()
-    {
-        ShowBusyIcon(busy);
-    }
+	protected virtual void Start()
+	{
+		ShowBusyIcon(busy);
+	}
 
-    public void ShowBusyIcon(bool b)
-    {
-        busy = b;
-        if (busyIcon != null)
-        {
-            busyIcon.SetActive(b);
-        }
-        if (busyIconCamera != null)
-        {
-            busyIconCamera.enabled = b;
-        }
-    }
+	public void ShowBusyIcon(bool b)
+	{
+		busy = b;
+		if (busyIcon != null)
+		{
+			busyIcon.SetActive(b);
+		}
+		if (busyIconCamera != null)
+		{
+			busyIconCamera.enabled = b;
+		}
+	}
 }

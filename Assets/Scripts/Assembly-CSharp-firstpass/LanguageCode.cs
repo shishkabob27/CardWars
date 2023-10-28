@@ -1,5 +1,3 @@
-// Assembly-CSharp-firstpass, Version=1.4.1003.3007, Culture=neutral, PublicKeyToken=null
-// LanguageCode
 public enum LanguageCode
 {
 	N,

@@ -1,5 +1,3 @@
-// Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// LeaderForm
 public class LeaderForm
 {
 	public const int HP_PER_LEVEL = 5;
