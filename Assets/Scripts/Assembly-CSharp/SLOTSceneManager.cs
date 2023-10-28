@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SLOTSceneManager : SLOTGameSingleton<SLOTSceneManager>
 {
@@ -36,7 +37,8 @@ public class SLOTSceneManager : SLOTGameSingleton<SLOTSceneManager>
 		if (name != null && name.Length > 0)
 		{
 			CheckAsyncOperationDone(true);
-			Application.LoadLevel(GetLevelName(name));
+			//Application.LoadLevel(GetLevelName(name));
+			
 		}
 	}
 
@@ -45,8 +47,9 @@ public class SLOTSceneManager : SLOTGameSingleton<SLOTSceneManager>
 		if (name != null && name.Length > 0)
 		{
 			CheckAsyncOperationDone(true);
-			Application.LoadLevelAdditive(GetLevelName(name));
-		}
+            //Application.LoadLevelAdditive(GetLevelName(name));
+            SceneManager.LoadScene(GetLevelName(name), LoadSceneMode.Additive);
+        }
 	}
 
 	public AsyncOperation LoadLevelAsync(string name)
