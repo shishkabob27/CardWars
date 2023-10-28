@@ -156,8 +156,8 @@ public class KFFNetwork : MonoBehaviour
         if (activeRequestCount < MAX_CONCURRENT_WWW_REQUEST_COUNT)
         {
             WWW wWW = null;
-            wWW = ((!RuntimeServices.EqualityOperator(postData, null) && !RuntimeServices.EqualityOperator(headers, null)) ? new WWW(url, postData, headers) : (RuntimeServices.EqualityOperator(form, null) ? new WWW(url) : new WWW(url, form)));
-            if (!RuntimeServices.EqualityOperator(wWW, null))
+            wWW = (postData != null && headers != null) ? new WWW(url, postData, headers) : (form == null ? new WWW(url) : new WWW(url, form));
+            if (wWW != null)
             {
                 wWWInfo = new WWWInfo();
                 wWWInfo.www = wWW;
@@ -173,7 +173,7 @@ public class KFFNetwork : MonoBehaviour
             wWWInfo.queued = true;
             wWWInfo.active = false;
         }
-        if (!RuntimeServices.EqualityOperator(wWWInfo, null))
+        if (wWWInfo != null)
         {
             wWWInfo.callback = WWWRequestCallback;
             wWWInfo.callbackParam = callbackParam;
@@ -197,7 +197,7 @@ public class KFFNetwork : MonoBehaviour
         if (activeRequestCount < MAX_CONCURRENT_WWW_REQUEST_COUNT)
         {
             WWW wWW = WWW.LoadFromCacheOrDownload(url, version);
-            if (!RuntimeServices.EqualityOperator(wWW, null))
+            if (wWW != null)
             {
                 wWWInfo = new WWWInfo();
                 wWWInfo.www = wWW;
@@ -215,7 +215,7 @@ public class KFFNetwork : MonoBehaviour
             wWWInfo.active = false;
             wWWInfo.version = version;
         }
-        if (!RuntimeServices.EqualityOperator(wWWInfo, null))
+        if (wWWInfo != null)
         {
             wWWInfo.callback = WWWRequestCallback;
             wWWInfo.callbackParam = callbackParam;
@@ -233,7 +233,7 @@ public class KFFNetwork : MonoBehaviour
 
     public virtual void CancelWWWRequest(WWWInfo info)
     {
-        if (!RuntimeServices.EqualityOperator(info, null))
+        if (info != null)
         {
             if ((info.active || info.queued) && info.callback != null)
             {
@@ -264,8 +264,8 @@ public class KFFNetwork : MonoBehaviour
                 {
                     string url = wWWInfo.url;
                     WWW wWW = null;
-                    wWW = ((wWWInfo.version >= 0) ? WWW.LoadFromCacheOrDownload(url, wWWInfo.version) : ((!RuntimeServices.EqualityOperator(wWWInfo.postData, null) && !RuntimeServices.EqualityOperator(wWWInfo.headers, null)) ? new WWW(url, wWWInfo.postData, wWWInfo.headers) : (RuntimeServices.EqualityOperator(wWWInfo.form, null) ? new WWW(url) : new WWW(url, wWWInfo.form))));
-                    if (!RuntimeServices.EqualityOperator(wWW, null))
+                    wWW = ((wWWInfo.version >= 0) ? WWW.LoadFromCacheOrDownload(url, wWWInfo.version) : ((wWWInfo.postData != null && wWWInfo.headers != null) ? new WWW(url, wWWInfo.postData, wWWInfo.headers) : (wWWInfo.form == null ? new WWW(url) : new WWW(url, wWWInfo.form))));
+                    if (wWW != null)
                     {
                         wWWInfo.www = wWW;
                         wWWInfo.queued = false;
@@ -282,12 +282,12 @@ public class KFFNetwork : MonoBehaviour
                     }
                 }
             }
-            else if (RuntimeServices.EqualityOperator(wWWInfo.www, null) || wWWInfo.www.isDone || !string.IsNullOrEmpty(wWWInfo.www.error))
+            else if (wWWInfo.www == null || wWWInfo.www.isDone || !string.IsNullOrEmpty(wWWInfo.www.error))
             {
                 object arg = null;
                 string text = null;
                 bool flag = true;
-                if (!RuntimeServices.EqualityOperator(wWWInfo.www, null) && wWWInfo.www.error == null)
+                if (wWWInfo.www != null && wWWInfo.www.error == null)
                 {
                     if (wWWInfo.rawRequest)
                     {
@@ -301,49 +301,39 @@ public class KFFNetwork : MonoBehaviour
                             object obj = Json.Deserialize(wWWInfo.www.text);
                             Dictionary<string, object> dictionary = obj as Dictionary<string, object>;
                             WWWRequestResult wWWRequestResult = null;
-                            if (!RuntimeServices.EqualityOperator(dictionary, null))
+                            if (dictionary != null)
                             {
                                 wWWRequestResult = new WWWRequestResult();
-                                IEnumerator enumerator = UnityRuntimeServices.GetEnumerator(dictionary.Keys);
-                                while (enumerator.MoveNext())
+
+                                foreach (string text2 in dictionary.Keys)
                                 {
-                                    object obj2 = enumerator.Current;
-                                    if (!(obj2 is string))
+                                    if (dictionary[text2] != null)
                                     {
-                                        obj2 = RuntimeServices.Coerce(obj2, typeof(string));
-                                    }
-                                    string text2 = (string)obj2;
-                                    if (!RuntimeServices.EqualityOperator(dictionary[text2], null))
-                                    {
-                                        if (RuntimeServices.EqualityOperator(dictionary[text2].GetType(), typeof(float)))
+                                        Type valueType = dictionary[text2].GetType();
+
+                                        if (valueType == typeof(float))
                                         {
-                                            float value = RuntimeServices.UnboxSingle(dictionary[text2]);
-                                            UnityRuntimeServices.Update(enumerator, text2);
+                                            float value = (float)dictionary[text2];
                                             wWWRequestResult.SetValue(text2, value);
-                                            UnityRuntimeServices.Update(enumerator, text2);
                                         }
-                                        else if (RuntimeServices.EqualityOperator(dictionary[text2].GetType(), typeof(long)))
+                                        else if (valueType == typeof(long))
                                         {
-                                            int value2 = RuntimeServices.UnboxInt32(dictionary[text2]);
-                                            UnityRuntimeServices.Update(enumerator, text2);
+                                            int value2 = (int)(long)dictionary[text2];
                                             wWWRequestResult.SetValue(text2, value2);
-                                            UnityRuntimeServices.Update(enumerator, text2);
                                         }
-                                        else if (RuntimeServices.EqualityOperator(dictionary[text2].GetType(), typeof(string)))
+                                        else if (valueType == typeof(string))
                                         {
                                             wWWRequestResult.SetValue(text2, dictionary[text2] as string);
-                                            UnityRuntimeServices.Update(enumerator, text2);
                                         }
                                     }
                                     else
                                     {
                                         wWWRequestResult.SetValue(text2, null);
-                                        UnityRuntimeServices.Update(enumerator, text2);
                                     }
                                 }
                             }
-                            text = (RuntimeServices.EqualityOperator(wWWInfo.www, null) ? null : wWWInfo.www.error);
-                            if (!RuntimeServices.EqualityOperator(wWWRequestResult, null))
+                            text = (wWWInfo.www == null ? null : wWWInfo.www.error);
+                            if (wWWRequestResult != null)
                             {
                                 arg = wWWRequestResult;
                                 wWWRequestResult.CreateDictionary();
