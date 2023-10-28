@@ -41,7 +41,7 @@ public class GooglePlaySocial : SocialManager
 			_gpgAchievementIDs = KFFAndroidPlugin.GetManifestKeyStrings(names);
 			for (int j = 0; j < names.Length; j++)
 			{
-				TFUtils.DebugLog("Achievement ID mapping: " + Enum.GetName(typeof(AchievementIDs), j) + " => " + _gpgAchievementIDs[j]);
+				//TFUtils.DebugLog("Achievement ID mapping: " + Enum.GetName(typeof(AchievementIDs), j) + " => " + _gpgAchievementIDs[j]);
 			}
 		}
 	}
