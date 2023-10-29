@@ -473,13 +473,10 @@ public class CWTutorialsPopup : MonoBehaviour
 	{
 		//UnityEngine.Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("menuitems/Tutorial_Arrow");
 		GameObject original = Instantiate(Resources.Load("menuitems/Tutorial_Arrow", typeof(GameObject))) as GameObject; 
-		UnityEngine.Debug.Log(original.name);
 		GameObject gameObject = null;
 		if (!pinfo.Hide || pinfo.ScaleTarget)
 		{
 			gameObject = original as GameObject;
-            UnityEngine.Debug.Log(pinfo.PointerTarget);
-            UnityEngine.Debug.Log(gameObject.name);
 			
 			gameObject.name += pinfo.PointerTarget;
 			Transform transform = FindSpriteGroup(gameObject);

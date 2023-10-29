@@ -220,7 +220,6 @@ public class PoolManager : MonoBehaviour
 
 	public static void PopulateStore(GameObject prefab, string poolName, int count)
 	{
-		UnityEngine.Debug.Log(prefab.name);
 		Transform parent = Instance.transform;
 		Stack<GameObject> value = null;
 		Dictionary<string, Stack<GameObject>> dictionary = Instance.objectStore;
