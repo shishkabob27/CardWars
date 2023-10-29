@@ -39,12 +39,14 @@ public static class Language
 
 	public static string getDeviceLanguage()
 	{
-		return InstLocaleAndroid.Call<string>("getLanguage", new object[0]).ToLower();
+        System.Globalization.CultureInfo currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+        return currentCulture.TwoLetterISOLanguageName.ToLower();
 	}
 
 	public static string getDeviceLocale()
 	{
-		return InstLocaleAndroid.Call<string>("getCountry", new object[0]).ToLower();
+        System.Globalization.CultureInfo currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+        return currentCulture.Name.ToLower();
 	}
 
 	public static void Init(string persistentPath)

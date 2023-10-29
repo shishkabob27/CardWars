@@ -107,7 +107,9 @@ public class AuthScreenController : MonoBehaviour
 		}
 		else
 		{
-			Invoke("SocialLogin", 0.5f);
+			//Skip social login for now.
+			//Invoke("SocialLogin", 0.5f);
+			StartGameLoginFlow();
 		}
 	}
 

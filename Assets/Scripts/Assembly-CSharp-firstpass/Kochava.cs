@@ -735,6 +735,7 @@ public class Kochava : MonoBehaviour
 			_S._fireEvent("session", new Dictionary<string, object> { { "state", "launch" } });
 		}
 		AndroidJNIHelper.debug = true;
+		/*
 		using (AndroidJavaClass androidUnityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
 		{
 			AndroidJavaObject androidActivity = androidUnityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -742,6 +743,7 @@ public class Kochava : MonoBehaviour
 			AndroidJavaClass androidHelperClass = new AndroidJavaClass("com.kochava.android.tracker.lite.KochavaSDKLite");
 			androidHelperClass.CallStatic<string>("GetExternalKochavaInfo_Android", new object[5] { androidContext, whitelist, device_id_delay, adidBlacklisted, AdidSupressed });
 		}
+		*/
 	}
 
 	private void DeviceInformationCallback(string deviceInfo)

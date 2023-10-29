@@ -39,7 +39,8 @@ public class KFFCSUtils : MonoBehaviour
 
 	private static string KFFiOSUtils_GetCurrencyCode()
 	{
-		return InstCurrencyAndroid.Call<string>("getCurrencyCode", new object[0]);
+        System.Globalization.RegionInfo regionInfo = new System.Globalization.RegionInfo(System.Globalization.CultureInfo.CurrentCulture.Name);
+        return regionInfo.ISOCurrencySymbol;
 	}
 
 	public static object CreateObjectByTypeName(string typename)
