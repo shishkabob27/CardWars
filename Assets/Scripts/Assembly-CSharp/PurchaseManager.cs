@@ -118,9 +118,9 @@ public class PurchaseManager : Singleton<PurchaseManager>
 
 	private IPurchaseListener m_Listener;
 
-	public static string CHECK_CLIENT_VERSION_URL = "http://floop-iap-lb.kffgames.com/DomoJump/IAPReceiptVerificationServer/check_client_version.php";
+	public static string CHECK_CLIENT_VERSION_URL = "http://retroretreat.net/DomoJump/IAPReceiptVerificationServer/check_client_version.php";
 
-	public static string CHECK_ASSET_DOWNLOADS_URL = "http://floop-iap-lb.kffgames.com/DomoJump/IAPReceiptVerificationServer/check_asset_downloads.php";
+	public static string CHECK_ASSET_DOWNLOADS_URL = "http://retroretreat.net/DomoJump/IAPReceiptVerificationServer/check_asset_downloads.php";
 
 	private List<DbProductInfo> storeItems;
 
@@ -160,7 +160,7 @@ public class PurchaseManager : Singleton<PurchaseManager>
 	{
 		get
 		{
-			return "http://floop-iap-lb.kffgames.com/AdventureTime/CardWars/IAPReceiptVerificationServer";
+			return "http://retroretreat.net/AdventureTime/CardWars/IAPReceiptVerificationServer";
 		}
 	}
 

@@ -6,7 +6,7 @@ Shader "Transparent/VertexLit with Z"
 	}
 	 
 	SubShader {
-	    Tags {"RenderType"="Transparent" "IGNOREPROJECTOR"="true" "Queue"="Transparent"}
+	    Tags {"RenderType"="Transparent" "IGNOREPROJECTOR"="false" "Queue"="Transparent"}
 	    // Render into depth buffer only
 	    Pass {
 	        ColorMask 0
@@ -20,7 +20,7 @@ Shader "Transparent/VertexLit with Z"
 	            Diffuse [_Color]
 	            Ambient [_Color]
 	        }
-	        Lighting On
+	        Lighting Off
 	        SetTexture [_MainTex] {
 	            Combine texture * primary DOUBLE, texture * primary
 	        } 

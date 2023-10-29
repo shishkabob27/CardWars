@@ -4,9 +4,10 @@ Shader "Unlit/Alpha With Fade" {
         _MainTex ("Base (RGB) Alpha (A)", 2D) = "white" { }
     }
     SubShader { 
-        Tags { "Queue" = "Overlay" }
+        Tags { "Queue" = "Transparent" }
         LOD 200
-
+        
+        Lighting Off
         CGPROGRAM
         #pragma surface surf Lambert alpha
 
