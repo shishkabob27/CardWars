@@ -6,11 +6,8 @@ Shader "Transparent/VertexLit with Z"
 	}
 	 
 	SubShader {
-	    Tags {"RenderType"="Transparent" "IGNOREPROJECTOR"="false" "Queue"="Transparent"}
-	    // Render into depth buffer only
-	    Pass {
-	        ColorMask 0
-	    }
+	    Tags { "Queue"="Transparent"}
+
 	    // Render normally
 	    Pass {
 	        ZWrite on
@@ -22,7 +19,7 @@ Shader "Transparent/VertexLit with Z"
 	        }
 	        Lighting Off
 	        SetTexture [_MainTex] {
-	            Combine texture * primary DOUBLE, texture * primary
+	            Combine texture * primary
 	        } 
 	    }
 	}
