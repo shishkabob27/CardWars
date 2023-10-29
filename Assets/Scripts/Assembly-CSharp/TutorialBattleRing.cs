@@ -20,6 +20,10 @@ public class TutorialBattleRing : MonoBehaviour
 
 	public void SetPhase(int phaseIndex)
 	{
+		//TODO: Actually make this tutorial work.
+		//Right now we just skip it.
+		Time.timeScale = 1;
+		return;
 		base.gameObject.SetActive(true);
 		animToPlayWhilePaused = null;
 		switch (phaseIndex)

@@ -37,17 +37,20 @@ public class CWSpawnObject : MonoBehaviour
 		{
 			parentTr = base.transform;
 		}
-		Object objData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + resourceName);
-		if (objData == null)
+		//Object objData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + resourceName);
+		GameObject objData = Resources.Load("Props/" + resourceName, typeof(GameObject)) as GameObject;
+
+        if (objData == null)
 		{
-			objData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + resourceName);
-		}
+            //objData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + resourceName);
+            objData = Resources.Load("Particles/" + resourceName, typeof(GameObject)) as GameObject;
+        }
 		if (objData != null)
 		{
 			GameObject spawnObj = null;
 			if (objData != null)
 			{
-				spawnObj = SLOTGame.InstantiateFX(objData, parentTr.position, parentTr.rotation) as GameObject;
+				spawnObj = Instantiate(objData, parentTr.position, parentTr.rotation) as GameObject;
 				spawnObj.transform.parent = parentTr;
 			}
 		}

@@ -209,8 +209,9 @@ public class CWTutorialsPopup : MonoBehaviour
 		AudioClip audioClip = null;
 		if (info.VOClip.Length > 0)
 		{
-			audioClip = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("VO/Tutorial/" + info.VOClip) as AudioClip;
-			TutorialMonitor.Instance.PlayAudioForTutorial(audioClip, delay);
+			//audioClip = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("VO/Tutorial/" + info.VOClip) as AudioClip;
+			audioClip = Resources.Load("VO/Tutorial/" + info.VOClip, typeof(AudioClip)) as AudioClip;
+            TutorialMonitor.Instance.PlayAudioForTutorial(audioClip, delay);
 			if (audioClip != null)
 			{
 				VOClip = audioClip;

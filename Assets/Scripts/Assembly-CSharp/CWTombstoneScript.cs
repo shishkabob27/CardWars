@@ -17,10 +17,11 @@ public class CWTombstoneScript : MonoBehaviour
 
 	public void SpawnTombStone()
 	{
-		Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + tombStone.name);
-		if ((bool)@object)
+		//Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + tombStone.name);
+        GameObject original = Resources.Load("Props/" + tombStone.name, typeof(GameObject)) as GameObject;
+        if (original != null)
 		{
-			tombStoneObj = SLOTGame.InstantiateFX(@object, base.transform.position, base.transform.rotation) as GameObject;
+			tombStoneObj = Instantiate(original, base.transform.position, base.transform.rotation) as GameObject;
 			tombStoneObj.transform.parent = base.transform;
 			if (tombStone.name == "GoldBag")
 			{
@@ -43,10 +44,11 @@ public class CWTombstoneScript : MonoBehaviour
 
 	private void FlyingCard()
 	{
-		Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + panelMgrBattle.flyingCard.name);
-		if (@object != null)
+        //Object @object = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Props/" + panelMgrBattle.flyingCard.name);
+        GameObject original = Resources.Load("Props/" + panelMgrBattle.flyingCard.name, typeof(GameObject)) as GameObject;
+        if (original != null)
 		{
-			GameObject gameObject = SLOTGame.InstantiateFX(@object) as GameObject;
+			GameObject gameObject = Instantiate(original) as GameObject;
 			gameObject.transform.parent = panelMgrBattle.flyingCardDestination.transform.parent;
 		}
 	}
