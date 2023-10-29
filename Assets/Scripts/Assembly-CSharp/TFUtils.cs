@@ -939,18 +939,19 @@ public class TFUtils
 	public static void WriteFile(string filename, string data)
 	{
 		filename = Path.GetFileName(filename);
-		KFFAndroidPlugin.SavePrivateFileData(filename, data);
+		filename = Path.Combine(Application.persistentDataPath, filename);
+		File.WriteAllText(filename, data);
 	}
 
 	public static string ReadFile(string filename)
 	{
 		filename = Path.GetFileName(filename);
-		string text = KFFAndroidPlugin.ReadPrivateFileData(filename);
-		if (text == null)
+		string filePath = Path.Combine(Application.persistentDataPath, filename);
+		if (!File.Exists(filePath))
 		{
 			throw new FileNotFoundException("File not found: " + filename);
 		}
-		return text;
+		return File.ReadAllText(filePath);
 	}
 
 	public static string ComputeDigest(string input)
