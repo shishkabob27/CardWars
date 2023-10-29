@@ -333,14 +333,6 @@ public class Kochava : MonoBehaviour
 		loadQueue();
 	}
 
-	public void Start()
-	{
-		if (Application.isPlaying)
-		{
-			Init();
-		}
-	}
-
 	public void OnEnable()
 	{
 		if (Application.isPlaying)
@@ -1113,15 +1105,6 @@ public class Kochava : MonoBehaviour
 		catch (Exception ex)
 		{
 			Log("Error scanning watchlist: " + ex, KochLogLevel.error);
-		}
-	}
-
-	public void Update()
-	{
-		if (Application.isPlaying && processQueueKickstartTime != 0f && Time.time > processQueueKickstartTime)
-		{
-			processQueueKickstartTime = 0f;
-			StartCoroutine("processQueue");
 		}
 	}
 
