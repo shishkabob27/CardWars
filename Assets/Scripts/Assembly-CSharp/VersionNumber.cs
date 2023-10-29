@@ -9,7 +9,8 @@ public class VersionNumber : MonoBehaviour
 		mVersion = base.gameObject.GetComponent<UILabel>();
 		if ((bool)mVersion)
 		{
-			mVersion.text = "Version: " + KFFCSUtils.GetManifestKeyString("CFBundleVersion");
-		}
+			//mVersion.text = "Version: " + KFFCSUtils.GetManifestKeyString("CFBundleVersion");
+			mVersion.text = "Version: " + Application.version;
+        }
 	}
 }

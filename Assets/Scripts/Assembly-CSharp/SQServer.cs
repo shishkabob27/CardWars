@@ -56,7 +56,7 @@ public class SQServer
 	{
 		get
 		{
-			return "http://retroretreat.net";
+			return "http://cardwars.retroretreat.net/";
 		}
 	}
 

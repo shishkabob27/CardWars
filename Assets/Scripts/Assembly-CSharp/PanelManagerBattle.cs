@@ -450,11 +450,12 @@ public class PanelManagerBattle : MonoBehaviour
 			phaseMgr.Phase = ((player != PlayerType.User) ? BattlePhase.P2SetupActionSpell : BattlePhase.P1SetupActionSpell);
 		}
 		yield return new WaitForSeconds(0.5f);
-		Object particleData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + ((SpellCard)card.Form).ParticleName);
+		//Object particleData = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Particles/" + ((SpellCard)card.Form).ParticleName);
+		GameObject particleData = Resources.Load("Particles/" + ((SpellCard)card.Form).ParticleName, typeof(GameObject)) as GameObject;
 		Transform parentTr = CWFloopActionManager.GetInstance().spawnFXCameraCenter.transform;
 		if (particleData != null)
 		{
-			GameObject particleObj = SLOTGame.InstantiateFX(particleData, parentTr.position, parentTr.rotation) as GameObject;
+			GameObject particleObj = Instantiate(particleData, parentTr.position, parentTr.rotation) as GameObject;
 			particleObj.transform.parent = parentTr;
 		}
 		yield return new WaitForSeconds(1.5f);

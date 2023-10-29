@@ -34,8 +34,9 @@ public class UserInfo : MonoBehaviour
 		}
 		if (ClientVersion != null)
 		{
-			ClientVersion.text = ClientVersion.text.Replace("<Val>", KFFCSUtils.GetManifestKeyString("CFBundleVersion"));
-		}
+            //ClientVersion.text = ClientVersion.text.Replace("<Val>", KFFCSUtils.GetManifestKeyString("CFBundleVersion"));
+            ClientVersion.text = ClientVersion.text.Replace("<Val>", Application.version);
+        }
 		if (Debug.isDebugBuild)
 		{
 			if (BundleID != null)

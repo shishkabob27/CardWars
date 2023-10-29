@@ -20,7 +20,7 @@ public class SLOTGame : BusyIconController
 
 	public delegate bool AssetBundleLoadedCallback(string url, AssetBundle bundle);
 
-	public const string CHECK_ASSET_DOWNLOADS_URL = "http://retroretreat.net/AdventureTime/CardWars/IAPReceiptVerificationServer/check_asset_downloads.php";
+	public const string CHECK_ASSET_DOWNLOADS_URL = "http://cardwars.retroretreat.net/AdventureTime/CardWars/IAPReceiptVerificationServer/check_asset_downloads.php";
 
 	public const string ASSET_DOWNLOAD_SUBDIRECTORY = "data_1.01";
 
@@ -204,7 +204,7 @@ public class SLOTGame : BusyIconController
 		checkassetdownloadscallback = callback;
 		showprogresscallback = callback2;
 		assetbundleloadedcallback = callback3;
-		string text = "http://retroretreat.net/AdventureTime/CardWars/IAPReceiptVerificationServer/check_asset_downloads.php?lowend=" + (IsLowEndDevice() ? 1 : 0);
+		string text = "http://cardwars.retroretreat.net/AdventureTime/CardWars/IAPReceiptVerificationServer/check_asset_downloads.php?lowend=" + (IsLowEndDevice() ? 1 : 0);
 		text += "&subdirectory=data_1.01";
 		text += "&platform=";
 		text += "Android";
