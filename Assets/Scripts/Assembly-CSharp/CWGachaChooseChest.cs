@@ -83,14 +83,14 @@ public class CWGachaChooseChest : MonoBehaviour
 		case CWGachaController.ChestType.Normal:
 		{
 			instance.openAnimScript.target = instance.normalChestAnim;
-			instance.openAnimScript.clipName = "NChest_OpenLvl5";
+			instance.openAnimScript.clipName = "NChest_OpenLvl5_0";
 			instance.closeAnimScript.target = instance.normalChestAnim;
 			instance.closeAnimScript.clipName = "NChest_End";
 			UIButtonPlayAnimation[] components2 = instance.openCameraScript.gameObject.GetComponents<UIButtonPlayAnimation>();
 			UIButtonPlayAnimation[] array3 = components2;
 			foreach (UIButtonPlayAnimation uIButtonPlayAnimation3 in array3)
 			{
-				uIButtonPlayAnimation3.clipName = "NChest_OpenLvl5";
+				uIButtonPlayAnimation3.clipName = "NChest_OpenLvl5_0";
 			}
 			components2 = instance.closeCameraScript.gameObject.GetComponents<UIButtonPlayAnimation>();
 			UIButtonPlayAnimation[] array4 = components2;
@@ -103,14 +103,14 @@ public class CWGachaChooseChest : MonoBehaviour
 		case CWGachaController.ChestType.Premium:
 		{
 			instance.openAnimScript.target = instance.premiumChestAnim;
-			instance.openAnimScript.clipName = "PChest_OpenLvl5";
+			instance.openAnimScript.clipName = "PChest_OpenLvl5_0";
 			instance.closeAnimScript.target = instance.premiumChestAnim;
 			instance.closeAnimScript.clipName = "PChest_End";
 			UIButtonPlayAnimation[] components = instance.openCameraScript.gameObject.GetComponents<UIButtonPlayAnimation>();
 			UIButtonPlayAnimation[] array = components;
 			foreach (UIButtonPlayAnimation uIButtonPlayAnimation in array)
 			{
-				uIButtonPlayAnimation.clipName = "PChest_OpenLvl5";
+				uIButtonPlayAnimation.clipName = "PChest_OpenLvl5_0";
 			}
 			components = instance.closeCameraScript.gameObject.GetComponents<UIButtonPlayAnimation>();
 			UIButtonPlayAnimation[] array2 = components;
