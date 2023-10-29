@@ -27,50 +27,7 @@ public class KFFLODManager
 
 	public static bool IsLowEndDevice(bool ignoreOverride = false)
 	{
-		if (!isFirstCall)
-		{
-			return isLowEndDevice || (!ignoreOverride && isLowEndOverride);
-		}
-		isFirstCall = false;
-		isLowEndOverride = PlayerPrefs.GetInt("IsLowEndOverride", 0) != 0;
-		bool result = !ignoreOverride && isLowEndOverride;
-		if (SystemInfo.deviceModel == "samsung SPH-L710")
-		{
-			return result;
-		}
-		if (SystemInfo.deviceModel == "samsung SPH-L720")
-		{
-			return result;
-		}
-		if (SystemInfo.deviceModel == "samsung SPH-P600")
-		{
-			return result;
-		}
-		if (SystemInfo.deviceModel == "samsung SPH-L900")
-		{
-			return result;
-		}
-		int systemMemorySize = SystemInfo.systemMemorySize;
-		int graphicsMemorySize = SystemInfo.graphicsMemorySize;
-		int width = Screen.width;
-		int height = Screen.height;
-		if (systemMemorySize <= 1664 || width <= 480 || height <= 480)
-		{
-			isLowEndDevice = true;
-			return isLowEndDevice;
-		}
-		bool flag = false;
-		string text = SystemInfo.deviceModel.ToLower();
-		int num = text.IndexOf("amazon");
-		if (num >= 0)
-		{
-			flag = true;
-		}
-		if (flag)
-		{
-			return result;
-		}
-		return result;
+		return false;
 	}
 
 	public static string GetHiLowResFolderName()
