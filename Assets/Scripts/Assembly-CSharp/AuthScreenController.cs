@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AuthScreenController : MonoBehaviour
@@ -78,7 +79,65 @@ public class AuthScreenController : MonoBehaviour
 		StartCoroutine(CoroutineShowPopup(error +"\nRetry?", clickCallback));
 	}
 
-	private void AddAuthEvents()
+    private void OnPlayerCreateAccount()
+    {
+        ConfirmPopupController.ClickCallback clickCallback = delegate (bool yes)
+        {
+            if (yes)
+            {
+                WWW www = new WWW("http://127.0.0.1:8000/account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
+                UnityEngine.Debug.Log("Attempting to create player account: " + www.url);
+
+                while (!www.isDone)
+                {
+                }
+
+                object response = null;
+
+
+                try
+                {
+                    response = MiniJSON.Json.Deserialize(www.text);
+                }
+                catch (Exception e)
+                {
+                    OnPlayerFailedToAuthenticate(www.error);
+                }
+
+                UnityEngine.Debug.Log(response);
+
+                if (response == null)
+                {
+                    UnityEngine.Debug.Log(www.error);
+                    OnPlayerFailedToAuthenticate(www.error);
+                }
+                else
+                {
+                    Dictionary<string, object> responseData = (Dictionary<string, object>)response;
+
+                    if (responseData.ContainsKey("success") && (bool)responseData["success"])
+                    {
+                        UnityEngine.Debug.Log("Account Created");
+						SocialLogin();
+                    }
+                    else
+                    {
+                        UnityEngine.Debug.Log("Authentication failed");
+                        OnPlayerFailedToAuthenticate((string)responseData["message"]);
+                    }
+                }
+
+            }
+            else
+            {
+                LoginOptionsTween.Play(true);
+            }
+        };
+
+        StartCoroutine(CoroutineShowPopup("The account, '"+ PlayerPrefs.GetString("user")+"' does not exist.\nWould you like to create it?", clickCallback));
+    }
+
+    private void AddAuthEvents()
 	{
 		SocialManager.Instance.playerAuthenticated += OnPlayerAuthenticated;
 		SocialManager.Instance.playerFailedToAuthenticate += OnPlayerFailedToAuthenticate;
@@ -127,19 +186,53 @@ public class AuthScreenController : MonoBehaviour
 	{
 		UnityEngine.Debug.Log(Username + " " + Password);
 
-        if (PlayerInfoScript.GetInstance().IsUnderage || Username == string.Empty || Password == string.Empty)
+        if (Username == string.Empty || Password == string.Empty)
         {
-            PlayerPrefs.DeleteKey("SocialLogin");
-            PlayerPrefs.DeleteKey("RetrySocialLogin");
-            PlayerPrefs.DeleteKey("user");
-            PlayerPrefs.DeleteKey("pass");
-            StartGameLoginFlow();
+            ConfirmPopupController.ClickCallback clickCallback = delegate (bool yes)
+            {
+                if (yes)
+                {
+                    LoginOptionsTween.Play(true);
+                }
+                else
+                {
+                    PlayerPrefs.DeleteKey("SocialLogin");
+                    PlayerPrefs.DeleteKey("RetrySocialLogin");
+                    PlayerPrefs.DeleteKey("user");
+                    PlayerPrefs.DeleteKey("pass");
+                    ClearAuthEvents();
+                    StartGameLoginFlow();
+                }
+            };
+
+            StartCoroutine(CoroutineShowPopup("No username or password provided.\nRetry?", clickCallback));
+
         }
         else
         {
             PlayerPrefs.SetString("user", Username);
             PlayerPrefs.SetString("pass", Password);
-            Invoke("SocialLogin", 0.5f);
+
+            WWW www = new WWW("http://127.0.0.1:8000/account/exists?user=" + PlayerPrefs.GetString("user"));
+            UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
+
+            while (!www.isDone)
+            {
+            }
+
+            object response = null;
+
+            UnityEngine.Debug.Log(response);
+
+			if (www.text == "true")
+			{
+				Invoke("SocialLogin", 0.5f);
+			}
+			else if (www.text == "false")
+			{
+				OnPlayerCreateAccount();
+			}
+            
         }
     }
 
