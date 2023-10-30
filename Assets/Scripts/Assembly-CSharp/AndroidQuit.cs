@@ -5,11 +5,14 @@ public class AndroidQuit : MonoBehaviour
 	private void Confirm()
 	{
 		base.gameObject.SetActive(false);
-		Application.Quit();
-		UnityEditor.EditorApplication.isPlaying = false;
-	}
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
+    }
 
-	public void Dismiss()
+    public void Dismiss()
 	{
 		base.gameObject.SetActive(false);
 	}

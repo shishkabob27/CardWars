@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class AuthScreenController : MonoBehaviour
@@ -70,7 +69,8 @@ public class AuthScreenController : MonoBehaviour
 			{
 				PlayerPrefs.DeleteKey("user");
 				PlayerPrefs.DeleteKey("pass");
-				ClearAuthEvents();
+                PlayerPrefs.DeleteKey("RetrySocialLogin");
+                ClearAuthEvents();
 				StartGameLoginFlow();
 			}
 		};
@@ -109,6 +109,7 @@ public class AuthScreenController : MonoBehaviour
 		if (PlayerInfoScript.GetInstance().IsUnderage)
 		{
 			PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("RetrySocialLogin");
             PlayerPrefs.DeleteKey("user");
             PlayerPrefs.DeleteKey("pass");
             Invoke("StartGameLoginFlow", 0.5f);
@@ -129,6 +130,7 @@ public class AuthScreenController : MonoBehaviour
         if (PlayerInfoScript.GetInstance().IsUnderage || Username == string.Empty || Password == string.Empty)
         {
             PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("RetrySocialLogin");
             PlayerPrefs.DeleteKey("user");
             PlayerPrefs.DeleteKey("pass");
             StartGameLoginFlow();
@@ -196,7 +198,8 @@ public class AuthScreenController : MonoBehaviour
         PlayerPrefs.DeleteKey("user");
         PlayerPrefs.DeleteKey("pass");
         PlayerPrefs.DeleteKey("RetrySocialLogin");
-	}
+        PlayerPrefs.DeleteKey("SocialLogin");
+    }
 
 	private void Awake()
 	{
@@ -233,7 +236,9 @@ public class AuthScreenController : MonoBehaviour
 		{
             PlayerPrefs.DeleteKey("user");
             PlayerPrefs.DeleteKey("pass");
-            StartGameLoginFlow();   
+            PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("SocialLogin");
+            StartGameLoginFlow();
         }
 	}
 
