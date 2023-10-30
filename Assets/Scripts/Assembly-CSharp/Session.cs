@@ -83,13 +83,13 @@ public class Session : IDisposable
                 // Now you can use 'key' and 'value' as needed
                 UnityEngine.Debug.Log("Key: "+key + "Value: "+value);
             }
-			bool flag = session.Server.IsNetworkError(dictionary);
-			bool flag2 = true;
-			//if (dictionary.ContainsKey("success"))
-			//{
-			//	flag2 = (bool)dictionary["success"];
-			//}
-			if (!flag)
+			bool NetworkError = session.Server.IsNetworkError(dictionary);
+			bool UsernameExists = PlayerPrefs.GetString("user") == "";
+            //if (dictionary.ContainsKey("success"))
+            //{
+            //	flag2 = (bool)dictionary["success"];
+            //}
+            if (!NetworkError || UsernameExists)
 			{
 				if (Session.OnSessionUserLoginFail != null)
 				{

@@ -64,16 +64,18 @@ public class AuthScreenController : MonoBehaviour
 		{
 			if (yes)
 			{
-                SocialManager.Instance.AuthenticatePlayer(false);
+				LoginOptionsTween.Play(true);
 			}
 			else
 			{
-                ClearAuthEvents();
+				PlayerPrefs.DeleteKey("user");
+				PlayerPrefs.DeleteKey("pass");
+				ClearAuthEvents();
 				StartGameLoginFlow();
 			}
 		};
 
-		StartCoroutine(CoroutineShowPopup("!!SOCIAL_SIGN_IN_FAILED_RETRY", clickCallback));
+		StartCoroutine(CoroutineShowPopup(error +"\nRetry?", clickCallback));
 	}
 
 	private void AddAuthEvents()
@@ -107,6 +109,8 @@ public class AuthScreenController : MonoBehaviour
 		if (PlayerInfoScript.GetInstance().IsUnderage)
 		{
 			PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("user");
+            PlayerPrefs.DeleteKey("pass");
             Invoke("StartGameLoginFlow", 0.5f);
         }
 		else
@@ -122,16 +126,17 @@ public class AuthScreenController : MonoBehaviour
 	{
 		UnityEngine.Debug.Log(Username + " " + Password);
 
-		PlayerPrefs.SetString("user", Username);
-		PlayerPrefs.SetString("pass", Password);
-
         if (PlayerInfoScript.GetInstance().IsUnderage || Username == string.Empty || Password == string.Empty)
         {
             PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("user");
+            PlayerPrefs.DeleteKey("pass");
             StartGameLoginFlow();
         }
         else
         {
+            PlayerPrefs.SetString("user", Username);
+            PlayerPrefs.SetString("pass", Password);
             Invoke("SocialLogin", 0.5f);
         }
     }
@@ -188,7 +193,9 @@ public class AuthScreenController : MonoBehaviour
 
 	private static void OnSocialLogout()
 	{
-		PlayerPrefs.DeleteKey("RetrySocialLogin");
+        PlayerPrefs.DeleteKey("user");
+        PlayerPrefs.DeleteKey("pass");
+        PlayerPrefs.DeleteKey("RetrySocialLogin");
 	}
 
 	private void Awake()
@@ -224,8 +231,10 @@ public class AuthScreenController : MonoBehaviour
 		}
 		else
 		{
-			StartGameLoginFlow();
-		}
+            PlayerPrefs.DeleteKey("user");
+            PlayerPrefs.DeleteKey("pass");
+            StartGameLoginFlow();   
+        }
 	}
 
 	private void LoadNextLevel()
