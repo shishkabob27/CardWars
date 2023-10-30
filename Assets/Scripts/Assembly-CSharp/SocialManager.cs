@@ -1,5 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Policy;
+using UnityEngine;
+using UnityEngine.Networking;
 
 public class SocialManager
 {
@@ -31,14 +35,7 @@ public class SocialManager
 		{
 			if (instance == null)
 			{
-				if (!KFFCSUtils.GetManifestKeyBool("force_amazon_store"))
-				{
-					instance = new GooglePlaySocial();
-				}
-				else
-				{
-					instance = new SocialManager();
-				}
+				instance = new SocialManager();
 			}
 			return instance;
 		}
@@ -54,8 +51,49 @@ public class SocialManager
 	public event Action playerLoggedOut;
 
 	public virtual void AuthenticatePlayer(bool silent)
-	{
-		playerDidAuthenticate();
+    {
+        WWW www = new WWW("http://127.0.0.1:8000/account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
+        UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
+		
+		while (!www.isDone)
+		{
+        }
+
+		object response = null;
+
+
+        try
+		{
+            response = MiniJSON.Json.Deserialize(www.text);
+        }
+		catch (Exception e)
+		{
+            playerAuthenticationFailed(www.error);
+        }
+
+        UnityEngine.Debug.Log(response);
+
+        if (response == null)
+        {
+            UnityEngine.Debug.Log(www.error);
+			playerAuthenticationFailed(www.error);
+        }
+        else
+        {
+            Dictionary<string, object> responseData = (Dictionary<string, object>)response;
+
+            if (responseData.ContainsKey("success") && (bool)responseData["success"])
+            {
+                UnityEngine.Debug.Log("Authentication successful");
+
+                playerDidAuthenticate();
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Authentication failed");
+                playerAuthenticationFailed((string)responseData["message"]);
+            }
+        }
 	}
 
 	public virtual bool IsPlayerAuthenticated()
@@ -75,7 +113,7 @@ public class SocialManager
 
 	public virtual bool IsAgeGateRequired()
 	{
-		return false;
+		return true;
 	}
 
 	public virtual bool IsRetryAuth(string error)

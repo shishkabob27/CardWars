@@ -479,7 +479,7 @@ public class SessionManager : MonoBehaviour
 	private void StartLoadingData()
 	{
 		loadingDataFinished = false;
-		Language.ReloadLanguage();
+		//Language.ReloadLanguage();
 		StartCoroutine(LoadingManager.Instance.LoadAll(FinishedLoadingData));
 	}
 
@@ -537,7 +537,7 @@ public class SessionManager : MonoBehaviour
 			}
 			if (GetServerVersion() != null)
 			{
-				if (GetServerVersion() > new Version((!string.IsNullOrEmpty(SQSettings.BundleVersion)) ? SQSettings.BundleVersion : "1.0"))
+				if (GetServerVersion() > new Version(Application.version))
 				{
 					NeedsForcedUpdate = true;
 					State = States.WAITING_FOR_RESTART;

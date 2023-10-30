@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class AuthScreenController : MonoBehaviour
@@ -24,6 +25,7 @@ public class AuthScreenController : MonoBehaviour
 
 	private void SocialLogin()
 	{
+		UnityEngine.Debug.Log("Doing SocialLogin");
 		PlayerPrefs.DeleteKey("RetrySocialLogin");
 		if (SocialManager.Instance.IsPlayerAuthenticated())
 		{
@@ -36,7 +38,8 @@ public class AuthScreenController : MonoBehaviour
 
 	private void OnPlayerAuthenticated()
 	{
-		string @string = PlayerPrefs.GetString("SocialLogin", null);
+        UnityEngine.Debug.LogError("Auth: On player authed");
+        string @string = PlayerPrefs.GetString("SocialLogin", null);
 		string text = SocialManager.Instance.PlayerIdentifierHash();
 		if (!string.IsNullOrEmpty(@string) && @string != text)
 		{
@@ -50,31 +53,27 @@ public class AuthScreenController : MonoBehaviour
 			SocialManager.Instance.ResetAllAchievements();
 		}
 		ClearAuthEvents();
+
 		StartGameLoginFlow();
 	}
 
 	private void OnPlayerFailedToAuthenticate(string error)
 	{
+		UnityEngine.Debug.LogError(error);
 		ConfirmPopupController.ClickCallback clickCallback = delegate(bool yes)
 		{
 			if (yes)
 			{
-				SocialManager.Instance.AuthenticatePlayer(false);
+                SocialManager.Instance.AuthenticatePlayer(false);
 			}
 			else
 			{
-				ClearAuthEvents();
+                ClearAuthEvents();
 				StartGameLoginFlow();
 			}
 		};
-		if (SocialManager.Instance.IsRetryAuth(error))
-		{
-			StartCoroutine(CoroutineShowPopup("!!SOCIAL_SIGN_IN_FAILED_RETRY", clickCallback));
-		}
-		else
-		{
-			clickCallback(false);
-		}
+
+		StartCoroutine(CoroutineShowPopup("!!SOCIAL_SIGN_IN_FAILED_RETRY", clickCallback));
 	}
 
 	private void AddAuthEvents()
@@ -108,8 +107,8 @@ public class AuthScreenController : MonoBehaviour
 		if (PlayerInfoScript.GetInstance().IsUnderage)
 		{
 			PlayerPrefs.DeleteKey("SocialLogin");
-			StartGameLoginFlow();
-		}
+            Invoke("StartGameLoginFlow", 0.5f);
+        }
 		else
 		{
             if (LoginOptionsTween != null)
@@ -122,6 +121,9 @@ public class AuthScreenController : MonoBehaviour
 	private void OnLoginDone(string Username, string Password)
 	{
 		UnityEngine.Debug.Log(Username + " " + Password);
+
+		PlayerPrefs.SetString("user", Username);
+		PlayerPrefs.SetString("pass", Password);
 
         if (PlayerInfoScript.GetInstance().IsUnderage || Username == string.Empty || Password == string.Empty)
         {
