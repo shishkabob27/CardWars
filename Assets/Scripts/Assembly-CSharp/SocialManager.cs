@@ -50,7 +50,10 @@ public class SocialManager
 	[method: MethodImpl(32)]
 	public event Action playerLoggedOut;
 
-	public virtual void AuthenticatePlayer(bool silent)
+    [method: MethodImpl(32)]
+    public event Action playerAccountDoesNotExist;
+
+    public virtual void AuthenticatePlayer(bool silent)
     {
         WWW www = new WWW("http://127.0.0.1:8000/account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
         UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
@@ -160,4 +163,12 @@ public class SocialManager
 			this.playerFailedToAuthenticate(error);
 		}
 	}
+
+    protected void playerAccountNotExist()
+    {
+        if (this.playerAccountDoesNotExist != null)
+        {
+            this.playerAccountDoesNotExist();
+        }
+    }
 }
