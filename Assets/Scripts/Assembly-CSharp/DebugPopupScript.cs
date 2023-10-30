@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 public class DebugPopupScript : MonoBehaviour
@@ -47,9 +48,9 @@ public class DebugPopupScript : MonoBehaviour
 		if (NumPopups > 3)
 		{
 			return null;
-		}
-		Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource("Debug/Debug_Popup");
-		GameObject gameObject = Object.Instantiate(original) as GameObject;
+        }
+		Object original = Resources.Load("Debug/Debug_Popup", typeof(GameObject)) as GameObject;
+		GameObject gameObject = Instantiate(original) as GameObject;
 		Camera camera = FindMyCamera(gameObject.layer);
 		if (camera != null)
 		{
@@ -64,8 +65,8 @@ public class DebugPopupScript : MonoBehaviour
 	public static void CreateSavePopup(bool isSuccessful)
 	{
 		string path = ((!isSuccessful) ? "Debug/Save_Bad" : "Debug/Save_Good");
-		Object original = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(path);
-		GameObject gameObject = Object.Instantiate(original) as GameObject;
+		Object original = Resources.Load(path, typeof(GameObject)) as GameObject;
+		GameObject gameObject = Instantiate(original) as GameObject;
 		Camera camera = FindMyCamera(gameObject.layer);
 		if (camera != null)
 		{
