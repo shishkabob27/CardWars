@@ -55,7 +55,7 @@ public class SocialManager
 
     public virtual void AuthenticatePlayer(bool silent)
     {
-        WWW www = new WWW(SQSettings.ServerURL + "account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
+        WWW www = new WWW(SQSettings.SERVER_URL + "account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
         UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
 		
 		while (!www.isDone)

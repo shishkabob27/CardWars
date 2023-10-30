@@ -68,9 +68,10 @@ public class AuthScreenController : MonoBehaviour
 			}
 			else
 			{
-				PlayerPrefs.DeleteKey("user");
-				PlayerPrefs.DeleteKey("pass");
+                PlayerPrefs.DeleteKey("SocialLogin");
                 PlayerPrefs.DeleteKey("RetrySocialLogin");
+                PlayerPrefs.DeleteKey("user");
+                PlayerPrefs.DeleteKey("pass");
                 ClearAuthEvents();
 				StartGameLoginFlow();
 			}
@@ -85,7 +86,7 @@ public class AuthScreenController : MonoBehaviour
         {
             if (yes)
             {
-                WWW www = new WWW(SQSettings.ServerURL+"account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
+                WWW www = new WWW(SQSettings.SERVER_URL+ "account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
                 UnityEngine.Debug.Log("Attempting to create player account: " + www.url);
 
                 while (!www.isDone)
@@ -213,7 +214,7 @@ public class AuthScreenController : MonoBehaviour
             PlayerPrefs.SetString("user", Username);
             PlayerPrefs.SetString("pass", Password);
 
-            WWW www = new WWW(SQSettings.ServerURL+"account/exists?user=" + PlayerPrefs.GetString("user"));
+            WWW www = new WWW(SQSettings.SERVER_URL + "account/exists?user=" + PlayerPrefs.GetString("user"));
             UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
 
             while (!www.isDone)
@@ -231,6 +232,10 @@ public class AuthScreenController : MonoBehaviour
 			else if (www.text == "false")
 			{
 				OnPlayerCreateAccount();
+			}
+			else
+			{
+				OnPlayerFailedToAuthenticate("Server did not respond.");
 			}
             
         }
