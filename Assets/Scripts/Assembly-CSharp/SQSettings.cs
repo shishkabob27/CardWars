@@ -138,9 +138,9 @@ public class SQSettings
 		empty = ((!streamingAssetsFile.Contains("://")) ? File.ReadAllText(streamingAssetsFile) : getJsonPath(streamingAssetsFile));
 		Dictionary<string, object> dictionary = (Dictionary<string, object>)Json.Deserialize(empty);
 		serverUrl = (string)dictionary["server_url"];
-		cdnUrl = (string)dictionary["cdn_url"];
-		manifestUrl = (string)dictionary["manifest_file_url"];
-		streamingAssetsFile = TFUtils.GetStreamingAssetsFile("global_settings.json");
+		cdnUrl = (string)dictionary["server_url"] + "/static/";
+        manifestUrl = (string)dictionary["server_url"] + "/static/manifest.json";
+        streamingAssetsFile = TFUtils.GetStreamingAssetsFile("global_settings.json");
 		empty = ((!streamingAssetsFile.Contains("://")) ? File.ReadAllText(streamingAssetsFile) : getJsonPath(streamingAssetsFile));
 		dictionary = (Dictionary<string, object>)Json.Deserialize(empty);
 		saveInterval = TFUtils.LoadInt(dictionary, "save_interval");

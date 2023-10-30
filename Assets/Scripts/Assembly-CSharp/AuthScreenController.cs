@@ -10,6 +10,8 @@ public class AuthScreenController : MonoBehaviour
 
 	public UIButtonTween AgeGateShowTween;
 
+	public UIButtonTween LoginOptionsTween;
+
 	public string NextSceneName = "AssetLoader";
 
 	public BusyIconController busyIconController;
@@ -90,16 +92,19 @@ public class AuthScreenController : MonoBehaviour
 	private void OnEnable()
 	{
 		HowOldAreYou.AgeGateDone += OnAgeGateDone;
+		LoginOptions.LoginDone += OnLoginDone;
 	}
 
 	private void OnDisable()
 	{
 		HowOldAreYou.AgeGateDone -= OnAgeGateDone;
+		LoginOptions.LoginDone -= OnLoginDone;
 	}
 
 	private void OnAgeGateDone(int playerAge)
 	{
 		PlayerPrefs.SetInt("PlayerAge", playerAge);
+
 		if (PlayerInfoScript.GetInstance().IsUnderage)
 		{
 			PlayerPrefs.DeleteKey("SocialLogin");
@@ -107,11 +112,27 @@ public class AuthScreenController : MonoBehaviour
 		}
 		else
 		{
-			//Skip social login for now.
-			//Invoke("SocialLogin", 0.5f);
-			StartGameLoginFlow();
-		}
-	}
+            if (LoginOptionsTween != null)
+            {
+                LoginOptionsTween.Play(true);
+            }
+        }
+    }
+
+	private void OnLoginDone(string Username, string Password)
+	{
+		UnityEngine.Debug.Log(Username + " " + Password);
+
+        if (PlayerInfoScript.GetInstance().IsUnderage || Username == string.Empty || Password == string.Empty)
+        {
+            PlayerPrefs.DeleteKey("SocialLogin");
+            StartGameLoginFlow();
+        }
+        else
+        {
+            Invoke("SocialLogin", 0.5f);
+        }
+    }
 
 	private IEnumerator CoroutineShowPopup(string message, ConfirmPopupController.ClickCallback callback)
 	{
