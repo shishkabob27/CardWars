@@ -6,6 +6,7 @@ public class AndroidQuit : MonoBehaviour
 	{
 		base.gameObject.SetActive(false);
 		Application.Quit();
+		UnityEditor.EditorApplication.isPlaying = false;
 	}
 
 	public void Dismiss()
