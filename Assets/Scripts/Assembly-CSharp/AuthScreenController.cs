@@ -85,7 +85,7 @@ public class AuthScreenController : MonoBehaviour
         {
             if (yes)
             {
-                WWW www = new WWW("http://127.0.0.1:8000/account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
+                WWW www = new WWW(SQSettings.ServerURL+"account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
                 UnityEngine.Debug.Log("Attempting to create player account: " + www.url);
 
                 while (!www.isDone)
