@@ -99,9 +99,11 @@ public class SocialManager
         }
 	}
 
+	bool authed = false;
+
 	public virtual bool IsPlayerAuthenticated()
 	{
-		return false;
+		return authed;
 	}
 
 	public virtual string PlayerIdentifier()
@@ -144,6 +146,7 @@ public class SocialManager
 	{
 		if (this.playerLoggedOut != null)
 		{
+			authed = false;
 			this.playerLoggedOut();
 		}
 	}
@@ -152,6 +155,7 @@ public class SocialManager
 	{
 		if (this.playerAuthenticated != null)
 		{
+			authed = true;
 			this.playerAuthenticated();
 		}
 	}
@@ -160,6 +164,7 @@ public class SocialManager
 	{
 		if (this.playerFailedToAuthenticate != null)
 		{
+			authed = false;
 			this.playerFailedToAuthenticate(error);
 		}
 	}
@@ -168,6 +173,7 @@ public class SocialManager
     {
         if (this.playerAccountDoesNotExist != null)
         {
+			authed = false;
             this.playerAccountDoesNotExist();
         }
     }
