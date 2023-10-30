@@ -213,7 +213,7 @@ public class AuthScreenController : MonoBehaviour
             PlayerPrefs.SetString("user", Username);
             PlayerPrefs.SetString("pass", Password);
 
-            WWW www = new WWW("http://127.0.0.1:8000/account/exists?user=" + PlayerPrefs.GetString("user"));
+            WWW www = new WWW(SQSettings.ServerURL+"account/exists?user=" + PlayerPrefs.GetString("user"));
             UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
 
             while (!www.isDone)
