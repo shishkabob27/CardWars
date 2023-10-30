@@ -120,9 +120,7 @@ public class OptionsScript : MonoBehaviour
 
 	public void ResetAge()
 	{
-		PlayerPrefs.DeleteKey("PlayerAge");
-        PlayerPrefs.DeleteKey("user");
-        PlayerPrefs.DeleteKey("pass");
+		PlayerPrefs.DeleteAll();
         PlayerInfoScript.GetInstance().ReloadGame();
 	}
 }
