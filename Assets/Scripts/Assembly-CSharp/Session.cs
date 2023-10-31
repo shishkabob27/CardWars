@@ -75,13 +75,21 @@ public class Session : IDisposable
 			{
 				return;
 			}
-			bool flag = session.Server.IsNetworkError(dictionary);
-			bool flag2 = true;
-			if (dictionary.ContainsKey("success"))
-			{
-				flag2 = (bool)dictionary["success"];
-			}
-			if (flag || !flag2)
+            foreach (var kvp in dictionary)
+            {
+                string key = kvp.Key;
+                object value = kvp.Value;
+
+                // Now you can use 'key' and 'value' as needed
+                UnityEngine.Debug.Log("Key: "+key + "Value: "+value);
+            }
+			bool NetworkError = session.Server.IsNetworkError(dictionary);
+			bool UsernameExists = PlayerPrefs.GetString("user") == "";
+            //if (dictionary.ContainsKey("success"))
+            //{
+            //	flag2 = (bool)dictionary["success"];
+            //}
+            if (!NetworkError || UsernameExists)
 			{
 				if (Session.OnSessionUserLoginFail != null)
 				{
@@ -96,7 +104,7 @@ public class Session : IDisposable
 				{
 					Session.OnSessionUserLoginSucceed();
 				}
-				session.ThePlayer = Player.LoadFromDataDict(dictionary);
+				session.ThePlayer = Player.LoadFromResponse(PlayerPrefs.GetString("user"), true);
 			}
 			session.TheGame.SetPlayer(session.ThePlayer);
 			session.ThePlayer.SaveLocally();
@@ -365,7 +373,7 @@ public class Session : IDisposable
 			}
 			else
 			{
-				game.MyServerVersion = new Version(0, 0);
+				game.MyServerVersion = new Version(0, 0, 0);
 			}
 			break;
 		case "getUserInfo":
@@ -572,31 +580,14 @@ public class Session : IDisposable
 
 	private Version ProcessVersionData(string response)
 	{
-		object obj = Json.Deserialize(response);
-		if (obj != null)
-		{
-			Dictionary<string, object> data = (Dictionary<string, object>)obj;
-			string text = null;
-			if (TFUtils.AmazonDevice)
-			{
-				text = TFUtils.TryLoadString(data, "amazon_version");
-				UpdateUrl = TFUtils.TryLoadString(data, "amazon_url");
-			}
-			else
-			{
-				text = TFUtils.TryLoadString(data, "android_version");
-				UpdateUrl = TFUtils.TryLoadString(data, "android_url");
-			}
-			if (text == null)
-			{
-				text = TFUtils.TryLoadString((Dictionary<string, object>)obj, "version");
-			}
-			if (text != null)
-			{
-				return new Version(text);
-			}
-		}
-		return new Version(1, 0);
+        char[] delimiterChar = {'.'};
+		string[] version = response.Split(delimiterChar);
+
+        return new Version(
+			int.Parse(version[0]),
+            int.Parse(version[1]),
+            int.Parse(version[2])
+			);
 	}
 
 	protected void ProcessAsyncResponses()
@@ -619,6 +610,7 @@ public class Session : IDisposable
 
 	public void AddAsyncResponse(string key, object val)
 	{
+		UnityEngine.Debug.Log("Adding Key: '" + key + "'");
 		lock (asyncRequests)
 		{
 			if (asyncRequests.ContainsKey(key))

@@ -236,9 +236,10 @@ public class SQServer
 		tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/tournament/player/", callback);
 	}
 
-	public void MultiplayerFindMatch(int maxLevel, TFServer.JsonResponseHandler callback)
+	public void MultiplayerFindMatch(string playerId, int maxLevel, TFServer.JsonResponseHandler callback)
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
+		dictionary["name"] = playerId;
 		dictionary["level"] = maxLevel;
 		dictionary["version"] = 0;
 		dictionary["signature"] = SignDictionary(dictionary, nonce, "xc0u18^g0!ac3k%0+2vgglmnr1)x^!o(n6@$m3t^(7l!(#kv!-");

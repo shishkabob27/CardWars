@@ -773,6 +773,7 @@ public class TFUtils
 
 	public static void DebugLog(object message, string channel = null, bool bypassStrictMode = true)
 	{
+		UnityEngine.Debug.Log(message);
 		InitLog();
 		if (ShouldLog(channel, bypassStrictMode))
 		{
@@ -781,7 +782,8 @@ public class TFUtils
 
 	public static void ErrorLog(object message, string channel = null, bool bypassStrictMode = true)
 	{
-		InitLog();
+        UnityEngine.Debug.LogError(message);
+        InitLog();
 		if (ShouldLog(channel, bypassStrictMode))
 		{
 		}
@@ -789,7 +791,8 @@ public class TFUtils
 
 	public static void WarnLog(object message, string channel = null, bool bypassStrictMode = true)
 	{
-		InitLog();
+        UnityEngine.Debug.LogWarning(message);
+        InitLog();
 		if (ShouldLog(channel, bypassStrictMode))
 		{
 		}

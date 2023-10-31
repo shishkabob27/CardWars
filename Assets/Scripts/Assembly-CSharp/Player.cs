@@ -85,7 +85,12 @@ public class Player
 		return new Player((string)data["user_id"], (bool)data["is_new"]);
 	}
 
-	public string CacheFile(string fileName)
+    public static Player LoadFromResponse(string user_id, bool is_new)
+    {
+        return new Player(user_id, is_new);
+    }
+
+    public string CacheFile(string fileName)
 	{
 		return cacheDir + Path.DirectorySeparatorChar + fileName;
 	}

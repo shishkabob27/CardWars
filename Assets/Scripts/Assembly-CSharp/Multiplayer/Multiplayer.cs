@@ -15,10 +15,9 @@ namespace Multiplayer
 				{
 					callback(null, ResponseFlag.Error);
 				}
-				else if (status == HttpStatusCode.OK && (bool)data["success"])
+				else if (status == HttpStatusCode.OK)
 				{
-					Dictionary<string, object> dict = (Dictionary<string, object>)data["data"];
-					callback(new MultiplayerData(dict), ResponseFlag.Success);
+                    callback(new MultiplayerData(data), ResponseFlag.Success);
 				}
 				else if (status == HttpStatusCode.NotFound)
 				{
@@ -216,7 +215,7 @@ namespace Multiplayer
 					callback(null, ResponseFlag.Error);
 				}
 			};
-			session.Server.MultiplayerFindMatch(maxLevel, callback2);
+			session.Server.MultiplayerFindMatch(session.ThePlayer.playerId ,maxLevel, callback2);
 		}
 
 		public static void MatchGetDeck(Session session, string matchid, float deckRank, string leader, int leaderLevel, StringCallback callback)

@@ -25,14 +25,8 @@ public class OptionsScript : MonoBehaviour
 	private void Awake()
 	{
 		audioMgr = SLOTGameSingleton<SLOTAudioManager>.GetInstance();
-		if (LowResOverride != null && KFFLODManager.IsLowEndDevice(true))
-		{
-			LowResOverride.SetActive(false);
-		}
-		else
-		{
-			LowResOverride.SetActive(true);
-		}
+		LowResOverride.SetActive(false);
+
 	}
 
 	private void Start()
@@ -40,6 +34,7 @@ public class OptionsScript : MonoBehaviour
 		if (null != AgeReset)
 		{
 			AgeReset.SetActive(SocialManager.Instance.IsAgeGateRequired());
+			AgeReset.GetComponentInChildren<UILabel>().text = "Logout";
 		}
 	}
 
@@ -125,7 +120,8 @@ public class OptionsScript : MonoBehaviour
 
 	public void ResetAge()
 	{
-		PlayerPrefs.DeleteKey("PlayerAge");
-		PlayerInfoScript.GetInstance().ReloadGame();
+		PlayerPrefs.DeleteAll();
+		SocialManager.Instance.playerDidLogOut();
+        PlayerInfoScript.GetInstance().ReloadGame();
 	}
 }

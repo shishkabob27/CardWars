@@ -75,8 +75,10 @@ public class HealCreature : SpellScript
 			return;
 		}
 		CWList<Lane> candidates = AITargetSelection(base.Owner, SelectionType.Creature);
+		UnityEngine.Debug.Log("HealCreature.Cast: canidates: " + candidates);
 		CreatureScript creatureScript = CardScript.BestCandidateForHealing(candidates, -1, true);
-		HealTarget(creatureScript.CurrentLane);
+        UnityEngine.Debug.Log("HealCreature.Cast: BestCandidateForHealing: " + creatureScript);
+        HealTarget(creatureScript.CurrentLane);
 	}
 
 	public override bool DoResult(CardScript target)

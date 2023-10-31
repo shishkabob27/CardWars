@@ -1568,6 +1568,19 @@ public class Kochava : MonoBehaviour
 
 	private void Log(string msg, KochLogLevel level)
 	{
+		if (level == KochLogLevel.error)
+		{
+			UnityEngine.Debug.LogError(msg);
+		}
+		else if (level == KochLogLevel.warning)
+		{
+			UnityEngine.Debug.LogWarning(msg);
+		}
+		else if (level == KochLogLevel.debug)
+		{
+			UnityEngine.Debug.Log(msg);
+        }
+
 		if (level == KochLogLevel.error || debugMode)
 		{
 		}

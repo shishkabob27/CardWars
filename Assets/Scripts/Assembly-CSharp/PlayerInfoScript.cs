@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using JsonFx.Json;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInfoScript : MonoBehaviour
 {
@@ -2482,7 +2483,7 @@ public class PlayerInfoScript : MonoBehaviour
 		{
 			session.ClearNeedsReload();
 		}
-		Application.LoadLevel("AppReloadScene");
+		SceneManager.LoadScene("AppReloadScene");
 	}
 
 	public void iCloudCheckUpdate()

@@ -1,5 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Policy;
+using UnityEngine;
+using UnityEngine.Networking;
 
 public class SocialManager
 {
@@ -31,14 +35,7 @@ public class SocialManager
 		{
 			if (instance == null)
 			{
-				if (!KFFCSUtils.GetManifestKeyBool("force_amazon_store"))
-				{
-					instance = new GooglePlaySocial();
-				}
-				else
-				{
-					instance = new SocialManager();
-				}
+				instance = new SocialManager();
 			}
 			return instance;
 		}
@@ -53,14 +50,61 @@ public class SocialManager
 	[method: MethodImpl(32)]
 	public event Action playerLoggedOut;
 
-	public virtual void AuthenticatePlayer(bool silent)
-	{
-		playerDidAuthenticate();
+    [method: MethodImpl(32)]
+    public event Action playerAccountDoesNotExist;
+
+    public virtual void AuthenticatePlayer(bool silent)
+    {
+		authed = false;
+        WWW www = new WWW(SQSettings.SERVER_URL + "account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
+        UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
+		
+		while (!www.isDone)
+		{
+        }
+
+		object response = null;
+
+
+        try
+		{
+            response = MiniJSON.Json.Deserialize(www.text);
+        }
+		catch (Exception e)
+		{
+            playerAuthenticationFailed(www.error);
+        }
+
+        UnityEngine.Debug.Log(response);
+
+        if (response == null)
+        {
+            UnityEngine.Debug.Log(www.error);
+			playerAuthenticationFailed(www.error);
+        }
+        else
+        {
+            Dictionary<string, object> responseData = (Dictionary<string, object>)response;
+
+            if (responseData.ContainsKey("success") && (bool)responseData["success"])
+            {
+                UnityEngine.Debug.Log("Authentication successful");
+
+                playerDidAuthenticate();
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Authentication failed");
+                playerAuthenticationFailed((string)responseData["message"]);
+            }
+        }
 	}
+
+	bool authed = false;
 
 	public virtual bool IsPlayerAuthenticated()
 	{
-		return false;
+		return authed;
 	}
 
 	public virtual string PlayerIdentifier()
@@ -75,7 +119,7 @@ public class SocialManager
 
 	public virtual bool IsAgeGateRequired()
 	{
-		return false;
+		return true;
 	}
 
 	public virtual bool IsRetryAuth(string error)
@@ -99,10 +143,11 @@ public class SocialManager
 	{
 	}
 
-	protected void playerDidLogOut()
+	public void playerDidLogOut()
 	{
 		if (this.playerLoggedOut != null)
 		{
+			authed = false;
 			this.playerLoggedOut();
 		}
 	}
@@ -111,6 +156,7 @@ public class SocialManager
 	{
 		if (this.playerAuthenticated != null)
 		{
+			authed = true;
 			this.playerAuthenticated();
 		}
 	}
@@ -119,7 +165,17 @@ public class SocialManager
 	{
 		if (this.playerFailedToAuthenticate != null)
 		{
+			authed = false;
 			this.playerFailedToAuthenticate(error);
 		}
 	}
+
+    protected void playerAccountNotExist()
+    {
+        if (this.playerAccountDoesNotExist != null)
+        {
+			authed = false;
+            this.playerAccountDoesNotExist();
+        }
+    }
 }

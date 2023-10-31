@@ -182,13 +182,18 @@ public static class Language
 	private static string GetLanguageFileContents(string sheetTitle)
 	{
 		string text = string.Concat("Languages/", currentLanguage, "_", sheetTitle);
+		
 		string path = _persistentDataPath + "/" + text + ".xml";
-		if (File.Exists(path))
+        UnityEngine.Debug.Log(path);
+        if (File.Exists(path))
 		{
-			return File.ReadAllText(path);
+            UnityEngine.Debug.Log("lang file exist so return that");
+            return File.ReadAllText(path);
+
 		}
 		TextAsset textAsset = (TextAsset)Resources.Load(text, typeof(TextAsset));
-		return textAsset.text;
+        UnityEngine.Debug.Log(textAsset.name);
+        return textAsset.text;
 	}
 
 	public static LanguageCode CurrentLanguage()

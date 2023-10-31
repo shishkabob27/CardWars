@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AuthScreenController : MonoBehaviour
@@ -9,6 +10,8 @@ public class AuthScreenController : MonoBehaviour
 	public UIButtonTween GeneralPopupShowTween;
 
 	public UIButtonTween AgeGateShowTween;
+
+	public UIButtonTween LoginOptionsTween;
 
 	public string NextSceneName = "AssetLoader";
 
@@ -22,6 +25,7 @@ public class AuthScreenController : MonoBehaviour
 
 	private void SocialLogin()
 	{
+		UnityEngine.Debug.Log("Doing SocialLogin");
 		PlayerPrefs.DeleteKey("RetrySocialLogin");
 		if (SocialManager.Instance.IsPlayerAuthenticated())
 		{
@@ -34,7 +38,8 @@ public class AuthScreenController : MonoBehaviour
 
 	private void OnPlayerAuthenticated()
 	{
-		string @string = PlayerPrefs.GetString("SocialLogin", null);
+        UnityEngine.Debug.LogError("Auth: On player authed");
+        string @string = PlayerPrefs.GetString("SocialLogin", null);
 		string text = SocialManager.Instance.PlayerIdentifierHash();
 		if (!string.IsNullOrEmpty(@string) && @string != text)
 		{
@@ -48,34 +53,92 @@ public class AuthScreenController : MonoBehaviour
 			SocialManager.Instance.ResetAllAchievements();
 		}
 		ClearAuthEvents();
+
 		StartGameLoginFlow();
 	}
 
 	private void OnPlayerFailedToAuthenticate(string error)
 	{
+		UnityEngine.Debug.LogError(error);
 		ConfirmPopupController.ClickCallback clickCallback = delegate(bool yes)
 		{
 			if (yes)
 			{
-				SocialManager.Instance.AuthenticatePlayer(false);
+				LoginOptionsTween.Play(true);
 			}
 			else
 			{
-				ClearAuthEvents();
+                PlayerPrefs.DeleteKey("SocialLogin");
+                PlayerPrefs.DeleteKey("RetrySocialLogin");
+                PlayerPrefs.DeleteKey("user");
+                PlayerPrefs.DeleteKey("pass");
+                ClearAuthEvents();
 				StartGameLoginFlow();
 			}
 		};
-		if (SocialManager.Instance.IsRetryAuth(error))
-		{
-			StartCoroutine(CoroutineShowPopup("!!SOCIAL_SIGN_IN_FAILED_RETRY", clickCallback));
-		}
-		else
-		{
-			clickCallback(false);
-		}
+
+		StartCoroutine(CoroutineShowPopup(error +"\nRetry?", clickCallback));
 	}
 
-	private void AddAuthEvents()
+    private void OnPlayerCreateAccount()
+    {
+        ConfirmPopupController.ClickCallback clickCallback = delegate (bool yes)
+        {
+            if (yes)
+            {
+                WWW www = new WWW(SQSettings.SERVER_URL+ "account/create?user=" + PlayerPrefs.GetString("user") + "&pass=" + PlayerPrefs.GetString("pass"));
+                UnityEngine.Debug.Log("Attempting to create player account: " + www.url);
+
+                while (!www.isDone)
+                {
+                }
+
+                object response = null;
+
+
+                try
+                {
+                    response = MiniJSON.Json.Deserialize(www.text);
+                }
+                catch (Exception e)
+                {
+                    OnPlayerFailedToAuthenticate(www.error);
+                }
+
+                UnityEngine.Debug.Log(response);
+
+                if (response == null)
+                {
+                    UnityEngine.Debug.Log(www.error);
+                    OnPlayerFailedToAuthenticate(www.error);
+                }
+                else
+                {
+                    Dictionary<string, object> responseData = (Dictionary<string, object>)response;
+
+                    if (responseData.ContainsKey("success") && (bool)responseData["success"])
+                    {
+                        UnityEngine.Debug.Log("Account Created");
+						SocialLogin();
+                    }
+                    else
+                    {
+                        UnityEngine.Debug.Log("Authentication failed");
+                        OnPlayerFailedToAuthenticate((string)responseData["message"]);
+                    }
+                }
+
+            }
+            else
+            {
+                LoginOptionsTween.Play(true);
+            }
+        };
+
+        StartCoroutine(CoroutineShowPopup("The account, '"+ PlayerPrefs.GetString("user")+"' does not exist.\nWould you like to create it?", clickCallback));
+    }
+
+    private void AddAuthEvents()
 	{
 		SocialManager.Instance.playerAuthenticated += OnPlayerAuthenticated;
 		SocialManager.Instance.playerFailedToAuthenticate += OnPlayerFailedToAuthenticate;
@@ -90,28 +153,93 @@ public class AuthScreenController : MonoBehaviour
 	private void OnEnable()
 	{
 		HowOldAreYou.AgeGateDone += OnAgeGateDone;
+		LoginOptions.LoginDone += OnLoginDone;
 	}
 
 	private void OnDisable()
 	{
 		HowOldAreYou.AgeGateDone -= OnAgeGateDone;
+		LoginOptions.LoginDone -= OnLoginDone;
 	}
 
 	private void OnAgeGateDone(int playerAge)
 	{
 		PlayerPrefs.SetInt("PlayerAge", playerAge);
+
 		if (PlayerInfoScript.GetInstance().IsUnderage)
 		{
 			PlayerPrefs.DeleteKey("SocialLogin");
-			StartGameLoginFlow();
-		}
+            PlayerPrefs.DeleteKey("RetrySocialLogin");
+            PlayerPrefs.DeleteKey("user");
+            PlayerPrefs.DeleteKey("pass");
+            Invoke("StartGameLoginFlow", 0.5f);
+        }
 		else
 		{
-			//Skip social login for now.
-			//Invoke("SocialLogin", 0.5f);
-			StartGameLoginFlow();
-		}
-	}
+            if (LoginOptionsTween != null)
+            {
+                LoginOptionsTween.Play(true);
+            }
+        }
+    }
+
+	private void OnLoginDone(string Username, string Password)
+	{
+		UnityEngine.Debug.Log(Username + " " + Password);
+
+        if (Username == string.Empty || Password == string.Empty)
+        {
+            ConfirmPopupController.ClickCallback clickCallback = delegate (bool yes)
+            {
+                if (yes)
+                {
+                    LoginOptionsTween.Play(true);
+                }
+                else
+                {
+                    PlayerPrefs.DeleteKey("SocialLogin");
+                    PlayerPrefs.DeleteKey("RetrySocialLogin");
+                    PlayerPrefs.DeleteKey("user");
+                    PlayerPrefs.DeleteKey("pass");
+                    ClearAuthEvents();
+                    StartGameLoginFlow();
+                }
+            };
+
+            StartCoroutine(CoroutineShowPopup("No username or password provided.\nRetry?", clickCallback));
+
+        }
+        else
+        {
+            PlayerPrefs.SetString("user", Username);
+            PlayerPrefs.SetString("pass", Password);
+
+            WWW www = new WWW(SQSettings.SERVER_URL + "account/exists?user=" + PlayerPrefs.GetString("user"));
+            UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
+
+            while (!www.isDone)
+            {
+            }
+
+            object response = null;
+
+            UnityEngine.Debug.Log(response);
+
+			if (www.text == "true")
+			{
+				Invoke("SocialLogin", 0.5f);
+			}
+			else if (www.text == "false")
+			{
+				OnPlayerCreateAccount();
+			}
+			else
+			{
+				OnPlayerFailedToAuthenticate("Server did not respond.");
+			}
+            
+        }
+    }
 
 	private IEnumerator CoroutineShowPopup(string message, ConfirmPopupController.ClickCallback callback)
 	{
@@ -165,8 +293,11 @@ public class AuthScreenController : MonoBehaviour
 
 	private static void OnSocialLogout()
 	{
-		PlayerPrefs.DeleteKey("RetrySocialLogin");
-	}
+        PlayerPrefs.DeleteKey("user");
+        PlayerPrefs.DeleteKey("pass");
+        PlayerPrefs.DeleteKey("RetrySocialLogin");
+        PlayerPrefs.DeleteKey("SocialLogin");
+    }
 
 	private void Awake()
 	{
@@ -201,8 +332,12 @@ public class AuthScreenController : MonoBehaviour
 		}
 		else
 		{
-			StartGameLoginFlow();
-		}
+            PlayerPrefs.DeleteKey("user");
+            PlayerPrefs.DeleteKey("pass");
+            PlayerPrefs.DeleteKey("SocialLogin");
+            PlayerPrefs.DeleteKey("SocialLogin");
+            StartGameLoginFlow();
+        }
 	}
 
 	private void LoadNextLevel()

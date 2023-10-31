@@ -1,6 +1,7 @@
 using System;
 using Prime31;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyAndReload : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class DestroyAndReload : MonoBehaviour
 	{
 		if (complete)
 		{
-			Application.LoadLevel("StartupScene");
+			SceneManager.LoadScene("StartupScene");
 			complete = false;
 		}
 	}
