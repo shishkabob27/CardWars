@@ -10,6 +10,8 @@ public class LoginOptions : MonoBehaviour
 
     public UIButtonTween HideTween;
 
+    public GameObject TempPasswordLabel;
+
     public GameObject OKButton;
 
     private UIInput mUserNameInput;
@@ -47,6 +49,7 @@ public class LoginOptions : MonoBehaviour
 
     private void Update()
     {
+        TempPasswordLabel.GetComponent<Text>().text = mPasswordInput.text;
     }
 
     public void OnClick()
