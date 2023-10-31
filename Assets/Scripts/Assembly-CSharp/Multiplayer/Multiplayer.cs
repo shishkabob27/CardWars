@@ -205,10 +205,10 @@ namespace Multiplayer
 		{
 			TFServer.JsonResponseHandler callback2 = delegate(Dictionary<string, object> data, HttpStatusCode status)
 			{
-				if (status == HttpStatusCode.OK && data != null && (bool)data["success"])
+				if (status == HttpStatusCode.OK && data != null)
 				{
-					Dictionary<string, object> dict = (Dictionary<string, object>)data["data"];
-					callback(new MatchData(dict), ResponseFlag.Success);
+					//Dictionary<string, object> dict = (Dictionary<string, object>)data["data"];
+					callback(new MatchData(data), ResponseFlag.Success);
 				}
 				else
 				{
@@ -295,7 +295,7 @@ namespace Multiplayer
 				}
 			};
 			string deck2 = Convert.ToBase64String(Encoding.UTF8.GetBytes(deck));
-			session.Server.MultiplayerUpdateDeck(deck2, deckRank, landscapes, leader, leaderLevel, callback2);
+			session.Server.MultiplayerUpdateDeck(session.ThePlayer.playerId, deck2, deckRank, landscapes, leader, leaderLevel, callback2);
 		}
 
 		public static void GetTournamentEndDate(Session session, bool cheater, TournamentDataCallback callback)

@@ -171,9 +171,10 @@ public class SQServer
 		tfServer.PostToJSON(SQSettings.SERVER_URL + "multiplayer/new_player/", dictionary, callback);
 	}
 
-	public void MultiplayerUpdateDeck(string deck, float deckRank, string landscapes, string leader, int leaderLevel, TFServer.JsonResponseHandler callback)
+	public void MultiplayerUpdateDeck(string name,string deck, float deckRank, string landscapes, string leader, int leaderLevel, TFServer.JsonResponseHandler callback)
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
+		dictionary["name"] = name;
 		dictionary["deck"] = deck;
 		dictionary["deck_rank"] = deckRank;
 		dictionary["landscapes"] = landscapes;
