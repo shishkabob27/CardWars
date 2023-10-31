@@ -41,7 +41,7 @@ public class ReauthenticationHelper : ReloadDetection
 			yield return null;
 		}
 		Busy = false;
-		if (!sessionMgr.IsAuthenticated())
+		if (!SocialManager.Instance.IsPlayerAuthenticated())
 		{
 			callback(Result.FAIL);
 		}

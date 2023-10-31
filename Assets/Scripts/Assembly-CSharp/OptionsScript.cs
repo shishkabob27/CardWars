@@ -121,6 +121,7 @@ public class OptionsScript : MonoBehaviour
 	public void ResetAge()
 	{
 		PlayerPrefs.DeleteAll();
+		SocialManager.Instance.playerDidLogOut();
         PlayerInfoScript.GetInstance().ReloadGame();
 	}
 }

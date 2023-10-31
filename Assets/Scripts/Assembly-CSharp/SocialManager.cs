@@ -55,6 +55,7 @@ public class SocialManager
 
     public virtual void AuthenticatePlayer(bool silent)
     {
+		authed = false;
         WWW www = new WWW(SQSettings.SERVER_URL + "account/auth?user="+PlayerPrefs.GetString("user")+"&pass="+ PlayerPrefs.GetString("pass"));
         UnityEngine.Debug.Log("Attempting to authenticate player: " + www.url);
 		
@@ -142,7 +143,7 @@ public class SocialManager
 	{
 	}
 
-	protected void playerDidLogOut()
+	public void playerDidLogOut()
 	{
 		if (this.playerLoggedOut != null)
 		{

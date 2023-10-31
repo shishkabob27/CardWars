@@ -46,11 +46,9 @@ public class SQSettings
 		{
             string empty = string.Empty;
             string streamingAssetsFile = TFUtils.GetStreamingAssetsFile("server_settings.json");
-            UnityEngine.Debug.LogError("streamingAssetsFile:" + streamingAssetsFile);
             empty = ((!streamingAssetsFile.Contains("://")) ? File.ReadAllText(streamingAssetsFile) : getJsonPath(streamingAssetsFile));
             Dictionary<string, object> dictionary = (Dictionary<string, object>)Json.Deserialize(empty);
             serverUrl = (string)dictionary["server_url"];
-			UnityEngine.Debug.LogError("serverUrl:" + serverUrl);
             return serverUrl;
 		}
 	}

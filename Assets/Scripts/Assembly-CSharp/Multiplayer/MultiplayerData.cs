@@ -23,10 +23,12 @@ namespace Multiplayer
 			leader = dict["leader"].ToString();
 			leaderLevel = TFUtils.LoadInt(dict, "level");
 			trophies = TFUtils.LoadInt(dict, "trophies");
-			if (dict.ContainsKey("needs_rename"))
-			{
-				rename = (bool)dict["needs_rename"];
-			}
-		}
+			//if (dict.ContainsKey("needs_rename"))
+			//{
+			//	rename = (bool)dict["needs_rename"];
+			//}
+            UnityEngine.Debug.Log("MultiplayerData Done");
+        }
+
 	}
 }
