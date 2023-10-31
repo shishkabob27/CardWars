@@ -20,7 +20,7 @@ It's CARD WARS!
 
 ## Download
 
-* [Latest Windows Version](https://cardwars.retroretreat.net/download/Windows)
+* [Latest Windows Version](https://github.com/shishkabob27/CardWars/releases/latest/download/CardWars-Windows.zip)
 * Mac Version - Coming Soon
 * Linux Version - Coming Soon
 
