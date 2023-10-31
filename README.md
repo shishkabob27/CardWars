@@ -25,8 +25,8 @@ It's CARD WARS!
 * Linux Version - Coming Soon
 
 ## Images
-![CardWars_r8d9H393Tp](https://github.com/shishkabob27/CardWars/assets/64564902/b1593193-fa05-41b8-af60-325d44076bc7)
-![CardWars_F7nDRbIxel](https://github.com/shishkabob27/CardWars/assets/64564902/b8177e2e-fe13-4c4d-8783-4af63063ebb3)
+![CardWars_r8d9H393Tp](https://i.imgur.com/cXUolY0.jpg)
+![CardWars_F7nDRbIxel](https://i.imgur.com/N3BH326.jpg)
 
 ## Contributing
 Card Wars uses Unity 2017.3.0f3. No other dependencies are required.
