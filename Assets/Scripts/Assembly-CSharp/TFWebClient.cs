@@ -33,9 +33,10 @@ public class TFWebClient : WebClient
 	public TFWebClient(CookieContainer cookieContainer)
 	{
 		cookies = cookieContainer;
-	}
+		ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
+    }
 
-	protected override WebRequest GetWebRequest(Uri address)
+    protected override WebRequest GetWebRequest(Uri address)
 	{
 		HttpWebRequest httpWebRequest = base.GetWebRequest(address) as HttpWebRequest;
 		httpWebRequest.CookieContainer = cookies;
