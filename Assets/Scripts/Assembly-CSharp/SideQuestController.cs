@@ -226,8 +226,8 @@ public class SideQuestController : MonoBehaviour
 		}
 		if (SQHudObj == null)
 		{
-			GameObject prefab2 = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(SQHudPrefabPath) as GameObject;
-			SQHudObj = UnityEngine.Object.Instantiate(prefab2);
+			GameObject prefab2 = Resources.Load(SQHudPrefabPath, typeof(GameObject)) as GameObject;
+			SQHudObj = Instantiate(prefab2);
 			SQHudObj.name = "SideQuest_Hud";
 			SQHudObj.transform.SetParent(HudCanvas.transform, false);
 			Button hudButton = SQHudObj.GetComponentInChildren<Button>();
@@ -241,8 +241,8 @@ public class SideQuestController : MonoBehaviour
 		SQHud.UIAtlas = UIAtlas;
 		if (SQPanelObj == null)
 		{
-			GameObject prefab = SLOTGameSingleton<SLOTResourceManager>.GetInstance().LoadResource(SQPanelPrefabPath) as GameObject;
-			SQPanelObj = UnityEngine.Object.Instantiate(prefab);
+			GameObject prefab = Resources.Load(SQPanelPrefabPath, typeof(GameObject)) as GameObject;
+			SQPanelObj = Instantiate(prefab);
 			SQPanelObj.name = "SideQuest_Panel";
 			SQPanelObj.transform.SetParent(PanelCanvas.transform, false);
 			SQPanel = SQPanelObj.GetComponent<SideQuestPanel>();
