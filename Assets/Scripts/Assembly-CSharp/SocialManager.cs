@@ -119,7 +119,7 @@ public class SocialManager
 
 	public virtual bool IsAgeGateRequired()
 	{
-		return true;
+		return false;
 	}
 
 	public virtual bool IsRetryAuth(string error)

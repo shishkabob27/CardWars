@@ -33,7 +33,7 @@ public class OptionsScript : MonoBehaviour
 	{
 		if (null != AgeReset)
 		{
-			AgeReset.SetActive(SocialManager.Instance.IsAgeGateRequired());
+			AgeReset.SetActive(true);
 			AgeReset.GetComponentInChildren<UILabel>().text = "Logout";
 		}
 	}
