@@ -35,12 +35,6 @@ public class NextScreenScript : MonoBehaviour
 		{
 			return;
 		}
-		GameObject gameObject = ((!(SLOTFacebook.GetInstance() != null) || !SLOTFacebook.GetInstance().IsLoggedIn() || !(NextScreen_Facebook != null)) ? NextScreen : NextScreen_Facebook);
-		if (!(gameObject != null))
-		{
-			return;
-		}
-		Object.Instantiate(gameObject);
 		if (ChangeMusic)
 		{
 			Jukebox.GetComponent<AudioSource>().clip = NewMusic;

@@ -38,7 +38,6 @@ public class AuthScreenController : MonoBehaviour
 
 	private void OnPlayerAuthenticated()
 	{
-        UnityEngine.Debug.LogError("Auth: On player authed");
         string @string = PlayerPrefs.GetString("SocialLogin", null);
 		string text = SocialManager.Instance.PlayerIdentifierHash();
 		if (!string.IsNullOrEmpty(@string) && @string != text)
