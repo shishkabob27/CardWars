@@ -32,7 +32,6 @@ public class AuthScreenController : MonoBehaviour
 			OnPlayerAuthenticated();
 			return;
 		}
-		AddAuthEvents();
 		SocialManager.Instance.AuthenticatePlayer(true);
 	}
 
@@ -303,7 +302,8 @@ public class AuthScreenController : MonoBehaviour
 		if (!staticInited)
 		{
 			SocialManager.Instance.playerLoggedOut += OnSocialLogout;
-			staticInited = true;
+            AddAuthEvents();
+            staticInited = true;
 		}
 	}
 
