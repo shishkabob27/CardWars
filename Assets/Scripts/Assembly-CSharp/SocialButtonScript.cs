@@ -20,11 +20,7 @@ public class SocialButtonScript : MonoBehaviour
 
 	private void OnEnable()
 	{
-		if (!(buttonObj == null))
-		{
-			bool manifestKeyBool = KFFCSUtils.GetManifestKeyBool("force_amazon_store");
-			buttonObj.SetActive(!manifestKeyBool && !PlayerInfoScript.GetInstance().IsUnderage);
-		}
+
 	}
 
 	private void OnClick()

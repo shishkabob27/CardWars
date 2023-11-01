@@ -15,14 +15,7 @@ public class SLOTStartup : MonoBehaviour
 		if (!started)
 		{
 			started = true;
-			if (KFFCSUtils.GetManifestKeyBool("support_obb"))
-			{
-				DownloadOBB();
-			}
-			else
-			{
-				Startup();
-			}
+			Startup();
 		}
 	}
 

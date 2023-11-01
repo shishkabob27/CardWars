@@ -85,45 +85,6 @@ public class KFFNetwork2 : MonoBehaviour
 		return wWWInfo;
 	}
 
-	public WWWInfo SendHTTPSRequest(string url, WWWInfo.RequestCallback WWWRequestCallback, object callbackParam, Dictionary<string, string> postData)
-	{
-		WWWInfo wWWInfo = null;
-		if (activeRequestCount < MAX_CONCURRENT_WWW_REQUEST_COUNT)
-		{
-			if (KFFAndroidPlugin.HttpRequest(url, AndroidHttpRequestCallback, postData))
-			{
-				wWWInfo = new WWWInfo();
-				wWWInfo.queued = false;
-				wWWInfo.active = true;
-				activeRequestCount++;
-			}
-		}
-		else
-		{
-			wWWInfo = new WWWInfo();
-			wWWInfo.queued = true;
-			wWWInfo.active = false;
-		}
-		if (wWWInfo != null)
-		{
-			wWWInfo.callback = WWWRequestCallback;
-			wWWInfo.callbackParam = callbackParam;
-			wWWInfo.scriptNameAndParams = url;
-			wWWInfo.isHttps = true;
-			wWWInfo.isHttpsDone = false;
-			if (postData != null)
-			{
-				wWWInfo.postData = postData;
-			}
-			wwwList.Add(wWWInfo);
-		}
-		else if (WWWRequestCallback != null)
-		{
-			WWWRequestCallback(null, null, null, callbackParam);
-		}
-		return wWWInfo;
-	}
-
 	public WWWInfo LoadFromCacheOrDownload(string url, int version, WWWInfo.RequestCallback WWWRequestCallback, object callbackParam)
 	{
 		WWWInfo wWWInfo = null;
@@ -197,16 +158,7 @@ public class KFFNetwork2 : MonoBehaviour
 					string scriptNameAndParams = wWWInfo.scriptNameAndParams;
 					if (wWWInfo.isHttps)
 					{
-						if (KFFAndroidPlugin.HttpRequest(scriptNameAndParams, AndroidHttpRequestCallback))
-						{
-							wWWInfo.queued = false;
-							wWWInfo.active = true;
-							activeRequestCount++;
-						}
-						else
-						{
-							wwwList.RemoveAt(num2);
-						}
+						wwwList.RemoveAt(num2);
 					}
 					else
 					{
