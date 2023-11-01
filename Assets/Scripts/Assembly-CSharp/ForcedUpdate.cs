@@ -11,7 +11,7 @@ public class ForcedUpdate : MonoBehaviour
 		}
 		else
 		{
-			Application.OpenURL("http://lmgtfy.com/?q=adventure+time+card+wars");
+			Application.OpenURL("https://github.com/shishkabob27/CardWars/releases");
 		}
 	}
 }
