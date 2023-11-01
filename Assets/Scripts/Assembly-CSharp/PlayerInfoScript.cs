@@ -637,7 +637,7 @@ public class PlayerInfoScript : MonoBehaviour
 
 	public bool HasPurchasedFC()
 	{
-		return GetOccuranceCounter("HasPurchasedFC") != 0;
+		return true;
 	}
 
 	public bool SetHasPurchasedFC(string productId)

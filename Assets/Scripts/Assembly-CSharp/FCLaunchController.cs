@@ -37,39 +37,9 @@ public class FCLaunchController : MonoBehaviour
 
 	public void OnClick()
 	{
-		bool flag = PlayerInfoScript.GetInstance().HasCompletedFCDemo();
-		if (DebugFlagsScript.GetInstance() != null)
-		{
-			flag = flag || DebugFlagsScript.GetInstance().FCCompleteDemo;
-		}
-		if (flag)
-		{
-			if (PlayerInfoScript.GetInstance().HasPurchasedFC())
-			{
-				UICamera.useInputEnabler = true;
-				activateAnimationPlaying = true;
-				battleMapAnimation.CrossFade(animationActivate);
-			}
-			else
-			{
-				DisplayPurchaseScreen();
-			}
-		}
-		else if (PlayerInfoScript.GetInstance().HasStartedFCDemo())
-		{
-			if (PlayerInfoScript.GetInstance().HasPurchasedFC())
-			{
-				LaunchFCDemo();
-			}
-			else
-			{
-				DisplayPurchaseScreen();
-			}
-		}
-		else
-		{
-			LaunchFCDemo();
-		}
+		UICamera.useInputEnabler = true;
+		activateAnimationPlaying = true;
+		battleMapAnimation.CrossFade(animationActivate);
 	}
 
 	private void Update()
