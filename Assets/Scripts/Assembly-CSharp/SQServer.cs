@@ -263,7 +263,8 @@ public class SQServer
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
 		dictionary["match_id"] = matchId;
-		dictionary["loss"] = loss;
+		dictionary["name"] = SessionManager.GetInstance().theSession.ThePlayer.playerId;
+        dictionary["loss"] = loss;
 		dictionary["signature"] = SignDictionary(dictionary, nonce, "xc0u18^g0!ac3k%0+2vgglmnr1)x^!o(n6@$m3t^(7l!(#kv!-");
 		tfServer.PostToJSON(SQSettings.SERVER_URL + "multiplayer/matchmake/complete/", dictionary, callback);
 	}
