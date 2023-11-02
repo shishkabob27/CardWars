@@ -120,7 +120,9 @@ public class MenuController : ReloadHandler
 
 	public GameObject FCMapButton;
 
-	private MenuStartupStates MenuStartupState;
+    public GameObject QuitDialog;
+
+    private MenuStartupStates MenuStartupState;
 
 	private bool mainMenuFlowActive;
 
@@ -149,7 +151,12 @@ public class MenuController : ReloadHandler
 
 	private void Update()
 	{
-		if (MenuStartupState == MenuStartupStates.Startup_Complete)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+			SwitchToQuit();
+        }
+
+        if (MenuStartupState == MenuStartupStates.Startup_Complete)
 		{
 			return;
 		}
@@ -651,7 +658,11 @@ public class MenuController : ReloadHandler
 
 	public void SwitchToQuit()
 	{
-		TransitionState(MenuStates.None);
+        if (!QuitDialog.activeSelf)
+        {
+            QuitDialog.SetActive(true);
+        }
+        TransitionState(MenuStates.None);
 	}
 
 	private IEnumerator SwitchToMessages(float wait = 0f)
