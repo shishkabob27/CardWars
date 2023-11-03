@@ -183,7 +183,6 @@ public class AuthScreenController : MonoBehaviour
 
 	private void OnLoginDone(string Username, string Password)
 	{
-		UnityEngine.Debug.Log(Username + " " + Password);
 
         if (Username == string.Empty || Password == string.Empty)
         {
