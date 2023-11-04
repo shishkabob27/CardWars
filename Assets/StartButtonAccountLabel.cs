@@ -7,7 +7,7 @@ public class StartButtonAccountLabel : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		var PlayerName = PlayerInfoScript.GetInstance().MPPlayerName;
+		var PlayerName = PlayerInfoScript.GetInstance().GetPlayerCode();
 
 		if (PlayerName == "ua" || PlayerName == string.Empty)
 		{
