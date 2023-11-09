@@ -3,7 +3,7 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
-#endif
+
 
 public class CWAudioPrefabHandler : MonoBehaviour
 {
@@ -79,3 +79,4 @@ public class CWAudioPrefabHandler : MonoBehaviour
         return _path + objName + ".prefab";
     }
 }
+#endif
