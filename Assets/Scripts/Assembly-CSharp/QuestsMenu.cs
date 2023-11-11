@@ -30,7 +30,7 @@ public class QuestsMenu : MonoBehaviour
 			SessionManager instance = SessionManager.GetInstance();
 			if (null != instance)
 			{
-				OfflineStatus.SetActive(!instance.IsAuthenticated());
+				OfflineStatus.SetActive(!SocialManager.Instance.IsPlayerAuthenticated());
 			}
 		}
 	}
