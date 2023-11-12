@@ -214,11 +214,11 @@ public class SQServer
 	{
 		if (global)
 		{
-			tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/active_leaderboard/globalrank/", callback);
+			tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/active_leaderboard/globalrank/?username="+ SessionManager.GetInstance().theSession.ThePlayer.playerId, callback);
 		}
 		else
 		{
-			tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/active_leaderboard/rank/", callback);
+			tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/active_leaderboard/rank/?username="+ SessionManager.GetInstance().theSession.ThePlayer.playerId, callback);
 		}
 	}
 
@@ -234,7 +234,7 @@ public class SQServer
 
 	public void MultiplayerTournamentPlayerResult(TFServer.JsonResponseHandler callback)
 	{
-		tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/tournament/player/", callback);
+		tfServer.GetToJSON(SQSettings.SERVER_URL + "multiplayer/tournament/player/?username=" + SessionManager.GetInstance().theSession.ThePlayer.playerId, callback);
 	}
 
 	public void MultiplayerFindMatch(string playerId, int maxLevel, TFServer.JsonResponseHandler callback)
@@ -285,6 +285,7 @@ public class SQServer
 	public void MultiplayerRedeemReward(int tournamentId, TFServer.JsonResponseHandler callback)
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
+		dictionary["username"] = SessionManager.GetInstance().theSession.ThePlayer.playerId;
 		dictionary["tournament_id"] = tournamentId;
 		dictionary["signature"] = SignDictionary(dictionary, nonce, "xc0u18^g0!ac3k%0+2vgglmnr1)x^!o(n6@$m3t^(7l!(#kv!-");
 		tfServer.PostToJSON(SQSettings.SERVER_URL + "multiplayer/tournament/complete/", dictionary, callback);
