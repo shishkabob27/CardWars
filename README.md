@@ -29,4 +29,4 @@ It's CARD WARS!
 ![CardWars_F7nDRbIxel](https://i.imgur.com/N3BH326.jpg)
 
 ## Contributing
-Card Wars uses Unity 2017.3.0f3. No other dependencies are required.
+Card Wars uses Unity 2017.4.40f1. No other dependencies are required.
