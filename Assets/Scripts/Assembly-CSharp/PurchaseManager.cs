@@ -204,7 +204,7 @@ public class PurchaseManager : Singleton<PurchaseManager>
 			}
 		}
 		DbProductInfo dbProductInfoById = GetDbProductInfoById(ProductID);
-		Price = "$" + ((dbProductInfoById == null) ? "0.00" : dbProductInfoById.price.ToString("n2"));
+		Price = ((dbProductInfoById == null) ? "0.00" : dbProductInfoById.price.ToString() + "C");
 	}
 
 	private void Awake()
@@ -261,6 +261,8 @@ public class PurchaseManager : Singleton<PurchaseManager>
 	public void PurchaseProduct(string a_productID, ProductPurchaseCallback a_Callback)
 	{
 		TFUtils.DebugLog("calling KFF.PurchaseProduct", "iap");
+		RedeemPurchase(a_productID);
+		return;
 		if (m_Listener != null)
 		{
 			m_Listener.PurchaseProduct(a_productID, a_Callback);
@@ -289,25 +291,28 @@ public class PurchaseManager : Singleton<PurchaseManager>
 	private ProductDataRequestResult GetProductData(string[] a_StringIDs, ReceivedProductDataCallback a_Callback)
 	{
 		TFUtils.DebugLog("calling KFF.GetProductData", "iap");
-		busyCounter++;
-		ProductDataRequestResult productData = m_Listener.GetProductData(a_StringIDs, delegate(bool success, List<ProductData> productList, string error)
+
+		List<ProductData> productList = new List<ProductData>();
+
+		foreach(DbProductInfo localproduct in storeItems)
 		{
-			busyCounter--;
-			if (success && productList != null)
-			{
-				HasServerProductData = true;
-				m_Products = productList;
-			}
-			if (a_Callback != null)
-			{
-				a_Callback(success, productList, error);
-			}
-		});
-		if (productData != 0)
-		{
-			busyCounter--;
+			ProductData newproduct = new ProductData();
+			newproduct.ProductIdentifier = localproduct.productID;
+			newproduct.Price = localproduct.price.ToString();
+
 		}
-		return productData;
+
+		if (productList != null)
+		{
+			HasServerProductData = true;
+
+			m_Products = productList;
+		}
+		if (a_Callback != null)
+		{
+			a_Callback(true, productList, "");
+		}
+		return ProductDataRequestResult.Success;
 	}
 
 	private IEnumerator CoroutineRestorePurchase(RestorePurchasesCallback callback)
@@ -439,10 +444,6 @@ public class PurchaseManager : Singleton<PurchaseManager>
 
 	public ProductDataRequestResult GetProductData(ReceivedProductDataCallback a_Callback)
 	{
-		if (isRetrievingProductData)
-		{
-			return ProductDataRequestResult.Busy;
-		}
 		int storeItemCount = GetStoreItemCount();
 		List<string> list2 = new List<string>();
 		for (int i = 0; i < storeItemCount; i++)
@@ -455,12 +456,12 @@ public class PurchaseManager : Singleton<PurchaseManager>
 		}
 		string[] a_StringIDs = list2.ToArray();
 		isRetrievingProductData = true;
-		return GetProductData(a_StringIDs, delegate(bool success, List<ProductData> list, string error)
+        return GetProductData(a_StringIDs, delegate(bool success, List<ProductData> list, string error)
 		{
 			isRetrievingProductData = false;
-			if (success || !string.IsNullOrEmpty(error))
+            if (success || !string.IsNullOrEmpty(error))
 			{
-			}
+            }
 			if (a_Callback != null)
 			{
 				a_Callback(success, list, error);
@@ -506,9 +507,13 @@ public class PurchaseManager : Singleton<PurchaseManager>
 		switch (product.productType.ToLower())
 		{
 		case "gem":
-			TFUtils.DebugLog("RedeemPurchase granting " + product.productCount + " gems from " + product.productID, "iap");
-			instance.Gems += product.productCount;
-			break;
+			if (instance.Coins >= (int)product.price)
+			{
+                TFUtils.DebugLog("RedeemPurchase granting " + product.productCount + " gems from " + product.productID, "iap");
+                instance.Gems += product.productCount;
+                instance.Coins -= (int)product.price;
+            }
+            break;
 		case "coin":
 			TFUtils.DebugLog("RedeemPurchase Granting " + product.productCount + " coins from " + product.productID, "iap");
 			instance.Coins += product.productCount;
