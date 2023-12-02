@@ -114,7 +114,7 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
 
 	private bool KontagentTestMode;
 
-	private bool TurnOff;
+	private bool TurnOff = true;
 
 	private string deviceId;
 
