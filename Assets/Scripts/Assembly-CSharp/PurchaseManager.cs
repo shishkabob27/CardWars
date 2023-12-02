@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using com.amazon.device.iap.cpt;
 using UnityEngine;
 
 public class PurchaseManager : Singleton<PurchaseManager>
@@ -50,11 +49,6 @@ public class PurchaseManager : Singleton<PurchaseManager>
 
 		public override string ToString()
 		{
-			if (Singleton<PurchaseManager>.Instance.IsAmazon)
-			{
-				PurchaseResponse purchaseResponse = (PurchaseResponse)NativeTransaction;
-				return string.Format("<AmazonReceipt> ID: {0}, type: {1}, transactionIdentifier: {2}", purchaseResponse.PurchaseReceipt.Sku, purchaseResponse.PurchaseReceipt.ProductType, purchaseResponse.PurchaseReceipt.ReceiptId);
-			}
 			GooglePurchase googlePurchase = (GooglePurchase)NativeTransaction;
 			return string.Format("<GooglePurchase> ID: {0}, type: {1}, transactionIdentifier: {2}", googlePurchase.productId, googlePurchase.type, googlePurchase.orderId);
 		}
@@ -211,14 +205,7 @@ public class PurchaseManager : Singleton<PurchaseManager>
 	{
 		UnityEngine.Object.DontDestroyOnLoad(this);
 		AmazonDevice = KFFCSUtils.IsAmazonDevice();
-		if (IsAmazon)
-		{
-			m_Listener = new AmazonPurchaseListener();
-		}
-		else
-		{
-			m_Listener = new GooglePurchaseListener();
-		}
+		m_Listener = new GooglePurchaseListener();
 	}
 
 	private void OnEnable()
